@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-datetimepicker.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="pc100 web-head">
+			<div class="web-head-title w1000">
+				<div class="fr">
+					<a href="javascript:;" data-toggle="modal" data-target="#myModal-login">登录</a>
+					<a href="javascript:;" data-toggle="modal" data-target="#myModal-reg">注册</a>
+					<a href="#">下载APP</a>
+					<a href="#">客服</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="web-nav-all">
+				<div class="w1000">
+					<a href="index.htm"><img class="fl web-logo" src="images/logo.png" /></a>
+					<ul class="fr">
+						<li><a href="index.html">首页</a></li>
+						<li ><a href="名家观点.html">名家观点</a></li>
+						<li><a href="video.html">视频课程</a></li>
+						<li><a href="开发中.html">实战案例</a></li>
+						<li   class="current"><a href="会员中心-会员特权.html">会员中心</a></li>
+						<li><a href="关于我们.html">关于V名</a></li>
+						<li><a href="加盟合作.html">加盟合作</a></li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		
+		<!--主体-->
+		<div class="pc100" style="margin-top: 132px;">
+			
+			<div class="w1000 web-point-title">
+				<div class="web-point-nav" style="padding-top: 25px;">
+						<ul class="fl">
+							<li><a href="会员中心-会员特权.html">会员特权</a></li>
+							<li  class="cur"><a href="基本资料.html">个人中心</a></li>
+							<li><a href="成长中心.html">成长中心</a></li>
+							<li><a href="购买会员.html">购买会籍</a></li>
+							<li><a href="帮助中心.html">帮助中心</a></li>
+						</ul>
+						<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+				<div class="web-member-content">
+					<div class="member-le-nav fl">
+						<ul>
+							<li class="leNav">基本资料</li>
+							<li>自我检测</li>
+							<li>会员活动</li>
+						</ul>
+					</div>
+					<div class="member-ri-content fl">
+						<div class="web-basic-info" style="position: relative;">
+							<h3>基本资料</h3>
+							<h4 style="margin-top: 20px;">V名会员基本资料</h4>
+							<div class="web-input-info">
+								<ul class="fl">
+									<li>
+										<div class="fl web-input-left">姓名</div>
+										<input id="infoName" class="web-input-default fl" disabled="disabled" value="奥巴马" type="text" />
+										<div class="clear"></div>
+									</li>
+									<li>
+										<div class="fl web-input-left">性别</div>
+										<select id="infoSex"  class="web-input-default fl" disabled="disabled">
+											<option>男</option>
+											<option>女</option>
+											<option>保密</option>
+										</select>
+										<div class="clear"></div>
+									</li>
+									<li>
+										<div class="fl web-input-left">身份证号</div>
+										<input id="infoCard" class="web-input-default fl" disabled="disabled" value="341616190812311818" type="text" />
+										<div class="clear"></div>
+									</li>
+									<li>
+										<div class="fl web-input-left">电话</div>
+										<input id="infoMobile" class="web-input-default fl" disabled="disabled" value="1818888888" type="text" />
+										<div class="clear"></div>
+									</li>
+								</ul>
+								
+								<ul class="fl" style="margin-left: 120px;">
+									<li>
+										<div class="fl web-input-left">生日</div>
+						                <input size="16" id="infoTime" type="text" value="2012-06-15"  disabled="disabled" class="form_date web-input-default fl">
+										<div class="clear"></div>
+									</li>
+									<li>
+										<div class="fl web-input-left">位置</div>
+										<select id="infoPro" class="web-input-default fl" style="width: 80px; padding: 0px;">
+										</select>
+										<select id="infoCity" class="web-input-default fl" style="width: 80px; margin: 0 5px;  padding: 0px;">
+										</select>
+										<select id="infoArea" class="web-input-default fl" style="width: 80px;  padding: 0px;">
+										</select>
+										<div class="clear"></div>
+									</li>
+									<li>
+										<div class="fl web-input-left">QQ</div>
+										<input id="infoQQ" class="web-input-default fl" disabled="disabled" value="1803202981" type="text" />
+										<div class="clear"></div>
+									</li>
+									<li>
+										<div class="fl web-input-left">邮箱</div>
+										<input id="infoEmil" class="web-input-default fl" disabled="disabled" value="huifeidezhubijiang@163.com" type="text" />
+										<div class="clear"></div>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+							<h4 style="margin-top: 20px;">职业信息</h4>
+							<div class="web-input-info">
+								<ul class="fl">
+									<li>
+										<div class="fl web-input-left">目前公司</div>
+										<input id="infoCompany" class="web-input-default fl" disabled="disabled" value="杭州必须广告有限公司" type="text" />
+										<div class="clear"></div>
+									</li>
+									<li>
+										<div class="fl web-input-left">目前薪资</div>
+										<input id="infoSalary" class="web-input-default fl" disabled="disabled" value="500K" type="text" />
+										<div class="clear"></div>
+									</li>
+								</ul>
+								
+								<ul class="fl" style="margin-left: 120px;">
+									<li>
+										<div class="fl web-input-left">职务</div>
+										<input id="infoDuite" class="web-input-default fl" disabled="disabled" value="设计师" type="text" />
+										<div class="clear"></div>
+									</li>
+									<li>
+										<div class="fl web-input-left">现工作地</div>
+										<input id="infoAddres" class="web-input-default fl" disabled="disabled" value="浙江杭州" type="text" />
+										<div class="clear"></div>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+							
+							
+							<h4 style="margin-top: 20px;">时间段</h4>
+							<div class="web-input-info">
+								<table>
+									<tr>
+										<td>时间段</td>
+										<td>公司名</td>
+										<td>职务</td>
+										<td>职务</td>
+									</tr>
+									<tr>
+										<td><div class="web-input-default fl">2010年7月</div></td>
+										<td><div class="web-input-default fl">2010年7月</div></td>
+										<td><div class="web-input-default fl">杭州必须广告有限公司</div></td>
+										<td><div class="web-input-default fl">设计师</div></td>
+									</tr>
+								</table>
+								<div class="clear"></div>
+							</div>
+							
+							
+							<h4 style="margin-top: 20px;">社交媒体信息</h4>
+							<div class="web-input-info">
+								<ul class="fl">
+									<li>
+										<div class="fl web-input-left">微信</div>
+										<input id="infoWeixin" class="web-input-default fl" disabled="disabled" value="奥巴马" type="text" />
+										<div class="clear"></div>
+									</li>
+									<li>
+										<div class="fl web-input-left">博客</div>
+										<input id="infoBoke" class="web-input-default fl" disabled="disabled" value="huifeidezhubijiang@163.com" type="text" />
+										<div class="clear"></div>
+									</li>
+									<li>
+										<div class="fl web-input-left">其他媒体</div>
+										<input id="infoMeiti" class="web-input-default fl" disabled="disabled" value="huifeidezhubijiang@163.com" type="text" />
+										<div class="clear"></div>
+									</li>
+								</ul>
+								
+								<ul class="fl" style="margin-left: 120px;">
+									<li>
+										<div class="fl web-input-left">微博</div>
+										<input id="infoWeibo" class="web-input-default fl" disabled="disabled" value="会飞的猪鼻酱" type="text" />
+										<div class="clear"></div>
+									</li>
+								</ul>
+								<div class="clear"></div>
+								<ul>
+									<li>
+										<div class="fl web-input-left">自我评价</div>
+										<textarea id="infoPinjia" class="web-input-default fl" disabled="disabled" style="width: 692px; height: 120px; padding-top: 5px; line-height: 20px;">岸上的撒娇的法律框架爱说的了客服阿萨德了房间爱死了的客服就爱上大家阿萨德飞就阿里看岸上的撒娇的法律框架爱说的了客服阿萨德了房间爱死了的客服就爱上大家阿萨德飞就阿里看岸上的撒娇的法律框架爱说的了客服阿萨德了房间爱死了的客服就爱上大家阿萨德飞就阿里看
+										</textarea>
+										<div class="clear"></div>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="web-btn-01 web-btn-02" onclick="_save(this)">修改</div>
+							
+							<div class="relative">
+								<div id="basic_Message"  class="login-msg" style="top: -40px;left: 180px; display: none;">
+									<p class="error" style="margin: 0px;"></p>
+									<button type="button" class="close  cloe_Message" style="position: absolute;right: 6px;top: 7px;"><i aria-hidden="true">×</i></button>
+							    </div>
+							</div>
+							
+						</div>
+						
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="web-point-content-title" style="margin-bottom: 30px; margin-top: 30px;"></div>
+			</div>
+		</div>
+		<!--主体-->
+		
+		
+		
+		
+		
+		
+		
+		<div class="web-footer pc100">
+			<div class="w1000">
+				<div class="fl footer-le">
+					<div class="row">
+					  <div class="col-md-4">
+					  		<h3>友情链接</h3>
+					  		<p><a href="#">广告门</a></p>
+					  		<p><a href="#">前程无忧</a></p>
+					  		<p><a href="#">金劳财富</a></p>
+					  </div>
+					   <div class="col-md-4">
+					  		<h3>关于V名</h3>
+					  		<p><a href="#">关于我们</a></p>
+					  		<p><a href="#">专家团队</a></p>
+					  		<p><a href="#">媒体报道</a></p>
+					  		<p><a href="#">工作机会</a></p>
+					  </div>
+					   <div class="col-md-4">
+					  		<h3>加盟合作</h3>
+					  		<p><a href="#">加盟V名</a></p>
+					  		<p><a href="#">分工合作</a></p>
+					  		<p><a href="#">培训合作</a></p>
+					  </div>
+					</div>
+				</div>
+				<div class="fr footer-ri">
+					<div class="row">
+					  <div class="col-md-6">
+					  		<a target="_blank" class="bottom-qq" href="http://shang.qq.com/wpa/qunwpa?idkey=3e06413ed9230de5e77279b7e6cada79c05b5440853b94ede7aebb7a22370ea1">
+					  			<p>Q群：490012537</p>
+					  			<p>一键加群</p>
+					  		</a>
+					  		<a href="Mailto:vming.customer@foxmail.com" class="bottom-email">
+					  			<p>vming.customer@foxmail.com</p>
+					  			<p>给我们写信</p>
+					  		</a>
+					  </div>
+					  <div class="col-md-6" style="margin-top: 65px;">
+					  		<div class="fl" style="margin-left: 20px;">
+					  			<img src="images/weibo.png" /><br />
+					  			<img style="margin-left: 28px; margin-top: 5px;" src="images/bottom-sina.png" />
+					  		</div>
+					  		<div class="fl" style="margin-left: 20px;">
+					  			<img src="images/weixin.png" /><br />
+					  			<img style="margin-left: 28px; margin-top: 5px;" src="images/bottom-wechat.png" />
+					  		</div>
+					  </div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="web-footer-bottom pc100">版权所有  杭州一来二去广告有限公司<br />浙ICP备15038601号</div>
+		<!--<div class="alert alert-success" role="alert">...</div>
+		<div class="alert alert-info" role="alert">...</div>
+		<div class="alert alert-warning" role="alert">...</div>
+		<div class="alert alert-danger" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		</div>-->
+		<!-- Modal 忘记密码-->
+		<div class="modal fade" id="myModal-forget" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header" style="border-bottom: 0px;">
+		        <button type="button" class="close closeClearInterval"  data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		      </div>
+		      <div class="modal-body web-modal-body">
+		        	<img src="images/logo.png" />
+		        	<div class="web-modal-title">忘记密码</div>
+		        	<form style="width: 350px; margin: 0 auto; position: relative;">
+		        		<!--错误提示信息-->
+		        		<div id="forget_Message" style="display: none;" class="login-msg">
+							<p class="error"></p>
+							<button type="button" class="close  cloe_Message"  style="position: absolute;right: 6px;top: 7px;"><span aria-hidden="true">×</span></button>
+					    </div>
+					    <!--错误提示信息-->
+					  <div class="form-group">
+					    <input type="text" class="form-control" id="forgetMobile"  placeholder="注册手机号">
+					  </div>
+					  <div class="form-group">
+					  	<div class="row">
+						  	<div class="col-md-9"><input type="text" id="forgetCode" class="form-control fl" placeholder="验证码"></div>
+						  	<div class="col-md-3 web-col-md4-code"><input id="forgetsendVerifyCodyBtn" onclick="forgetsendCodeFun('#forgetsendVerifyCodyBtn')" class="sendCodeBtn" type="button" class="fr" value="发送验证码" /></div>
+						</div>
+					  </div>
+					  <div class="form-group">
+					    <input type="password" class="form-control" id="forgetPass" placeholder="密码">
+					  </div>
+					  <div class="form-group">
+					    <input type="password" class="form-control" id="forgetPass_re" placeholder="确认密码">
+					  </div>
+					  <div class="form-group">
+					   <button type="button" class="web-btn-01" onclick="forget()">确认</button>
+					  </div>
+					</form>
+		      </div>
+		      <div class="modal-footer" style="border-top: 0px;"></div>
+		    </div>
+		  </div>
+		</div>
+		
+		<!-- Modal 注册-->
+		<div class="modal fade" id="myModal-reg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header" style="border-bottom: 0px;">
+		        <button type="button" class="close closeClearInterval"  data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		      </div>
+		      <div class="modal-body web-modal-body">
+		        	<img src="images/logo.png" />
+		        	<div class="web-modal-title">手机注册</div>
+		        	<form style="width: 350px; margin: 0 auto;">
+					  <div class="form-group">
+					    <input type="text" class="form-control"  placeholder="注册手机号">
+					  </div>
+					  <div class="form-group">
+					  	<div class="row">
+						  	<div class="col-md-9"><input type="text" class="form-control fl" placeholder="验证码"></div>
+						  	<div class="col-md-3 web-col-md4-code"><input id="sendVerifyCodyBtn" onclick="sendCodeFun('#sendVerifyCodyBtn')" class="sendCodeBtn" type="button" class="fr" value="发送验证码" /></div>
+						</div>
+					  </div>
+					  <div class="form-group">
+					    <input type="password" class="form-control" placeholder="密码">
+					  </div>
+					  <div class="form-group">
+					    <input type="password" class="form-control" placeholder="确认密码">
+					  </div>
+					  <div class="form-group">
+					   <button type="button" class="web-btn-01">注册</button>
+					  </div>
+					  <div class="checkbox" style="text-align: left; color: #727272;">
+					    <label>
+					      <input type="checkbox"><a href="#">我接受V名会员服务条款</a>
+					    </label>
+					  </div>
+					</form>
+		      </div>
+		      <div class="modal-footer" style="border-top: 0px;"></div>
+		    </div>
+		  </div>
+		</div>
+		
+		
+		<!-- Modal 登陆-->
+		<div class="modal fade closeClearInterval" id="myModal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog stopPropagation" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header" style="border-bottom: 0px;">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		      </div>
+		      <div class="modal-body web-modal-body" style="padding-bottom: 50px;">
+		        	<img src="images/logo.png" />
+		        	<div class="web-modal-title">欢迎登陆</div>
+		        	<form style="width: 350px; margin: 0 auto;">
+					  <div class="form-group">
+					    <input type="text" class="form-control"  placeholder="注册手机号">
+					  </div>
+					  <div class="form-group">
+					    <input type="password" class="form-control" placeholder="确认密码">
+					  </div>
+					  <div class="form-group">
+					   <button type="button" class="web-btn-01">登录</button>
+					  </div>
+					  <div class="checkbox" style="text-align: left; color: #727272;">
+					  	<a href="#" class="fl">忘记密码>></a>
+					  	<a  href="javascript:;" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#myModal-reg" class="fr">点击注册>></a>
+					  </div>
+					</form>
+		      </div>
+		      <div class="modal-footer" style="border-top: 0px;"></div>
+		    </div>
+		  </div>
+		</div>
+		
+		<!--dge边上悬浮-->
+		<div class="web-edge">
+			<ul style="padding-left: 0px;">
+				<li>
+					<a href="javascript:;"><img src="images/edge-01.png" /></a>
+					<div class="popover fade left in web-edge-hover" role="tooltip">
+						<div class="arrow" style="top: 50%;"></div>
+						<h3 class="popover-title">微信二维码</h3>
+						<div class="popover-content" style="padding: 0px;"><img style="width: 100%;" src="images/weixin.png" /></div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;"><img src="images/edge-02.png" /></a>
+					<div class="popover fade left in web-edge-hover" style="height: 76px; top: -8px;" role="tooltip">
+						<div class="arrow" style="top: 50%;"></div>
+						<h3 class="popover-title">微博</h3>
+						<div class="popover-content">关注我们</div>
+					</div>
+				</li>
+				<li>
+					<a  href="http://wpa.qq.com/msgrd?v=3&uin=380147589&site=qq&menu=yes" target="_blank"><img src="images/edge-03.png" /></a>
+					<div class="popover fade left in web-edge-hover" style="height: 76px; top: -8px;" role="tooltip">
+						<div class="arrow" style="top: 50%;"></div>
+						<h3 class="popover-title">QQ</h3>
+						<div class="popover-content">点击咨询</div>
+					</div>
+				</li>
+				<li>
+					<a href="javascript:;"><img src="images/edge-04.png" /></a>
+					<div class="popover fade left in web-edge-hover" style="height: 76px; top: -8px;" role="tooltip">
+						<div class="arrow" style="top: 50%;"></div>
+						<h3 class="popover-title">电话</h3>
+						<div class="popover-content">400-0000-000</div>
+					</div>
+				</li>
+				<li><img id="topBut" src="images/edge-05.png" /></li>
+			</ul>
+		</div>
+		
+	</body>
+	
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+	<script src="js/bootstrap-datetimepicker.js"></script>
+	<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+	
+	<script type="text/javascript" src="js/modal.js" ></script>
+	<script src="js/ProvinceAndCityJson.js"></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+	<script>
+	/**bootstrap datatime**/
+	$('.form_date').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+		format: 'yyyy-mm-dd'
+    });
+	function _save(_this){
+		var textInnerHTML = _this.innerHTML;
+
+		if(textInnerHTML == "修改"){
+			_this.innerHTML = "保存";
+			$('.web-input-info ul li input,.web-input-info ul li textarea,.web-input-info ul li select').removeAttr('disabled').removeClass('web-input-default').addClass('web-input-write');
+		}else{
+			var dataInfo = {};
+			/**姓名**/
+			var infoName = $("#infoName").val();
+			dataInfo.infoName = infoName;
+			
+			/**时间**/
+			var infoTime = $("#infoTime").val();
+			dataInfo.infoTime = infoTime;
+			dataInfo.infoTimeobj = $("#infoTime");
+			
+			/**QQ**/
+			var infoQQ = $("#infoQQ").val();
+			dataInfo.infoQQ = infoQQ;
+			dataInfo.infoQQobj = $("#infoQQ");
+			
+			/**电话**/
+			var infoMobile = $("#infoMobile").val();
+			dataInfo.infoMobile = infoMobile;
+			dataInfo.infoMobileobj = $("#infoMobile");
+			
+			/**邮箱**/
+			var infoEmil = $("#infoEmil").val();
+			dataInfo.infoEmil = infoEmil;
+			dataInfo.infoEmilobj = $("#infoEmil");
+			
+			
+			if(!checkInfo(dataInfo)){
+				return false;
+			}
+			
+			$("#basic_Message").hide().find(".error").html("");
+			/**
+			 * ajax
+			 * **/
+			_this.innerHTML = "修改"
+			$('.web-input-info ul li input,.web-input-info ul li textarea,.web-input-info ul li select').attr('disabled','disabled').addClass('web-input-default').removeClass('web-input-write');
+		}
+	}
+	
+	function checkInfo(dataInfo){
+		basic_Message = $("#basic_Message");
+		$('.web-input-info ul li input,.web-input-info ul li textarea,.web-input-info ul li select').removeClass("redBoder")
+		/**验证姓名**/
+		if(dataInfo.infoName == '' || dataInfo.infoName == undefined || dataInfo.infoName == null){
+			basic_Message.show().find(".error").html("姓名不能为空");
+			$("#infoName").addClass("redBoder");
+			return false;
+		}
+		/**时间**/
+		if(dataInfo.infoTime == '' || dataInfo.infoTime == undefined || dataInfo.infoTime == null){
+			basic_Message.show().find(".error").html("时间不能为空");
+			$("#infoTime").addClass("redBoder");
+			return false;
+		}else{
+			if (!/^\d{4}[-]\d{2}[-]\d{2}$/.test(dataInfo.infoTime)) {
+				basic_Message.show().find(".error").html("时间格式不正确");
+				$("#infoTime").addClass("redBoder");
+				return false;
+			}
+		}
+		/*qq*/
+		if (!/^[1-9]{1}[\d]{4,9}$/.test(dataInfo.infoQQ)) {
+			basic_Message.show().find(".error").html("QQ号码不正确");
+			$("#infoQQ").addClass("redBoder");
+			return false;
+		}
+		
+		/*电话*/
+		if (! /^[1][34578]\d{9}$/.test(dataInfo.infoMobile)) {
+			basic_Message.show().find(".error").html("电话号码不正确");
+			$("#infoMobile").addClass("redBoder");
+			return false;
+		}
+		
+		/*邮箱*/
+		if (!/^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/.test(dataInfo.infoEmil)) {
+			basic_Message.show().find(".error").html("邮箱不正确");
+			$("#infoEmil").addClass("redBoder");
+			return false;
+		}
+		return true;
+	}
+	
+	/**省级联动**/
+	$(window).proCity({
+		infoPro		:'#infoPro',
+		infoCity    :'#infoCity',
+		infoArea	:'#infoArea',
+		provinceAndCityData	:provinceAndCityData.province
+	});
+	
+	</script>
+</html>
