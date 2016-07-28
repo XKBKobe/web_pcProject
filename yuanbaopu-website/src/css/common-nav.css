@@ -1,0 +1,481 @@
+.section-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.common-header .head-nav{
+  display: block;
+}
+
+.common-header .ybp-tel {
+  text-align: right;
+  padding-top: 28px;
+  margin: 0 62px;
+}
+
+.common-header .tel-num {
+  padding: 8px 0 5px 22px;
+  font-size: 20px;
+  background: url(../images/ybp-tel.png) no-repeat left center;
+  color: #fff;
+  margin-left: 44px;
+}
+
+.common-header .nav-logo a {
+  color: #fff;
+}
+
+.common-header .big-nav .nav-logo {
+  height: 100%;
+  padding: 42px 62px 0 73px;
+}
+
+.common-header .data-loan-logo {
+  margin-right: 75px;
+  background: url(../images/ybp-logo.png) no-repeat right center;
+  width: 119px;
+  height: 48px;
+}
+
+.common-header .nav-links {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.common-header .nav-links li {
+  float: left;
+}
+
+.common-header .nav-links li a:hover {
+  border-bottom: 2px solid #0599d9;
+}
+
+.common-header .nav-links li span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 0;
+}
+
+.common-header .worker-main {
+  height: 100%;
+  line-height: 52px;
+  color: #717178;
+  font-size: 12px;
+}
+
+.common-header .worker-main a {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.common-header .worker-main a:hover {
+  border-bottom: 2px solid #0599d9;
+}
+
+.common-header .p-ybp-logo {
+  border-right: 1px solid #717178;
+  margin-right: 75px;
+  margin-top: 6px;
+}
+
+.common-header .index-logo {
+  display: block;
+  width: 56px;
+  height: 20px;
+  background: url(../images/index-logo.png) no-repeat center center;
+  padding: 4px 0 20px 0;
+  margin-right: 90px;
+  margin-top: 6px;
+}
+
+.common-header .fide-logo {
+  display: block;
+  width: 122px;
+  height: 22px;
+  background: url(../images/FIDE-logo.png) no-repeat center center;
+  padding: 4px 0 20px 0;
+  margin-right: 90px;
+  margin-top: 6px;
+}
+
+.common-header .e-loan-logo {
+  display: block;
+  width: 121px;
+  height: 22px;
+  background: url(../images/e-loan-logo.png) no-repeat center center;
+  padding: 4px 0 20px 0;
+  margin-top: 6px;
+}
+
+.common-header .nav-link {
+  margin-left: 44px;
+}
+
+.common-header .line-link {
+  color: #717178;
+  margin: 0 60px;
+}
+
+.common-header .small-nav {
+  padding: 2px 0;
+  background: #fff;
+  border-bottom: 1px solid #fafafa;
+}
+
+.common-header .small-nav .nav-logo{
+  height: 100%;
+  padding: 0 62px 0 73px;
+}
+
+.common-header .small-nav .p-ybp-logo {
+  border-right: 1px solid #717178;
+  margin-top: 12px;
+}
+
+.common-header .small-nav .worker-main{
+  line-height: 67px;
+}
+
+.common-header .small-nav .worker-main,
+.common-header .small-nav .worker-main a {
+  color: #000;
+}
+
+.common-header .small-nav .tel-num {
+  background: url(../images/tel-black.png) no-repeat left center;
+  color: #000;
+  font-size: 14px;
+}
+
+.common-header .small-nav .index-logo{
+  background: url(../images/index-logo-black.png) no-repeat center center;
+  padding: 0 0 24px 0;
+  margin-top: 11px;
+}
+
+.common-header .small-nav .fide-logo {
+  background: url(../images/fide-black.png) no-repeat center center;
+  padding: 0 0 24px 0;
+  margin-top: 11px;
+}
+
+.common-header .small-nav .e-loan-logo {
+  background: url(../images/e-loan-black.png) no-repeat center center;
+  padding: 0 0 24px 0;
+  margin-top: 11px;
+}
+
+.common-header .mobile-nav{
+  display: none;
+}
+
+@media screen and (min-width: 1216px) and (max-width: 1400px) {
+  /*--section-header--*/
+  .common-header .line-link {
+    margin: 0 40px;
+  }
+
+  .common-header .ybp-tel {
+    margin: 0 30px;
+  }
+
+  .common-header .big-nav .nav-logo {
+    padding: 42px 40px 0 40px;
+  }
+
+  .common-header .index-logo {
+    margin-right: 36px;
+  }
+
+  .common-header .fide-logo {
+    margin-right: 47px;
+  }
+
+  .common-header .small-nav .nav-logo {
+    padding: 0 40px 0 40px;
+  }
+
+  .common-header .p-ybp-logo,
+  .common-header .data-loan-logo {
+    margin-right: 37px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1215px) {
+  /*---section-header---*/
+  .common-header .ybp-tel {
+    padding-top: 24px;
+    margin: 0 24px;
+  }
+
+  .common-header .big-nav .nav-logo {
+    padding: 42px 24px 0 35px;
+  }
+
+  .common-header .index-logo {
+    margin-right: 36px;
+  }
+
+  .common-header .fide-logo {
+    margin-right: 49px;
+  }
+
+  .common-header .p-ybp-logo,
+  .common-header .small-nav .p-ybp-logo {
+    margin-right: 35px;
+  }
+
+  .common-header .small-nav .nav-logo {
+    padding: 0 24px 0 35px;
+  }
+
+  .common-header .data-loan-logo {
+    margin-right: 35px;
+  }
+
+  .common-header .nav-link {
+    margin-left: 26px;
+  }
+
+  .common-header .tel-num {
+    margin-left: 31px;
+  }
+
+  .common-header .line-link {
+    margin: 0 30px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .common-header .head-nav{
+    display: none;
+  }
+
+  /*--------mobile-nav-----------*/
+  .common-header .mobile-nav {
+    background: #06070d;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+    display: block;
+    width: 100%;
+  }
+
+  .common-header .mobile-nav .nav-list {
+    position: relative;
+  }
+
+  .common-header .mobile-nav .nav-ybp-logo {
+    background: url("../images/ybp-logo.png") no-repeat center center;
+    width: 75px;
+    height: 30px;
+    display: inline-block;
+    background-size: contain;
+    margin: 11px 0 0 0;
+  }
+
+  .common-header .mobile-nav .menus-list-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+    width: 50px;
+    height: 50px;
+  }
+
+  .common-header .menus-list-icon span {
+    position: absolute;
+    left: calc((100% - 25px) / 2);
+    top: calc((100% - 1px) / 2);
+    width: 25px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .common-header .menus-list-icon span:nth-child(1) {
+    transform: translateY(4px) rotate(0deg);
+  }
+
+  .common-header .menus-list-icon span:nth-child(2) {
+    transform: translateY(-4px) rotate(0deg);
+  }
+
+  .common-header .menus-list-hide-click span:nth-child(1) {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: clickfirst;
+  }
+
+  .common-header .menus-list-hide-click span:nth-child(2) {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: clicksecond;
+  }
+
+  @keyframes clickfirst {
+    0% {
+      transform: translateY(4px) rotate(0deg);
+
+    }
+
+    100% {
+      transform: translateY(0) rotate(45deg);
+    }
+  }
+
+  @keyframes clicksecond {
+    0% {
+      transform: translateY(-4px) rotate(0deg);
+    }
+
+    100% {
+      transform: translateY(0) rotate(-45deg);
+    }
+  }
+
+  .common-header .mobile-nav .main-tel {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .common-header .mobile-nav .main-tel span {
+    background: url("../images/mobile-tel.png") no-repeat center center;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    display: block;
+    margin: 12px auto 0 auto;
+  }
+
+  .common-header .mobile-inner-menus {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50px;
+    display: none;
+    z-index: 1000;
+    margin: auto;
+    max-width: 750px;
+  }
+
+  .common-header .menus-list a {
+    line-height: 34px;
+    text-decoration: none;
+    width: 100%;
+    color: #FFFFFF;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 10px 0 10px 0;
+    display: block;
+  }
+
+  .common-header .mobile-inner-menus a {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: returnToNormal;
+    animation-name: returnToNormal;
+  }
+
+  @-webkit-keyframes returnToNormal {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @keyframes returnToNormal {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  .common-header .menus-list a:first-child {
+    border-top: solid 1px rgba(255, 255, 255, 0.3);
+  }
+
+  .common-header .menus-list a:hover {
+    background: #07344b;
+  }
+
+  .common-header .mobile-inner-menus .fide-menu {
+    padding: 18px 0;
+  }
+
+  .common-header .fide-menu .fide-icon {
+    background: url(../images/FIDE-logo.png) no-repeat center center;
+    height: 20px;
+  }
+
+  .common-header .mobile-inner-menus .e-loan-menu {
+    padding: 18px 0;
+  }
+
+  .common-header .e-loan-menu .e-loan-icon {
+    background: url(../images/e-loan-logo.png) no-repeat center center;
+    height: 20px;
+  }
+
+  .common-header .login-info {
+    position: absolute;
+    bottom: 63px;
+    width: 100%;
+  }
+
+  .common-header .login-info .login-btn {
+    width: 87px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #fff;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+
+  .common-header .login-info .menu-up {
+    background: url("../images/menu-up.png") no-repeat center center;
+    background-size: contain;
+    width: 19px;
+    height: 10px;
+    margin: 20px auto 0 auto;
+    display: block;
+  }
+}

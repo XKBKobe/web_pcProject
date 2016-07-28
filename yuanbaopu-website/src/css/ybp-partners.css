@@ -1,0 +1,588 @@
+.ybpPartners .fl {
+  float: left;
+}
+
+.ybpPartners .fr {
+  float: right;
+}
+
+.ybpPartners .wrap {
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+.ybpPartners .fp-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.ybpPartners .fp-auto-height{
+  height: auto !important;
+}
+
+/**---------section-header----------*/
+.ybpPartners {
+  background: #0088c3;
+  position: relative;
+  overflow: hidden;
+}
+
+.ybpPartners .ybp-info{
+  border-bottom: 2px solid #0599d9;
+}
+
+/*--------------section-menu--------*/
+.ybpPartners .section-menus{
+  width: 132px;
+  height: 377px;
+  background: url("../images/menus-bg.png");
+  position: fixed;
+  top: 160px;
+  left: 111px;
+  z-index: 3;
+}
+
+/*---------cooperation-partners----------*/
+.ybpPartners .bg-source{
+  margin-bottom: 145px;
+}
+
+.ybpPartners .overlay{
+  width: 100%;
+  height: 324px;
+  background: url("../images/about-overlay.png") repeat-x;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+}
+
+.ybpPartners .pc-menus{
+  display: block;
+}
+
+.ybpPartners .mobile-menus,
+.ybpPartners .mobile-img{
+  display: none;
+}
+
+.ybpPartners .company-sum{
+  width: 41px;
+  height: 48px;
+  background: #fff;
+  padding: 4px 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ybpPartners .company-sum dd{
+  float: left;
+}
+
+.ybpPartners .govern-support{
+  margin: 0 26px;
+}
+
+.ybpPartners .company-sum a{
+  width: 33px;
+  display: block;
+  font-size: 16px;
+  color: #0599d9;
+  padding: 0 4px;
+}
+
+.ybpPartners .company-sum a:hover{
+  background: #d6f3ff;
+  border-radius: 5px;
+}
+
+.ybpPartners .other-link{
+  width: 47px;
+  font-size: 16px;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  text-align: center;
+}
+
+.ybpPartners .other-link li{
+  margin-bottom: 21px;
+}
+
+.ybpPartners .other-link li a{
+  height: 49px;
+  display: block;
+}
+
+.ybpPartners .company-detail{
+  position: absolute;
+  top: 160px;
+  left: 243px;
+  z-index: 1;
+  background: url("../images/details-bg.png");
+  padding: 58px 47px 26px 51px;
+}
+
+.ybpPartners .company-detail .show-detail{
+  width: 538px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.ybpPartners .show-detail p{
+  line-height: 25px;
+}
+
+.ybpPartners .info-title{
+  height: 45px;
+  margin-bottom: 33px;
+}
+
+.ybpPartners .show-detail .show-title1{
+  background: url("../images/co-partners.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.ybpPartners .show-detail .detail-desc {
+  margin-bottom: 20px;
+}
+
+.ybpPartners .source-bg{
+  height: 557px;
+  width: 100%;
+  background: url(../images/source-bg-big.jpg) no-repeat center;
+}
+
+.ybpPartners .co-partners{
+  padding: 44px;
+  background: #fff;
+  position: absolute;
+  top: 442px;
+  left: 243px;
+}
+
+.ybpPartners .partners-icon{
+  width: 1078px;
+  height: 112px;
+  background: url(../images/co-partners-lg.png) no-repeat center;
+}
+
+/*---------------government-support--------*/
+.ybpPartners .government-support{
+  width: 100%;
+  padding-top: 100px;
+  margin: auto;
+}
+
+.ybpPartners .main-wrap{
+  width: 1204px;
+  margin-left: 243px;
+}
+
+.ybpPartners .government-support .main-title{
+  width: 590px;
+  padding: 58px 0 58px 50px;
+  background: #0597d7;
+}
+
+.ybpPartners .government-support .title-logo{
+  height: 45px;
+  background: url(../images/government-support.png) no-repeat left center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.ybpPartners .support-cases{
+  margin-top: 30px;
+  margin-right: -106px;
+  zoom: 1
+}
+
+.ybpPartners .case-desc{
+  font-size: 13px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.ybpPartners .support-cases li img{
+  display: block;
+  margin: auto;
+}
+
+.ybpPartners .support-cases ul li{
+  float: left;
+  width: 195px;
+  padding: 23px 16px;
+  background: #0597d7;
+  margin: 0 100px 65px 0;
+  text-align: center;
+}
+
+/*----------------legal-adviser-------------*/
+.ybpPartners .legal-adviser{
+  width: 100%;
+  padding-top: 100px;
+  margin: 0 auto 141px 0;
+}
+
+.ybpPartners .legal-info{
+  padding: 58px 52px;
+  background: #0597d7;
+  height: 170px;
+}
+
+.ybpPartners .legal-info .legal-cont{
+  width: 541px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.ybpPartners .legal-info .legal-title{
+  height: 45px;
+  background: url(../images/co-legal-icon.png) no-repeat left center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  margin-bottom: 33px;
+}
+
+.ybpPartners .legal-info .legal-img{
+  text-align: center;
+  margin: 28px 105px 0 0;
+}
+
+/*-----------------section-footer-----------*/
+.ybpPartners .section-footer {
+  line-height: 100px;
+  height: 100px;
+  width: 100%;
+  background: #31393c;
+  color: #a5b5bb;
+  font-size: 13px;
+  position: relative;
+}
+
+.ybpPartners .footer-logo {
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1475px){
+  /*---------cooperation-partners----------*/
+  .ybpPartners .co-partners{
+    padding: 44px 25px;
+  }
+
+  /*---------government-support----------*/
+  .ybpPartners .support-cases ul li{
+    margin-right: 73px;
+  }
+
+  /*---------legal-adviser----------*/
+  .ybpPartners .legal-info{
+    width: 1023px;
+  }
+
+  .ybpPartners .legal-info .legal-img{
+    margin-right: 75px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  /*---------cooperation-partners----------*/
+  .ybpPartners .main-wrap{
+    width: 880px;
+  }
+  
+  .ybpPartners .partners-icon{
+    width: 731px;
+    height: 191px;
+    background: url(../images/co-partners-md.png) no-repeat center;
+  }
+
+  /*---------legal-adviser----------*/
+  .ybpPartners .legal-info .legal-cont{
+    width: 475px;
+  }
+
+  .ybpPartners .legal-info .legal-img {
+    margin: 28px 0 0 0;
+  }
+
+@media screen and (max-width: 1200px) {
+  /*--------section-menus-------*/
+  .ybpPartners .section-menus{
+    left: 58px;
+  }
+
+  /*---------cooperation-partners----------*/
+  .ybpPartners .main-wrap{
+    margin-left: 190px;
+    width: 772px;
+  }
+
+  .ybpPartners .company-detail,
+  .ybpPartners .co-partners{
+    left: 190px;
+  }
+
+  .ybpPartners .partners-icon{
+    width: 522px;
+    height: 246px;
+    background: url(../images/co-partners-sm.png) no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+
+  .ybpPartners .co-partners{
+    padding: 44px 63px 44px 51px;
+  }
+
+  /*---------government-support----------*/
+  .ybpPartners .government-support{
+    margin-top: 210px;
+  }
+
+  .ybpPartners .support-cases ul li{
+    margin-right: 48px;
+  }
+
+  /*---------legal-adviser----------*/
+  .ybpPartners .legal-info .legal-cont{
+    width: 390px;
+  }
+
+  .ybpPartners .legal-info{
+    padding-right: 42px;
+  }
+
+  .ybpPartners .legal-adviser{
+    padding-top: 52px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .ybpPartners,
+    .ybpPartners .wrap{
+      max-width: 750px;
+      margin: auto;
+    }
+
+    /*--section-header--*/
+    .ybpPartners .head-nav,
+    .ybpPartners .section-footer .pc-footer,
+    .ybpPartners .pc-menus,
+    .ybpPartners .overlay{
+      display: none;
+    }
+
+    .ybpPartners .section-footer .mobile-footer,
+    .ybpPartners .mobile-menus,
+    .ybpPartners .mobile-img{
+      display: block;
+    }
+
+    /*---------cooperation-partners----------*/
+    .ybpPartners .mobile-wrap,
+    .ybpPartners .main-wrap{
+      width: initial !important;
+      padding: 0 20px;
+      margin: 0;
+    }
+
+    .ybpPartners .company-detail{
+      position: relative;
+      top: 70px;
+      left: 0;
+      padding: 20px 15px;
+    }
+
+    .ybpPartners .info-title,
+    .ybpPartners .government-support .title-logo,
+    .ybpPartners .legal-info .legal-title{
+      height: 32px;
+    }
+
+    .ybpPartners .info-title,
+    .ybpPartners .legal-info .legal-title{
+      margin-bottom: 20px;
+    }
+
+    .ybpPartners .show-detail .detail-desc,
+    .ybpPartners .legal-info .legal-cont{
+      font-size: 16px;
+    }
+
+    .ybpPartners .company-detail .show-detail,
+    .ybpPartners .legal-info .legal-cont{
+      width: 100%;;
+    }
+
+    .ybpPartners .co-partners{
+      position: relative;
+      top: 70px;
+      left: 0;
+      padding: 20px 15px;
+    }
+
+    .ybpPartners .partners-icon{
+      width: 100%;
+      height: auto;
+      background: none;
+      text-align: center;
+    }
+
+    .ybpPartners .mobile-img img{
+      width: 100%;
+      max-width: 522px;
+    }
+    
+    /*---------government-support----------*/
+    .ybpPartners .government-support,
+    .ybpPartners .support-cases{
+      padding-top: 0;
+      margin: 0;
+    }
+
+    .ybpPartners .bg-source {
+      margin-bottom: 60px;
+    }
+
+    .ybpPartners .government-support .main-title,
+    .ybpPartners .legal-info{
+      width: auto;
+      height: auto;
+      padding: 20px 15px;
+    }
+
+    .ybpPartners .support-cases ul li{
+      width: 50%;
+      padding: 23px 0;
+      margin: 0;
+    }
+
+    .ybpPartners .support-cases li img{
+      width: 100%;
+      max-width: 180px;
+    }
+
+    .ybpPartners .case-desc{
+      font-size: 12px;
+    }
+
+    .ybpPartners .support-cases{
+      background: #0597d7;
+    }
+
+    
+    /*---------legal-adviser----------*/
+    .ybpPartners .legal-adviser{
+      margin-bottom: 100px;
+    }
+
+    .ybpPartners .legal-info .legal-img,
+    .ybpPartners .legal-info .legal-cont{
+      float: none;
+    }
+
+    .ybpPartners .legal-info .legal-img {
+      margin: 50px 0 30px 0;
+    }
+    
+    /*---section-footer---*/
+    .ybpPartners .wrap{
+      width: 320px;
+    }
+
+    .ybpPartners .section-footer {
+      height: 100px;
+      line-height: 20px;
+      font-size: 12px;
+    }
+
+    .ybpPartners .footer-logo {
+      width: 60px;
+      margin: 16px 0 10px 0;
+    }
+
+    /*---section-menus-----*/
+    .ybpPartners .section-menus{
+      width: 100%;
+      height: 50px;
+      position: relative;
+      top: auto;
+      left: auto;
+    }
+
+    .ybpPartners .bottom-menus{
+      width: 375px;
+      height: 50px;
+      margin: auto;
+      position: relative;
+    }
+
+    .ybpPartners .other-link{
+      width: 375px;
+      font-size: 14px;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    .ybpPartners .mobile-menus ul li {
+      width: 41px;
+      float: left;
+      margin-left: 43px;
+      line-height: 16px;
+    }
+
+    .ybpPartners .mobile-menus .bg-source{
+      color: #0599d9;
+      background: #fff;
+    }
+
+    .ybpPartners .other-link li a{
+      margin-top: 7px;
+      padding: 3px 0;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 470px) {
+    .ybpPartners .support-cases ul li{
+      width: 43%;
+      padding: 23px 11px;
+    }
+  }
+
+  @media screen and (max-width: 374px) {
+    .ybpPartners .mobile-wrap,
+    .ybpPartners .main-wrap{
+      padding: 0 10px;
+    }
+    
+    /*---------government-support----------*/
+    .ybpPartners .support-cases ul li{
+      width: 35%;
+      padding: 23px 22px;
+    }
+
+    .ybpPartners .case-desc{
+      margin-top: 15px;
+    }
+
+    /*---------legal-adviser----------*/
+    .ybpPartners .legal-img img{
+      width: 200px;
+    }
+    
+    /*--section-menus---*/
+    .ybpPartners .mobile-menus ul li{
+      margin-left: 30px;
+    }
+  }
+ }
+}

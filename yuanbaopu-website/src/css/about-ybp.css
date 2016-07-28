@@ -1,0 +1,827 @@
+.aboutYBP .fl {
+  float: left;
+}
+
+.aboutYBP .fr {
+  float: right;
+}
+
+.aboutYBP .wrap {
+  text-align: center;
+  width: 1200px;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+.aboutYBP .fp-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutYBP .fp-auto-height{
+  height: auto !important;
+}
+
+/**---------section-header----------*/
+.aboutYBP {
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutYBP .ybp-info{
+  border-bottom: 2px solid #0599d9;
+}
+
+/*--------------section-menu--------*/
+.aboutYBP .section-menus{
+  width: 132px;
+  height: 454px;
+  background: url("../images/menus-bg.png");
+  position: fixed;
+  top: 160px;
+  left: 111px;
+  z-index: 1;
+}
+
+/*---------banner----------*/
+.aboutYBP .overlay{
+  width: 100%;
+  height: 324px;
+  background: url("../images/about-overlay.png") repeat-x;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.aboutYBP .pic-list .icon,
+.aboutYBP .office-pics,
+.aboutYBP .pc-menus,
+.aboutYBP .pc-office,
+.aboutYBP .head-nav{
+  display: block;
+}
+
+.aboutYBP .mobile-menus,
+.aboutYBP .mobile-office,
+.aboutYBP .swiper-pagination{
+  display: none;
+}
+
+.aboutYBP .banner.fp-section,
+.aboutYBP .person-info.fp-section,
+.aboutYBP .office-bg.fp-section,
+.aboutYBP .company-pic,
+.aboutYBP .ybp-manager,
+.aboutYBP .ybp-office{
+  height: 954px !important;
+}
+
+.aboutYBP .company-sum{
+  width: 41px;
+  height: 48px;
+  background: #fff;
+  padding: 4px 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.aboutYBP .company-sum dd{
+  float: left;
+}
+
+.aboutYBP .office-back{
+  margin-left: 18px;
+}
+
+.aboutYBP .managers-team{
+  margin: 0 26px;
+}
+
+.aboutYBP .company-sum a{
+  width: 33px;
+  display: block;
+  font-size: 16px;
+  color: #0599d9;
+  padding: 0 4px;
+}
+
+.aboutYBP .company-sum a:hover{
+  background: #d6f3ff;
+  border-radius: 5px;
+}
+
+.aboutYBP .other-link{
+  width: 47px;
+  font-size: 16px;
+  position: absolute;
+  top: 53px;
+  left: 40px;
+  text-align: center;
+}
+
+.aboutYBP .other-link li{
+  margin-bottom: 21px;
+}
+
+.aboutYBP .other-link li a{
+  height: 50px;
+  display: block;
+}
+
+.aboutYBP .company-detail,
+.aboutYBP .managers-detail{
+  position: absolute;
+  top: 160px;
+  left: 243px;
+  z-index: 1;
+  background: url("../images/details-bg.png");
+  padding: 58px 47px 33px 51px;
+}
+
+.aboutYBP .company-detail .show-detail,
+.aboutYBP .managers-detail .manager-info{
+  width: 538px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.aboutYBP .show-detail p,
+.aboutYBP .manager-story p{
+  line-height: 25px;
+}
+
+.aboutYBP .banner .yx-rotation-title{
+  background: url("../images/company-title.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  height: 59px;
+  line-height: 59px;
+  width: 236px;
+  position: absolute;
+  bottom: 50px;
+  right: 55px;
+}
+
+.aboutYBP .banner .yx-rotation-t {
+  position: absolute;
+  color: #fff;
+  font-size: 16px;
+  bottom: 0;
+  left: 10px;
+  line-height: 47px
+}
+
+.aboutYBP .banner .yx-rotation-focus {
+  position: absolute;
+  right: 10px;
+  top: 29px;
+}
+
+.aboutYBP .banner .yx-rotation-focus span {
+  width: 1px;
+  height: 13px;
+  line-height: 12px;
+  float: left;
+  margin-left: 5px;
+  display: block;
+  background: #ffea00;
+  opacity: 0.3;
+  filter: Alpha(opacity=30);
+  text-indent: -9999px;
+}
+
+.aboutYBP .banner .yx-rotation-focus span.hover{
+  opacity: 1;
+  filter: Alpha(opacity=100);
+}
+
+.aboutYBP .info-title{
+  height: 45px;
+  margin-bottom: 33px;
+}
+
+.aboutYBP .company-pic li,
+.aboutYBP .ybp-office li{
+  margin-left: -960px;
+  left: 50%;
+}
+
+.aboutYBP .manager-info .pic-list{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.aboutYBP .manager-info .pic-list li{
+  float: left;
+  margin-right: 5px;
+}
+
+.aboutYBP .manager-info li a{
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  border: 1px solid #ffea00;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  color: #ffea00;
+}
+
+.aboutYBP .manager-info li a:hover{
+  background: #0783b9;
+}
+
+.aboutYBP .manager-info li a:active{
+  background: #03658f;
+}
+
+.aboutYBP .pic-list .btn{
+  width: 23px;
+  height: 23px;
+  display: block;
+}
+
+.aboutYBP .pic-list .icon{
+  border: 1px solid transparent;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.aboutYBP .pic-list .active{
+  background: #fff;
+  border: 1px solid #fff;
+  color: #1298d3;
+}
+
+.aboutYBP .pic-list .active:hover{
+  background: #fff;
+}
+
+.aboutYBP .pic-list .active:active{
+  background: #fff;
+}
+
+.aboutYBP .pic-list .icon:hover{
+  background: #0783b9;
+  border: 1px solid #ffea00;
+}
+
+.aboutYBP .pic-list .icon:active{
+  border: 1px solid #ffea00;
+  background: #03658f;
+}
+
+.aboutYBP .pic-list .left-icon{
+  margin-right: 15px !important;
+}
+
+.aboutYBP .pic-list .right-icon{
+  margin-left: 10px;
+}
+
+.aboutYBP .pic-list .left-btn{
+  background: url("../images/manager-btn-left.png") no-repeat center;
+}
+
+.aboutYBP .pic-list .right-btn{
+  background: url("../images/manager-btn-right.png") no-repeat center;
+}
+
+.aboutYBP .show-detail .show-title1{
+  background: url("../images/company-sum.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.aboutYBP .show-detail .detail-desc {
+  margin-bottom: 20px;
+}
+
+/*-----------------person-info--------------*/
+.aboutYBP .person-info {
+  background: #747b85;
+}
+
+.aboutYBP .managers-detail .show-title2{
+  padding-left: 221px;
+  background: url("../images/managers-team.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.aboutYBP .manager-story{
+  font-size: 14px;
+  padding-bottom: 20px;
+  display: none;
+}
+
+.aboutYBP .manager-title{
+  width: 100%;
+}
+
+.aboutYBP .manager-story.show{
+  display: block;
+}
+
+.aboutYBP .manager-story .honor{
+  margin-top: 14px;
+}
+
+.aboutYBP .manager-story .manager-name{
+  font-size: 30px;
+  margin: 0 33px 10px 0;
+}
+
+.aboutYBP .ybp-manager{
+  width: 1920px !important;
+}
+
+.aboutYBP .ybp-manager img{
+  margin-left: 478px;
+}
+
+/*-----------------office-bg-----------------*/
+.aboutYBP .office-background{
+  position: absolute;
+  top: 160px;
+  left: 243px;
+  z-index: 2;
+  background: url("../images/details-bg.png");
+  padding: 58px 0 27px 51px;
+  width: 259px;
+}
+
+.aboutYBP .office-bg .show-title3{
+  background: url("../images/office-bg.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.aboutYBP .office-pics img{
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.aboutYBP .office-pics li a{
+  width: 63px;
+  height: 63px;
+  display: block;
+  *background: #236481;
+  background: rgba(0, 0, 0, 0.5);
+  filter: Alpha(opacity=40);
+  -moz-opacity:0.5;
+  opacity: 0.5;
+}
+
+.aboutYBP .office-pics li{
+  float: left;
+  padding: 0 63px 34px 0;
+  position: relative;
+}
+
+.aboutYBP .office-pics li a.active{
+  border: 4px solid #ffea00;
+  width: 55px;
+  height: 55px;
+  background: transparent;
+  opacity: 1;
+  filter: Alpha(opacity=100);
+}
+
+.aboutYBP .swiper-pagination{
+  top: 19px;
+  right: 27px;
+}
+
+.aboutYBP .swiper-pagination-clickable .swiper-pagination-bullet{
+  margin-left: 10px;
+}
+
+.aboutYBP .swiper-pagination-bullet{
+  background: #fff;
+  opacity: 1;
+}
+
+.aboutYBP .swiper-pagination-bullet-active{
+  background: #000;
+}
+
+/*-----------------section-footer-----------*/
+.aboutYBP .section-footer {
+  line-height: 100px;
+  height: 100px;
+  width: 100%;
+  background: #31393c;
+  color: #a5b5bb;
+  font-size: 13px;
+  position: relative;
+}
+
+.aboutYBP .footer-logo {
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+@media screen and (min-width: 1216px) and (max-width: 1400px) {
+  /*-----banner---------*/
+  .aboutYBP .banner.fp-section,
+  .aboutYBP .person-info.fp-section,
+  .aboutYBP .office-bg.fp-section,
+  .aboutYBP .company-pic,
+  .aboutYBP .ybp-manager,
+  .aboutYBP .ybp-office{
+    height: 700px !important;
+  }
+
+  .aboutYBP .company-pic img,
+  .aboutYBP .ybp-office img{
+    height: 700px;
+    width: 100%;
+  }
+
+  .aboutYBP .ybp-manager img {
+    margin-left: 556px;
+    height: 814px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1216px) {
+  /*-----banner---------*/
+  .aboutYBP .section-menus{
+    left: 60px;
+  }
+
+  .aboutYBP .company-detail .show-detail{
+    width: 400px;
+  }
+
+  .aboutYBP .managers-detail .manager-info{
+    width: 436px;
+  }
+
+  .aboutYBP .company-detail{
+    padding: 32px 32px 27px 32px;
+    left: 192px;
+  }
+
+  .aboutYBP .managers-detail{
+    padding: 32px 0 28px 32px;
+    left: 192px;
+  }
+
+  .aboutYBP .office-background{
+    padding: 30px 0 58px 35px;
+    left: 192px;
+  }
+
+  .aboutYBP .info-title{
+    margin-bottom: 30px;
+  }
+
+  .aboutYBP .show-detail .detail-desc{
+    margin-bottom: 15px;
+  }
+
+  .aboutYBP .banner.fp-section,
+  .aboutYBP .person-info.fp-section,
+  .aboutYBP .office-bg.fp-section,
+  .aboutYBP .company-pic,
+  .aboutYBP .ybp-manager,
+  .aboutYBP .ybp-office{
+    height: 700px !important;
+  }
+
+  .aboutYBP .company-pic img,
+  .aboutYBP .ybp-office img{
+    height: 700px;
+    width: 100%;
+  }
+
+  .aboutYBP .ybp-manager img {
+    margin-left: 335px;
+    height: 837px;
+  }
+
+  .aboutYBP .manager-story{
+    padding-bottom: 14px;
+  }
+
+  .aboutYBP .managers-detail .show-title2{
+    padding-left: 205px;
+  }
+
+  .aboutYBP .pic-list .left-icon{
+    margin-right: 10px !important;
+  }
+
+  .aboutYBP .pic-list .right-icon{
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .aboutYBP,
+  .aboutYBP .wrap{
+    max-width: 750px;
+    margin: auto;
+  }
+
+  /*--section-header--*/
+  .aboutYBP .head-nav,
+  .aboutYBP .section-footer .pc-footer,
+  .aboutYBP .pic-list .icon,
+  .aboutYBP .office-pics,
+  .aboutYBP .pc-menus,
+  .aboutYBP .pc-office{
+    display: none !important;
+  }
+
+  .aboutYBP .mobile-flash,
+  .aboutYBP .section-footer .mobile-footer,
+  .aboutYBP .mobile-menus,
+  .aboutYBP .mobile-office,
+  .aboutYBP .swiper-pagination{
+    display: block;
+  }
+
+  /*--------banner-------*/
+  .aboutYBP .overlay{
+    height: 125px;
+  }
+
+  .aboutYBP .banner{
+    background: #3e494f;
+    position: relative;
+  }
+
+  .aboutYBP .person-info{
+    height: 719px !important;
+    position: relative;
+  }
+
+  .aboutYBP .company-pic{
+    height: 700px !important;
+    position: relative;
+  }
+
+  .aboutYBP .ybp-manager{
+    height: 700px !important;
+    position: static !important;
+  }
+
+  .aboutYBP .office-bg,
+  .aboutYBP .ybp-office{
+    height: 300px !important;
+    position: relative;
+  }
+
+  .aboutYBP .banner .yx-rotation-title{
+    bottom: 19px;
+    right: 19px;
+  }
+
+  .aboutYBP .company-detail .show-detail{
+    width: auto;
+  }
+
+  .aboutYBP .company-pic img{
+    width: 100%;
+    height: 700px;
+  }
+
+  .aboutYBP .manager-info li a{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .aboutYBP .office-background{
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    padding: 15px 0 15px 10px
+  }
+
+  .aboutYBP .office-bg .show-title3{
+    margin-bottom: 0;
+  }
+
+  .aboutYBP .banner .yx-rotation-t{
+    font-size: 12px;
+    line-height: 43px;
+    left: 5px;
+  }
+
+  .aboutYBP .banner .yx-rotation-focus{
+    top: 15px;
+    right: 5px;
+  }
+
+  .aboutYBP .banner .yx-rotation-focus span{
+    height: 9px;
+  }
+
+  .aboutYBP .banner .yx-rotation-title{
+    bottom: 0;
+    right: 5px;
+    height: 42px;
+    width: 133px;
+  }
+
+  .aboutYBP .company-pic,
+  .aboutYBP .company-pic img,
+  .aboutYBP .office-bg img{
+    height: 300px !important;
+    margin-left: 0;
+  }
+
+  .aboutYBP .office-bg img{
+    width: 100%;
+  }
+
+  .aboutYBP .ybp-manager img{
+    width: 460px !important;
+    margin: auto;
+  }
+
+  .aboutYBP .company-pic li,
+  .aboutYBP .ybp-office li{
+    margin-left: -375px;
+  }
+
+  .aboutYBP .ybp-manager li{
+    left: 50%;
+    margin-left: -229px;
+  }
+
+  .aboutYBP .company-detail{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 20px 10px;
+  }
+
+  .aboutYBP .info-title{
+    height: 24px;
+    margin-bottom: 15px;
+  }
+
+  .aboutYBP .company-detail .show-detail,
+  .aboutYBP .managers-detail .manager-info{
+    font-size: 12px;
+  }
+
+  .aboutYBP .show-detail .detail-desc {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .aboutYBP .managers-detail{
+    top: 300px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 10px 55px 10px;
+  }
+
+  .aboutYBP .manager-story{
+    font-size: 12px;
+  }
+
+  .aboutYBP .manager-story .manager-name {
+    font-size: 20px;
+    margin: 0 18px 10px 0;
+  }
+
+  .aboutYBP .manager-story .honor {
+    margin-top: 7px;
+  }
+
+  .aboutYBP .manager-info .pic-list{
+    position: absolute;
+    bottom: 15px;
+    width: 248px;
+    left: 36%;
+  }
+
+  /*---section-footer---*/
+  .aboutYBP .wrap{
+    width: 320px;
+  }
+
+  .aboutYBP .section-footer {
+    height: 100px;
+    line-height: 20px;
+    font-size: 12px;
+  }
+
+  .aboutYBP .footer-logo {
+    width: 60px;
+    margin: 16px 0 10px 0;
+  }
+
+  /*---section-menus-----*/
+  .aboutYBP .section-menus{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  
+  .aboutYBP .bottom-menus{
+    width: 375px;
+    height: 50px;
+    margin: auto;
+    position: relative;
+  }
+
+  .aboutYBP .other-link{
+    width: 375px;
+    font-size: 14px;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .aboutYBP .mobile-menus ul li {
+    width: 41px;
+    float: left;
+    margin-left: 43px;
+    line-height: 16px;
+  }
+
+  .aboutYBP .mobile-menus .company-info{
+    color: #0599d9;
+    background: #fff;
+  }
+
+  .aboutYBP .other-link li a{
+    margin-top: 7px;
+    padding: 3px 0;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 630px) {
+  .aboutYBP .manager-info .pic-list{
+    left: 33%;
+  }
+}
+
+@media screen and (min-width: 470px) and (max-width: 550px) {
+  .aboutYBP .manager-info .pic-list{
+    left: 30%;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 414px) {
+  .aboutYBP .manager-info .pic-list{
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .aboutYBP .banner{
+    height: 737px !important;
+  }
+
+  .aboutYBP .banner .yx-rotation-t{
+    line-height: 35px;
+  }
+
+  .aboutYBP .banner .yx-rotation-title{
+    height: 37px;
+    line-height: 37px;
+    width: 124px;
+  }
+
+  .aboutYBP .company-detail .show-detail{
+    width: 168px;
+  }
+
+  .aboutYBP .manager-info .pic-list{
+    left: 21%;
+  }
+
+  .aboutYBP .bottom-menus,
+  .aboutYBP .other-link{
+    width: 320px;
+  }
+
+  .aboutYBP .mobile-menus ul li{
+    margin-left: 30px;
+  }
+}

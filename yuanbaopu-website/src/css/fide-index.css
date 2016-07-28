@@ -1,0 +1,745 @@
+.fideIndex .fl {
+  float: left;
+}
+
+.fideIndex .fr {
+  float: right;
+}
+
+/**---------section-header----------*/
+.fideIndex {
+  position: relative;
+  overflow: hidden;
+}
+
+.fideIndex .fide-logo{
+  border-bottom: 2px solid #0599d9;
+}
+
+/*--------section-poster-----*/
+.fideIndex .section-poster {
+  position: relative;
+}
+
+.fideIndex .parallux {
+  height: 700px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.fideIndex .fide-poster {
+  background: url("../images/fide-poster.jpg") no-repeat center;
+  height: 700px;
+  width: 100%;
+}
+
+.fideIndex .poster-content {
+  position: absolute;
+  top: 191px;
+  width: 100%;
+  left: 0;
+}
+
+.fideIndex .data-loan-title {
+  width: 100%;
+  margin: auto;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.fideIndex .fide-main-logo {
+  height: 94px;
+  background: url("../images/fide-title.png") no-repeat top center;
+  background-size: contain;
+  margin-bottom: 45px;
+}
+
+.fideIndex .fide-desc {
+  width: 580px;
+  margin: auto;
+  line-height: 30px;
+}
+
+.fideIndex .pc-desc,
+.fideIndex .section-footer .pc-footer,
+.fideIndex video{
+  display: block;
+}
+
+.fideIndex .mobile-desc,
+.fideIndex .section-footer .mobile-footer{
+  display: none;
+}
+
+.fideIndex .section-poster .go-check {
+  width: 290px;
+  height: 44px;
+  line-height: 44px;
+  background: #f08200;
+  margin: 48px auto 0 auto;
+  display: block;
+  font-size: 16px;
+  border: 3px solid #fff;
+}
+
+#home-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -340px;
+  margin-left: -960px;
+}
+
+/*----------section-feature-------------*/
+.fideIndex .wrap {
+  text-align: center;
+  width: 1048px;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+.fideIndex .desc-show ul {
+  height: 229px;
+}
+
+.fideIndex .desc-show .item-logo {
+  height: 117px;
+  display: block;
+}
+
+.fideIndex .desc-show .item1-logo {
+  background: url("../images/fide-tab1.png") no-repeat top center;
+  background-size: contain;
+}
+
+.fideIndex .desc-show .item2-logo {
+  background: url("../images/fide-tab2.png") no-repeat top center;
+  background-size: contain;
+}
+
+.fideIndex .desc-show .item3-logo {
+  background: url("../images/fide-tab3.png") no-repeat top center;
+  background-size: contain;
+}
+
+.fideIndex .desc-show .des-title {
+  font-size: 26px;
+  color: #404040;
+  margin-top: 23px;
+}
+
+.fideIndex .tabs {
+  width: 100%;
+  margin: auto;
+  background: #e2e5e7;
+}
+
+.fideIndex .tabs li {
+  width: 347px;
+  float: left;
+  margin-right: 2px;
+}
+
+.fideIndex .tabs li .tab {
+  padding: 25px 30px;
+  background: #c5c7cd;
+  text-decoration: none;
+  color: #8478B3;
+  cursor: pointer;
+}
+
+.fideIndex .tabs li .tab:active {
+  background: #fff;
+}
+
+.fideIndex .tabs li .tab:hover {
+  background: #fff;
+}
+
+.fideIndex .tabs_container {
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  zoom: 1;
+  height: 600px;
+}
+
+.fideIndex .tabs-content {
+  width: 1304px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.fideIndex .tabs-content .tab-title {
+  margin: 40px 0 18px 0;
+  height: 34px;
+}
+
+.fideIndex .tabs-content .tab1-title {
+  background: url("../images/fide-title1.png") no-repeat center;
+  background-size: contain;
+}
+
+.fideIndex .tabs-content .tab2-title {
+  background: url("../images/fide-title2.png") no-repeat center;
+  background-size: contain;
+}
+
+.fideIndex .tabs-content .tab3-title {
+  background: url("../images/fide-title3.png") no-repeat center;
+  background-size: contain;
+}
+
+.fideIndex .tabs-content .tab-text {
+  font-size: 18px;
+  color: #404040;
+}
+
+.fideIndex .tabs_container .tab1-poster {
+  height: 425px;
+  background: url("../images/tab1-poster.png") no-repeat center;
+  background-size: contain;
+  margin-top: 53px;
+}
+
+.fideIndex .tabs_container .tab2-poster {
+  width: 1304px;
+  height: 600px;
+  background: url("../images/tab2-poster.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: -40px;
+  *top: 0;
+  left: 0;
+}
+
+.fideIndex .tabs_container .tab3-poster {
+  height: 349px;
+  background: url("../images/tab3-poster.png") no-repeat center;
+  background-size: contain;
+  margin-top: 44px;
+}
+
+.fideIndex .make_transist {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.fideIndex .tab_active {
+  background: #fff !important;
+}
+
+/*--------------section-process---------*/
+.fideIndex .section-process {
+  height: 830px;
+  background: url("../images/fide-process-bg.jpg") no-repeat bottom center;
+  position: relative;
+}
+
+.fideIndex .process-cont {
+  padding-top: 76px;
+}
+
+.fideIndex .process-pic {
+  height: 679px;
+  background: url("../images/process-pic.png") no-repeat center top;
+  -webkit-background-size: contain;
+  background-size: contain;;
+}
+
+/*-----------------section-media------------*/
+.fideIndex .section-media {
+  padding: 68px 0;
+  background: #fff;
+  position: relative;
+}
+
+.fideIndex .section-media .media-report {
+  width: 620px;
+  padding: 0 38px 0 12px;
+  border-right: 1px solid #f2f2f2;
+}
+
+.fideIndex .section-media .bank-partners {
+  width: 328px;
+  padding: 0 12px 0 30px;
+  color: #989898;
+}
+
+.fideIndex .section-media .media-logo {
+  height: 23px;
+  background: url("../images/fide-media.png") no-repeat left center;
+  text-align: right;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.fideIndex .media-logo a {
+  color: #989898;
+}
+
+.fideIndex .section-media .partners-logo {
+  height: 23px;
+  background: url("../images/fide-partners.png") no-repeat left center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.fideIndex .section-media .pc-more {
+  display: inline-block;
+  margin-top: 7px;
+}
+
+.fideIndex .section-media .mobile-media {
+  display: block;
+}
+
+.fideIndex .section-media .mobile-more,
+.fideIndex .section-media .mobile-media {
+  display: none;
+}
+
+.fideIndex .section-media .media-info,
+.fideIndex .section-media .banks-list {
+  border-top: 1px solid #d3d3d3;
+  margin-top: 14px;
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.fideIndex .media-info .news-item{
+  width: 540px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.fideIndex .section-media .media-info li {
+  text-align: left;
+  padding-bottom: 14px;
+  *padding-bottom: 18px;
+  line-height: 32px;
+}
+
+.fideIndex .section-media .news-title {
+  color: #000;
+  font-size: 14px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 80%;
+  float: left;
+}
+
+.fideIndex .section-media .news-type {
+  padding-left: 10px;
+  font-size: 12px;
+  color: #989898;
+}
+
+.fideIndex .section-media .news-icon img {
+  vertical-align: middle;
+  width: 60px;
+  height: 36px;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");  /* Firefox 3.5+ */
+  filter: gray;  /* IE6-9 */
+  -webkit-filter: grayscale(100%);  /* Chrome 19+ & Safari 6+ */
+}
+
+.fideIndex .section-media .bank-icon {
+  float: left;
+  padding: 0 19px 30px 0;
+}
+
+/*-----------------section-footer-----------*/
+.fideIndex .section-footer {
+  line-height: 100px;
+  height: 100px;
+  width: 100%;
+  background: #31393c;
+  color: #a5b5bb;
+  font-size: 13px;
+  position: relative;
+}
+
+.fideIndex .footer-logo {
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1216px) {
+  .fideIndex .wrap {
+    width: 950px;
+  }
+
+  /*---section-feature----*/
+  .fideIndex .desc-show ul li {
+    width: 314px;
+  }
+
+  .fideIndex .tabs-content {
+    width: 1024px;
+  }
+
+  .fideIndex .tabs_container .tab2-poster {
+    background: url("../images/tab2-poster-md.png") no-repeat left center;
+  }
+
+  .fideIndex .section-media .bank-partners {
+    width: 283px;
+    padding: 0 3px 0 30px;
+  }
+
+  .fideIndex .section-media .media-report {
+    padding: 0 19px 0 5px;
+  }
+
+  .fideIndex .section-media .bank-partners {
+    padding-left: 10px;
+  }
+
+  .fideIndex .section-media .bank-icon{
+    padding: 0 7px 30px 0;
+  }
+
+  /*---section-process--*/
+  .fideIndex .section-process{
+    height: 770px;
+  }
+  
+  .fideIndex .process {
+    width: 164px;
+  }
+
+  .fideIndex .process-line {
+    margin: 75px 0 0 10px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .fideIndex {
+    max-width: 750px;
+    margin: auto;
+  }
+
+  /*--section-header--*/
+  .fideIndex .section-media {
+    display: block;
+    max-width: 750px;
+    margin: auto;
+  }
+
+  /*---section-poster---*/
+  .fideIndex .parallux {
+    height: 590px;
+  }
+
+  .parallux .parallux-bg {
+    position: absolute;
+  }
+
+  .fideIndex .fide-poster {
+    background: url("../images/fide-poster-sm.jpg") no-repeat bottom center;
+    height: 590px;
+    width: 100%;
+  }
+
+  .fideIndex .poster-content {
+    top: 98px;
+  }
+
+  .fideIndex .pc-desc,
+  .fideIndex video{
+    display: none;
+  }
+
+  .fideIndex .mobile-desc{
+    display: block;
+  }
+
+  .fideIndex .fide-main-logo {
+    height: 60px;
+    margin-bottom: 40px;
+  }
+
+  .fideIndex .fide-desc {
+    width: 355px;
+    font-size: 12px;
+  }
+
+  .fideIndex .section-poster .go-check {
+    width: 165px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    margin-top: 63px;
+  }
+
+  /*---section-feature---*/
+  .fideIndex .wrap {
+    max-width: 750px;
+    width: initial;
+  }
+
+  .fideIndex .desc-show ul {
+    height: 203px;
+    margin: auto;
+    width: 375px;
+  }
+
+  .fideIndex .tabs_container {
+    height: auto;
+  }
+
+  .fideIndex .tabs li {
+    width: 33%;
+    margin-right: 0;
+  }
+
+  .fideIndex .tabs li:first-child {
+    margin-right: 1px;
+  }
+
+  .fideIndex .tabs li:last-child {
+    margin-left: 1px;
+  }
+
+  .fideIndex .tabs li .tab {
+    padding: 60px 13px 30px 13px;
+  }
+
+  .fideIndex .section-feature .desc-show {
+    padding: 0;
+  }
+
+  .fideIndex .desc-show .des-title {
+    font-size: 14px;
+  }
+
+  .fideIndex .desc-show .item-logo {
+    height: 69px;
+  }
+
+  .fideIndex .tabs-content {
+    width: 355px;
+    padding: 0 10px;
+  }
+
+  .fideIndex .tabs-content:nth-child(1) {
+    text-align: left;
+    height: 549px;
+  }
+
+  .fideIndex .tabs-content:nth-child(2) {
+    height: 460px;
+    display: none;
+  }
+
+  .fideIndex .tabs-content:nth-child(3) {
+    text-align: right;
+    height: 438px;
+    display: none;
+  }
+
+  .fideIndex .tabs-content .tab1-title {
+    height: 24px;
+    background-position: left;
+  }
+
+  .fideIndex .tabs-content .tab2-title {
+    height: 24px;
+  }
+
+  .fideIndex .tabs-content .tab3-title {
+    height: 24px;
+    background-position: right;
+  }
+
+  .fideIndex .tabs-content .tab-text {
+    font-size: 12px;
+  }
+
+  .fideIndex .tabs_container .tab1-poster {
+    background: url("../images/tab1-poster-sm.png") no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    margin-top: 41px;
+  }
+
+  .fideIndex .tabs_container .tab2-poster {
+    background: url("../images/tab2-poster-sm.png") no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 100%;
+  }
+
+  .fideIndex .tabs_container .tab3-poster {
+    background: url("../images/tab3-poster-sm.png") no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    margin-top: 0;
+  }
+
+  /*---section-process---*/
+  .fideIndex .section-process {
+    height: 780px;
+  }
+
+  .fideIndex .process-pic {
+    background: url("../images/process-pic-sm.png") no-repeat center top;
+    background-size: contain;
+  }
+
+  .fideIndex .process-cont {
+    padding-top: 56px;
+  }
+
+  /*---section-media-----*/
+  .fideIndex .section-media .pc-more,
+  .fideIndex .section-media .pc-media,
+  .fideIndex .section-footer .pc-footer{
+    display: none;
+  }
+
+  .fideIndex .section-media .mobile-media,
+  .fideIndex .section-footer .mobile-footer{
+    display: block;
+  }
+
+  .fideIndex .section-media .mobile-more {
+    display: inline-block;
+  }
+
+  .fideIndex .section-media {
+    padding: 34px 0;
+  }
+
+  .fideIndex .section-media .media-report {
+    float: none;
+    padding: 0 10px;
+    max-width: 355px;
+    margin: auto;
+    border: none;
+  }
+
+  .fideIndex .section-media .news-title {
+    color: #000;
+    font-size: 14px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80%;
+  }
+
+  .fideIndex .section-media .news-type {
+    padding: 0 10px 0 0;
+  }
+
+  .fideIndex .section-media .bank-partners {
+    float: none;
+    padding: 0 10px 0 10px;
+    width: 355px;
+    margin: 40px auto 0 auto;;
+  }
+
+  .fideIndex .section-media .partners-logo,
+  .fideIndex .section-media .media-logo {
+    height: 16px;
+    padding-top: 2px;
+  }
+
+  .fideIndex .section-media .media-info li{
+    line-height: 18px;
+    padding-bottom: 20px;
+  }
+
+  .fideIndex .media-info .news-item{
+    width: 275px;
+  }
+
+  .fideIndex .media-info .report-info{
+    line-height: 35px;
+  }
+
+  .fideIndex .section-media .media-info,
+  .fideIndex .section-media .banks-list {
+    margin-top: 10px;
+    padding-top: 30px;
+  }
+
+  .fideIndex .section-media .bank-icon {
+    padding: 0 8px 30px 0;
+  }
+
+  /*---section-footer---*/
+  .fideIndex .section-footer {
+    height: 100px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .fideIndex .footer-logo {
+    width: 60px;
+    margin: 16px 0 10px 0;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 400px) {
+  /*---section-feature--*/
+  .fideIndex .tabs-content{
+    width: 355px;
+  }
+
+  /*---section-process---*/
+  .fideIndex .section-process {
+    height: 755px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  /*---section-poster---*/
+  .fideIndex .fide-desc {
+    width: 300px;
+  }
+
+  /*---section-feature--*/
+  .fideIndex .desc-show ul{
+    width: 320px;
+  }
+
+  .fideIndex .tabs-content,
+  .fideIndex .section-media .bank-partners{
+    width: 300px;
+  }
+
+  /*---section-process---*/
+  .fideIndex .section-process {
+    height: 700px;
+  }
+
+  /*--section-media--*/
+  .fideIndex .section-media .media-report{
+    max-width: 300px;
+  }
+
+  .fideIndex .media-info .news-item{
+    width: 222px;
+  }
+
+  .fideIndex .section-media .bank-icon {
+    padding: 0 12px 30px 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  /*---section-process---*/
+  .fideIndex .section-process {
+    height: 665px;
+  }
+}

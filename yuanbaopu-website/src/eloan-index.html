@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>元宝铺--专注电商卖家小微企业金融信用贷款平台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link rel="stylesheet" href="css/common.css"/>
+  <link rel="stylesheet" href="css/normalize.css"/>
+  <link rel="stylesheet" href="css/swiper.min.css"/>
+  <link rel="stylesheet" href="css/common-nav.css"/>
+  <link rel="stylesheet" href="css/jquery.parallux.min.css"/>
+  <link rel="stylesheet" href="css/eLoan-index.css"/>
+
+  <!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <style>
+    .eLoanIndex .parallux-bg {
+      position: absolute;
+    }
+
+    .eLoanIndex .product-menus .dropdown dd:hover {
+      opacity: 0.2;
+      background: #fff;
+    }
+
+    .eLoanIndex .small-nav .dropdown dd:hover {
+      background: #dddddd;
+    }
+
+  </style>
+  <![endif]-->
+
+</head>
+
+<body>
+<div class="eLoanIndex">
+  <!--悬浮按钮-->
+  <div class="toolbar">
+    <a href="#" class="item qq"></a>
+    <a href="#" class="item weiXin">
+      <div class="item-info">
+					<img src="images/toolbar-weixin.jpg" alt="微信二维码">
+      </div>
+    </a>
+    <a href="#" class="item tel">
+			<div class="hotLine">
+        <p>服务热线：4007-177-000</p>
+        <p>投诉热线：0571-56630749</p>
+        <p>服务时间：9:00-18:00</p>
+			</div>
+    </a>
+    <a href="#" class="item app">
+			<div class="item-info">
+				<img src="images/toolbar-app.jpg" alt="app二维码">
+			</div>
+    </a>
+    <a href="#" class="item feedback"></a>
+  </div>
+  <div class="feedback-overlay"></div>
+  <div class="feedback-form">
+    <div class="close"><a href="javascript:void(0)" id="close" class="closeBtn"></a></div>
+    <div class="content">
+      <div class="title">欢迎您给我们提出网站使用感受和建议</div>
+      <ul class="clearfix">
+        <li><span class="mark">*</span><input type="text" placeholder="请输入标题"></li>
+        <li><input type="text" placeholder="请输入联系人"></li>
+        <li><input type="text" placeholder="请输入手机号"><span class="alert">手机号码错误</span></li>
+        <li><input type="text" placeholder="请输入QQ号"></li>
+        <li><input type="text" placeholder="请输入email地址"></li>
+        <li><span class="mark">*</span><textarea placeholder="请输入信息反馈内容"></textarea></li>
+        <li><input class="code" type="text" placeholder="请输入验证码"><img src="images/feedback-code.png"></li>
+        <li><button type="submit" class="submit-btn">提交</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-header common-header">
+    <!--头部导航-->
+    <div class="head-nav big-nav">
+      <!--<div class="ybp-tel"><span class="tel-num">4007-117-000</span></div>-->
+      <div class="nav-logo clearfix">
+        <div class="fl nav-title clearfix">
+          <a class="p-ybp-logo fl" href="index.html">
+            <div class="data-loan-logo"></div>
+          </a>
+          <ul class="nav-links fl">
+            <li><a href="index.html" class="index-logo"></a></li>
+            <li><a href="fide-index.html" class="fide-logo"></a></li>
+            <li><a href="eloan-index.html" class="e-loan-logo"></a></li>
+          </ul>
+        </div>
+        <div class="worker-main fr">
+          <ul class="common-title clearfix">
+            <li><a href="about-ybp.html">我的贷款</a></li>
+            <li>
+              <div class="product-menus" id="product-list">
+                <span class="product">关于元宝铺</span>
+                <dl class="dropdown">
+                  <dd><a href="fide-index.html">元宝铺介绍</a></dd>
+                  <dd><a href="eloan-index.html">安全保障</a></dd>
+                  <dd><a href="eloan-index.html">招贤纳士</a></dd>
+                  <dd><a href="eloan-index.html">合作园区</a></dd>
+                  <dd><a href="eloan-index.html">下载中心</a></dd>
+                  <dd><a href="eloan-index.html">联系我们</a></dd>
+                </dl>
+              </div>
+            </li>
+            <li class="hide-cont">
+              <a href="#">登录</a>
+              <span class="line-link">|</span>
+              <a href="#">注册</a>
+            </li>
+            <li><span class="tel-num">4007-117-000</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--手机导航-->
+    <header class="mobile-nav">
+      <div class="nav-list">
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <div class="nav-ybp-logo"></div>
+        <div class="main-tel">
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!--手机菜单-->
+    <header class="mobile-nav">
+      <div class="nav-list">
+        <div class="menus-list-icon">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="mobile-inner-menus">
+          <div class="menus-list">
+            <a href="index.html">首页</a>
+            <a href="fide-index.html" class="fide-menu">
+              <div class="fide-icon"></div>
+            </a>
+            <a href="eloan-index.html" class="e-loan-menu">
+              <div class="e-loan-icon"></div>
+            </a>
+            <a href="about-ybp.html">我的贷款</a>
+            <a href="#">安全保障</a>
+          </div>
+          <div class="login-info">
+            <a href="#" class="login-btn">登录</a>
+            <a href="#" class="register-btn">注册</a>
+            <a href="#" class="menu-up"></a>
+          </div>
+        </div>
+        <div class="nav-ybp-logo"></div>
+        <div class="main-tel">
+          <span></span>
+        </div>
+      </div>
+    </header>
+  </div>
+  <!--<div class="menu-overlay"></div>-->
+  <!--<div class="mobile-menu">-->
+  <!--<div class="menu-bg"></div>-->
+  <!--<div class="menu">-->
+  <!--<ul class="menu-splitL">-->
+  <!--<li><a href="">登录</a></li>-->
+  <!--<li><a href="">注册</a></li>-->
+  <!--<li><a href="">数据化信贷解决方案 FIDE</a></li>-->
+  <!--<li><a href="">在线查询 FIDE Lite</a></li>-->
+  <!--<li><a href="">首页</a></li>-->
+  <!--<li><a href="">元宝铺-电商贷</a></li>-->
+  <!--<li><a href="">关于元宝铺</a></li>-->
+  <!--<li><a href="">商务合作</a></li>-->
+  <!--</ul>-->
+  <!--</div>-->
+  <!--<div class="burger">-->
+  <!--<div class="line1"></div>-->
+  <!--<div class="line2"></div>-->
+  <!--<div class="line3"></div>-->
+  <!--</div>-->
+  <!--</div>-->
+
+  <div class="section-flash">
+    <!--pc轮播-->
+    <div class="parallux pc-flash">
+      <div class="parallux-bg">
+        <div id="flash-picture" class="parallux-inner">
+          <div class="banner-list-item" style="background: url(images/eloan-bg.jpg) no-repeat center;">
+            <a href="#" class="video-wrap">
+              <!--<div class="video-bg">-->
+              <!--<div class="data-loan-title">-->
+              <!--<div class="eLoan-logo"></div>-->
+              <!--&lt;!&ndash;帅“贷”了！淘宝、天猫、京东等网店一键就能申请&ndash;&gt;-->
+              <!--<a href="#" class="eLoan-apply-btn">立即申请</a>-->
+              <!--</div>-->
+              <!--</div>-->
+            </a>
+          </div>
+          <div class="banner-list-item">
+            <a href="#" style="background: url(images/eloan-banner2.jpg) no-repeat center;">
+              <!--<div class="wrap banner2">-->
+              <!--<div class="banner2-title"></div>-->
+              <!--<div class="banner2-desc"></div>-->
+              <!--<div class="banner2-func">真正免费实现 微信商城 + 分销加盟 + 三级返佣 </div>-->
+              <!--<a class="banner2-btn" href="#">免费开通</a>-->
+              <!--</div>-->
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flash-point">
+      <div id="statusitem" class="status-item">
+        <span class="current"></span>
+        <span></span>
+        <!--<span></span>-->
+      </div>
+    </div>
+  </div>
+
+  <!--mobile轮播-->
+  <div class="flash-pics mobile-flash">
+    <div class="flash-picture">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="banner-video">
+              <div class="video-bg">
+                <div class="data-loan-title">
+                  <div class="eLoan-logo"></div>
+                  <a href="#" class="eLoan-apply-btn">立即申请</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background: url('images/eloan-banner2-sm.jpg') no-repeat center;">
+            <div class="wrap banner2">
+              <div class="banner2-title"></div>
+              <div class="banner2-desc"></div>
+              <div class="banner2-func">真正免费实现<br>微信商城 + 分销加盟 + 三级返佣</div>
+              <a class="banner2-btn" href="#">免费开通</a>
+            </div>
+          </div>
+          <!--<div class="swiper-slide"><img src="images/1.jpg"></div>-->
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="section-feature">
+    <div class="wrap">
+      <ul class="desc-show clearfix">
+        <li>
+          <div class="item-logo item1-logo">
+            <p class="des-title">急速放款</p>
+
+            <p class="desc">最快当天到账</p>
+          </div>
+        </li>
+        <li>
+          <div class="item-logo item2-logo">
+            <p class="des-title">更低利息</p>
+
+            <p class="desc">日息低至万分之3.5</p>
+          </div>
+        </li>
+        <li>
+          <div class="item-logo item3-logo">
+            <p class="des-title">更高额度</p>
+
+            <p class="desc">最高可申请100万元</p>
+          </div>
+        </li>
+        <li>
+          <div class="item-logo item4-logo">
+            <p class="des-title">安全可靠</p>
+
+            <p class="desc">与各大银行深度合作</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-process">
+    <div class="wrap">
+      <div class="eLoan-process">在线化操作，电商融资简单快速</div>
+      <ul class="process-logo clearfix">
+        <li>
+          <div class="process process1">
+            <p>提交资料</p>
+
+            <p>申请贷款</p>
+          </div>
+        </li>
+        <li>
+          <div class="process-line"></div>
+        </li>
+        <li>
+          <div class="process process2">
+            <p>元宝铺评估</p>
+
+            <p>授信额度</p>
+          </div>
+        </li>
+        <li>
+          <div class="process-line process-line3"></div>
+        </li>
+        <li>
+          <div class="process process3">
+            <p>银行审核</p>
+
+            <p>放款</p>
+          </div>
+        </li>
+        <li>
+          <div class="process-line m-process-line"></div>
+        </li>
+        <li>
+          <div class="process process4">
+            <p>签约完成</p>
+
+            <p>支用</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-apply">
+    <div class="wrap">
+      <div class="eLoan-apply">只需电商经营数据，告别抵押担保</div>
+      <ul class="apply-condition clearfix">
+        <li class="m-apply">
+          <div class="apply-logo"><img src="images/e-condition1.png"></div>
+          <div class="apply-desc desc1">以网店形式经营的个体商户或者企业</div>
+        </li>
+        <li>
+          <div class="apply-logo"><img src="images/e-condition2.png"></div>
+          <div class="apply-desc desc2">店铺连续经营满1年</div>
+        </li>
+        <li class="m-apply">
+          <div class="apply-logo"><img src="images/e-condition3.png"></div>
+          <div class="apply-desc desc3">22周岁-50周岁中国公民</div>
+        </li>
+        <li>
+          <div class="apply-logo"><img src="images/e-condition4.png"></div>
+          <div class="apply-desc desc4">年月均2万元以上</div>
+        </li>
+      </ul>
+      <div class="eLoan-go-apply">
+        <a class="apply-btn" href="#">立即申请</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-partners">
+    <div class="wrap">
+      <div class="e-partners">
+        <div class="e-partners-title">战略合作机构</div>
+        <div class="e-partners-logo"></div>
+      </div>
+      <!--<div class="realize-more"><a href="#" class="realize-btn">了解更多</a></div>-->
+    </div>
+  </div>
+
+  <div class="section-cases">
+    <div class="wrap">
+      <div class="eLoan-cases">
+        <div class="eLoan-cases-text"></div>
+        元宝铺积极布局综合金融领域，<br>
+        服务范围已经从线上拓展到线下数据化小微，<br>
+        服务覆盖全国50余个城市，<br>
+        10000多家小微企业，授信总额超过15亿元！
+      </div>
+    </div>
+
+    <!--pc人物展示-->
+    <div id="featured">
+      <div class="container">
+        <div class="slide active">
+          <div class="case-pic" style="display: none;"><img src="images/e-case1.png" width='328' height='398'/></div>
+          <div class="case-detail"><img src="images/e-case1-info.png" width='328' height='398'/></div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="case-pic"><img src="images/e-case2.png" width='328' height='398'/></div>
+          <div class="case-detail" style="display: none;"><img src="images/e-case2-info.png" width='328' height='398'/>
+          </div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="case-pic"><img src="images/e-case3.png" width='328' height='398'/></div>
+          <div class="case-detail" style="display: none;"><img src="images/e-case3-info.png" width='328' height='398'/>
+          </div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="case-pic"><img src="images/e-case4.png" width='328' height='398'/></div>
+          <div class="case-detail" style="display: none;"><img src="images/e-case4-info.png" width='328' height='398'/>
+          </div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="case-pic"><img src="images/e-case5.png" width='328' height='398'/></div>
+          <div class="case-detail" style="display: none;"><img src="images/e-case5-info.png" width='328' height='398'/>
+          </div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="case-pic"><img src="images/e-case6.png" width='328' height='398'/></div>
+          <div class="case-detail" style="display: none;"><img src="images/e-case6-info.png" width='328' height='398'/>
+          </div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="case-pic"><img src="images/e-case7.png" width='328' height='398'/></div>
+          <div class="case-detail" style="display: none;"><img src="images/e-case7-info.png" width='328' height='398'/>
+          </div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="case-pic"><img src="images/e-case8.png" width='328' height='398'/></div>
+          <div class="case-detail" style="display: none;"><img src="images/e-case8-info.png" width='328' height='398'/>
+          </div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="case-pic"><img src="images/e-case9.png" width='328' height='398'/></div>
+          <div class="case-detail" style="display: none;"><img src="images/e-case9-info.png" width='328' height='398'/>
+          </div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="case-pic"><img src="images/e-case10.png" width='328' height='398'/></div>
+          <div class="case-detail" style="display: none;"><img src="images/e-case10-info.png" width='328' height='398'/>
+          </div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="case-pic"><img src="images/e-case5.png" width='328' height='398'/></div>
+          <div class="case-detail" style="display: none;"><img src="images/e-case1-info.png" width='328' height='398'/>
+          </div>
+          <div class="description">
+            <div class="desc-main">
+              <p class="money">10,000元</p>
+
+              <p>多肉植物专卖</p>
+            </div>
+            <div class="desc-info">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿元！</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="additional">
+        <div class="additional-btn">
+          <a class="prevslide" href="#">Previous</a>
+          <a class="nextslide" href="#">Next</a>
+        </div>
+        <div class="line-one"></div>
+      </div>
+      <div id="slider-left-overlay"></div>
+      <div id="slider-right-overlay"></div>
+    </div>
+
+    <!--手机人物展示-->
+    <div class="mobile-cases">
+      <ul class="cases clearfix">
+        <li><img src="images/e-case1.png"></li>
+        <li><img src="images/e-case2.png"></li>
+        <li><img src="images/e-case3.png"></li>
+        <li><img src="images/e-case4.png"></li>
+        <li><img src="images/e-case5.png"></li>
+        <li><img src="images/e-case1.png"></li>
+      </ul>
+      <div class="white-overlay"></div>
+      <div class="details-overlay">
+        <div class="overlay-close fr"></div>
+        <div class="info">
+          <div class="pic fl"><img src="images/e-case1.png"></div>
+          <div class="text fr">
+            <div class="text-info">
+              <div class="text-title">100,000元<br>多肉植物专卖</div>
+              <div class="text-des">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿到微企!</div>
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="pic fl"><img src="images/e-case2.png"></div>
+          <div class="text fr">
+            <div class="text-info">
+              <div class="text-title">100,000元<br>多肉植物专卖</div>
+              <div class="text-des">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿到微企!</div>
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="pic fl"><img src="images/e-case3.png"></div>
+          <div class="text fr">
+            <div class="text-info">
+              <div class="text-title">100,000元<br>多肉植物专卖</div>
+              <div class="text-des">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿到微企!</div>
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="pic fl"><img src="images/e-case4.png"></div>
+          <div class="text fr">
+            <div class="text-info">
+              <div class="text-title">100,000元<br>多肉植物专卖</div>
+              <div class="text-des">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿到微企!</div>
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="pic fl"><img src="images/e-case5.png"></div>
+          <div class="text fr">
+            <div class="text-info">
+              <div class="text-title">100,000元<br>多肉植物专卖</div>
+              <div class="text-des">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿到微企!</div>
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="pic fl"><img src="images/e-case1.png"></div>
+          <div class="text fr">
+            <div class="text-info">
+              <div class="text-title">100,000元<br>多肉植物专卖</div>
+              <div class="text-des">元宝铺积极布局综合金融领域，服已经从线上拓展到微企业，授信总额超过15亿到微企!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-media">
+    <!--pc媒体报道-->
+    <div class="pc-media">
+      <div class="wrap">
+        <div class="media-report">媒体报道</div>
+        <div class="media-news"><a href="#"><img src="images/e-media-news.jpg"></a></div>
+      </div>
+    </div>
+
+    <!--手机媒体报道-->
+    <div class="mobile-media">
+      <div class="wrap">
+        <div class="media-report">媒体报道</div>
+        <div class="media-news"><a href="#"><img src="images/news-report.jpg"></a></div>
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="section-advantage">-->
+  <!--<div class="wrap">-->
+  <!--<ul class="desc-show clearfix">-->
+  <!--<li>-->
+  <!--<div class="feature-logo feature1">-->
+  <!--<p class="feature-title">零手续费</p>-->
+  <!--</div>-->
+  <!--</li>-->
+  <!--<li>-->
+  <!--<div class="feature-logo feature2">-->
+  <!--<p class="feature-title">隐私保护</p>-->
+  <!--</div>-->
+  <!--</li>-->
+  <!--<li>-->
+  <!--<div class="feature-logo feature3">-->
+  <!--<p class="feature-title">技术保障</p>-->
+  <!--</div>-->
+  <!--</li>-->
+  <!--<li>-->
+  <!--<div class="feature-logo feature4">-->
+  <!--<p class="feature-title">365天客户热线</p>-->
+  <!--</div>-->
+  <!--</li>-->
+  <!--</ul>-->
+  <!--</div>-->
+  <!--</div>-->
+
+  <div class="section-about">
+    <div class="wrap">
+      <div class="about-info">
+        <ul class="about-item clearfix">
+          <li><a href="#">关于元宝铺</a><span>|</span></li>
+          <li><a href="#">帮助中心</a><span>|</span></li>
+          <li><a href="#">安全保障</a><span>|</span></li>
+          <li><a href="#">商务合作</a><span>|</span></li>
+          <li><a href="#">媒体报道</a><span>|</span></li>
+          <li><a href="#">招贤纳士</a><span>|</span></li>
+          <li><a href="#">联系我们</a><span>|</span></li>
+          <li><a href="#">代理商平台</a><span>|</span></li>
+          <li><a href="#">友情链接</a></li>
+        </ul>
+      </div>
+      <div class="eLoan-security">
+        <a href="#"><img src="images/e-security1.png"></a>
+        <a href="#"><img src="images/e-security2.png"></a>
+        <a href="#"><img src="images/e-security3.png"></a>
+        <a href="#"><img src="images/e-security4.png"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-footer">
+    <div class="wrap">
+      <!--pc-footer-->
+      <div class="pc-footer">
+        <img class="footer-logo" src="images/footer-logo.png">
+        <span>©2015 元宝铺 | 浙ICP备14029606号-1 | 浙江电融数据技术有限公司 </span>
+      </div>
+
+      <!--mobile-footer-->
+      <div class="mobile-footer">
+        <img class="footer-logo" src="images/footer-logo.png">
+
+        <p>©2015 元宝铺 | 浙ICP备14029606号-1 </p>
+
+        <p>浙江电融数据技术有限公司 </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="js/eLoan-index.js"></script>
+<script type="text/javascript" src="js/jquery.parallux.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script>
+  navigator.browser = (function () {
+    var ua = navigator.userAgent, tem,
+      M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+    if (/trident/i.test(M[1])) {
+      tem = /\brv[ :]+(\d+)/g.exec(ua) || [];
+      return 'IE ' + (tem[1] || '');
+    }
+    if (M[1] === 'Chrome') {
+      tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+      if (tem != null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+    }
+    M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+    if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
+    return M.join(' ');
+  })();
+
+  var version = navigator.browser.split(' ')[1];
+
+  if (version != '7' || version != '8' || version != '9') {
+    document.write('<script type="text/javascript" src="js/swiper.jquery.min.js"></' + 'script>');
+//    document.write('<script type="text/javascript" src="js/h5Effect.js"></' + 'script>');
+  }
+</script>
+</body>
+</html>

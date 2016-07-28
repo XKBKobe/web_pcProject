@@ -1,0 +1,387 @@
+.fideLite .fl {
+  float: left;
+}
+
+.fideLite .fr {
+  float: right;
+}
+
+/**---------section-header----------*/
+.fideLite {
+  position: relative;
+  overflow: hidden;
+}
+
+/*--------section-poster-----*/
+.fideLite .section-poster {
+  position: relative;
+}
+
+.fideLite .parallux {
+  height: 450px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.fideLite .fide-poster {
+  background: url("../images/fideLite-bg.jpg") no-repeat center;
+  height: 450px;
+  width: 100%;
+}
+
+.fideLite .poster-content {
+  position: absolute;
+  top: 180px;
+  width: 100%;
+  left: 0;
+}
+
+.fideLite .data-loan-title {
+  width: 100%;
+  margin: auto;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.fideLite .fide-main-logo {
+  height: 81px;
+  background: url("../images/fideLite-logo.png") no-repeat top center;
+  background-size: contain;
+  margin-bottom: 27px;
+}
+
+.fideLite .fide-title{
+  font-size: 24px;
+  margin-bottom: 17px;
+}
+
+.fideLite .fide-desc {
+  width: 580px;
+  margin: auto;
+  font-size: 12px;
+}
+
+.fideLite .section-footer .pc-footer{
+  display: block;
+}
+
+.fideLite .section-footer .mobile-footer{
+  display: none;
+}
+
+/*----------section-check-------------*/
+.fideLite .wrap {
+  text-align: center;
+  width: 1200px;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+.fideLite .section-check{
+  background: #f7f8f8;
+  position: relative;
+}
+
+.fideLite .lite-content{
+  background: url(../images/fideLite-cont-bg.jpg) repeat-y;
+  -webkit-box-shadow: 0 30px 60px #e6e6e6;
+  -moz-box-shadow: 0 30px 60px #e6e6e6;
+  box-shadow: 0 30px 60px #e6e6e6;
+}
+
+.fideLite .check-content{
+  width: 1000px;
+  margin: auto;
+}
+
+.fideLite .check-info{
+  width: 215px;
+  font-size: 14px;
+  color: #000;
+  text-align: left;
+  line-height: 27px;
+  margin-right: 32px;
+}
+
+.fideLite .check-type{
+  font-size: 22px;
+  color: #00a0e9;
+  margin-bottom: 25px;
+}
+
+.fideLite .alipay-check{
+  padding: 77px 0 55px 0;
+  border-bottom: 1px dashed #b1b1b1;
+  overflow: hidden;
+}
+
+.fideLite .platform{
+  border: 1px solid #e5e5e5;
+  -webkit-box-shadow: 0 0 60px #e6e6e6;
+  -moz-box-shadow: 0 0 60px #e6e6e6;
+  box-shadow: 0 0 60px #e6e6e6;
+}
+
+.fideLite .platform-name{
+  font-size: 20px;
+  color: #000;
+  margin-top: 23px;
+}
+
+.fideLite .platform-icon{
+  background: #fff;
+  padding: 58px 0 54px 0;
+  width: 248px;
+  display: block;
+  cursor: pointer;
+}
+
+.fideLite .platform:hover{
+  -moz-box-shadow: 0 12px 30px #efe2d5 inset;
+  -webkit-box-shadow: 0 12px 30px #efe2d5 inset;
+  box-shadow: 0 12px 30px #efe2d5 inset;
+}
+
+.fideLite .platform-icon:hover{
+  -moz-box-shadow: 0 12px 30px #efe2d5 inset;
+  -webkit-box-shadow: 0 12px 30px #efe2d5 inset;
+  box-shadow: 0 12px 30px #efe2d5 inset;
+}
+
+.fideLite .bankCard-check{
+  padding: 52px 0 65px 0;
+  overflow: hidden;
+  margin-right: -30px;
+}
+
+.fideLite .bankCard-check .check-type{
+  color: #e60012;
+}
+
+.fideLite .bankCard-check .platform-img{
+  height: 80px;
+}
+
+.fideLite .bankCard-check .platform{
+  border-right: none;
+  border-bottom: none;
+  width: 747px;
+}
+
+.fideLite .bankCard-check ul li{
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  float: left;
+}
+
+/*-----------------section-footer-----------*/
+.fideLite .section-footer {
+  line-height: 100px;
+  height: 100px;
+  width: 100%;
+  background: #31393c;
+  color: #a5b5bb;
+  font-size: 13px;
+  position: relative;
+}
+
+.fideLite .footer-logo {
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1216px) {
+  .fideLite .wrap {
+    width: 1024px;
+  }
+
+  .fideLite .check-content{
+    width: 100%;
+  }
+
+  .fideLite .alipay-check{
+    padding-left: 153px;
+  }
+
+  .fideLite .bankCard-check{
+    padding: 52px 0 84px 153px;
+  }
+
+  .fideLite .bankCard-check .check-info{
+    width: 713px;
+    margin-bottom: 52px;
+  }
+
+  .fideLite .check-info{
+
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .fideLite,
+  .fideLite .wrap,
+  .fideLite .check-content{
+    max-width: 750px;
+    margin: auto;
+    width: auto;
+  }
+
+  /*---section-poster---*/
+  .fideLite .parallux {
+    height: 300px;
+  }
+
+  .parallux .parallux-bg {
+    position: absolute;
+  }
+
+  .fideLite .fide-poster {
+    background: url("../images/fideLite-bg-sm.jpg") no-repeat center;
+    height: 300px;
+    width: 100%;
+  }
+
+  .fideLite .poster-content {
+    top: 106px;
+  }
+
+  .fideLite .mobile-nav{
+    display: block;
+  }
+
+  .fideLite .fide-main-logo {
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .fideLite .fide-desc {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .fideLite .fide-title{
+    margin-bottom: 5px;
+  }
+
+  /*---section-check---*/
+  .fideLite .check-info{
+    width: auto;
+    margin-right: 0;
+    float: none;
+  }
+  
+  .fideLite .lite-content{
+    padding: 0 15px;
+  }
+
+  .fideLite .alipay-check{
+    padding-top: 47px;
+  }
+
+  .fideLite .alipay-check .platform{
+    width: 171px;
+    margin: 35px auto 0 auto;
+    float: none;
+  }
+
+  .fideLite .bankCard-check{
+    margin-right: 0;
+  }
+
+  .fideLite .bankCard-check .platform{
+    margin: 35px auto 0 auto;
+    width: 344px;
+    float: none;
+  }
+
+  .fideLite .platform-icon{
+    width: 171px;
+    padding: 25px 0 20px 0;
+  }
+
+  /*---section-footer---*/
+  .fideLite .section-footer .pc-footer {
+    display: none;
+  }
+  .fideLite .section-footer .mobile-footer{
+    display: block;
+  }
+
+  .fideLite .section-footer {
+    height: 100px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .fideLite .footer-logo {
+    width: 60px;
+    margin: 16px 0 10px 0;
+  }
+}
+
+@media screen and (min-width: 545px) and (max-width: 1023px) {
+  .fideLite .lite-content{
+    padding: 0;
+  }
+  
+  .fideLite .alipay-check,
+  .fideLite .bankCard-check{
+    width: 545px;
+    margin: auto;
+  }
+
+  .fideLite .check-info{
+    padding: 0 6px;
+  }
+
+  .fideLite .alipay-check .check-info{
+    width: 210px;
+    float: left;
+  }
+
+  .fideLite .bankCard-check .check-info{
+    margin: auto;
+  }
+  
+  .fideLite .alipay-check .platform{
+    float: left;
+    margin-left: 52px;
+  }
+
+  .fideLite .bankCard-check .platform{
+    margin: 35px auto 0 auto;
+    width: 545px;
+  }
+
+  .fideLite .platform-icon {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  /*---section-poster---*/
+  .fideLite .fide-desc {
+    width: 300px;
+  }
+
+  /*---section-check--*/
+  .fideLite .lite-content{
+    padding: 0 10px;
+  }
+
+  .fideLite .bankCard-check .platform{
+    width: 200px;
+    margin: 35px auto 0 auto;
+    float: none;
+  }
+
+  .fideLite .bankCard-check ul li{
+    width: auto;
+  }
+
+  .fideLite .platform-icon,
+  .fideLite .alipay-check .platform{
+    width: 200px;
+  }
+}

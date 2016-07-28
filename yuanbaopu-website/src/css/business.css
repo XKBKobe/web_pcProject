@@ -1,0 +1,320 @@
+.businessCo .fl {
+  float: left;
+}
+
+.businessCo .fr {
+  float: right;
+}
+
+/**---------section-header----------*/
+.businessCo {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.businessCo .b-cooperation{
+  border-bottom: 2px solid #0599d9;
+}
+
+/*---------------business-co--------*/
+.businessCo .overlay{
+  width: 100%;
+  height: 324px;
+  background: url("../images/about-overlay.png") repeat-x;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+}
+
+.businessCo .company-detail{
+  position: absolute;
+  top: 160px;
+  left: 265px;
+  z-index: 1;
+  background: url("../images/details-bg.png");
+  padding: 58px 52px 26px 51px;
+}
+
+.businessCo .company-detail .show-detail{
+  width: 538px;
+}
+
+.businessCo .info-title{
+  height: 45px;
+  margin-bottom: 30px;
+}
+
+.businessCo .show-detail .show-title1{
+  background: url("../images/business-title.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.businessCo .source-bg{
+  height: 716px;
+  width: 100%;
+  background: url(../images/business-bg.jpg) no-repeat top center;
+}
+
+.businessCo .company-address{
+  font-size: 14px;
+  color: #fff;
+  line-height: 24px;
+}
+
+.businessCo .location-map{
+  width: 640px;
+  height: 437px;
+  position: absolute;
+  top: 367px;
+  left: 265px;
+}
+
+.businessCo .location-map .anchorBL{
+  display: none;
+}
+
+/*---------------section-business---------*/
+.businessCo .section-business{
+  padding: 198px 0 0 0;
+}
+
+.businessCo .business-info{
+  width: 1200px;
+  margin-left: 265px;
+  overflow: hidden;
+  padding-left: 50px;
+}
+
+.businessCo .co-type{
+  margin-bottom: 105px;
+  font-size: 14px;
+  color: #000;
+  float: left;
+  margin-right: 130px;
+}
+
+.businessCo .co-type .co-title{
+  font-size: 30px;
+}
+
+.businessCo .co-type .co-desc{
+  color: #656565;
+}
+
+.businessCo .co-type .co-info{
+  height: 30px;
+  line-height: 30px;
+  padding-left: 30px;
+}
+
+.businessCo .co-type .co-name{
+   background: url(../images/business-name.png) no-repeat left center;
+   margin-top: 25px;
+}
+
+.businessCo .co-type .co-email{
+  background: url(../images/business-email.png) no-repeat left center;
+  margin-top: 15px;
+  color: #0599d9;
+}
+
+.businessCo .co-type .co-tel{
+  background: url(../images/business-tel.png) no-repeat left center;
+  margin-top: 15px;
+}
+
+.businessCo .co-type .line{
+  margin-right: 10px;
+  color: #000;
+}
+
+.businessCo .co-type .help-online{
+  padding: 5px 10px;
+  color: #0599d9;
+  font-size: 14px;
+  border: 1px solid #0599d9;
+  margin-left: 5px;
+}
+
+/*-----------------section-footer-----------*/
+.businessCo .section-footer {
+  line-height: 100px;
+  height: 100px;
+  width: 100%;
+  background: #31393c;
+  color: #a5b5bb;
+  font-size: 13px;
+  position: relative;
+  text-align: center;
+}
+
+.businessCo .footer-logo {
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+@media screen and (max-width: 1400px) {
+  /*---------------business-co--------*/
+  .businessCo .business-info{
+    width: 950px;
+  }
+  
+  .businessCo .company-detail,
+  .businessCo .location-map{
+    left: 190px;
+  }
+
+  /*--------------section-business-----*/
+  .businessCo .business-info{
+    margin-left: 194px;
+  }
+
+  .businessCo .co-type{
+    margin-right: 54px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    /*---------------business-co--------*/
+    .businessCo .company-detail {
+      left: 190px;
+    }
+
+    .businessCo .business-info {
+      width: 758px;
+    }
+
+    .businessCo .co-type {
+      margin: 0 105px 76px 0;
+    }
+
+    @media screen and (max-width: 1023px) {
+      .businessCo,
+      .businessCo .wrap{
+        max-width: 750px;
+        margin: auto;
+        width: 100%;
+      }
+
+      /*--section-header--*/
+      .businessCo .head-nav,
+      .businessCo .section-footer .pc-footer,
+      .businessCo .overlay{
+        display: none;
+      }
+
+      .businessCo .section-footer .mobile-footer,
+      .businessCo .mobile-img{
+        display: block;
+      }
+
+      /*---------business-co----------*/
+      .businessCo .mobile-wrap{
+        width: initial !important;
+        padding: 0 20px;
+      }
+
+      .businessCo .company-address,
+      .businessCo .co-type{
+        font-size: 16px;
+      }
+
+      .businessCo .source-bg {
+        height: 518px;
+        width: 100%;
+        background: url(../images/business-bg-sm.jpg) no-repeat bottom center;
+      }
+
+      .businessCo .info-title{
+        height: 38px;
+        margin-bottom: 20px;
+      }
+
+      .businessCo .company-detail{
+        position: relative;
+        top: 70px;
+        left: 0;
+        padding: 30px 15px 20px 15px;
+      }
+
+      .businessCo .company-detail .show-detail{
+        width: 100%;
+      }
+
+      .businessCo .location-map{
+        width: 100%;
+        position: relative;
+        top: 70px;
+        left: 0;
+      }
+      
+      /*---------section-business----------*/
+      .businessCo .business-info{
+        width: auto;
+        padding: 0 20px;
+        margin-left: 0;
+      }
+
+      .businessCo .co-type {
+        margin: 0 auto 76px auto;
+        float: none;
+        max-width: 563px;
+        width: 100%;
+      }
+
+      .businessCo .co-type .co-title {
+        font-size: 26px;
+      }
+
+      .businessCo .co-type .help-online{
+        display: block;
+        margin: 10px auto 0 auto;
+        width: 56px;
+      }
+
+      /*---section-footer---*/
+      .businessCo .wrap{
+        width: 320px;
+        text-align: center;
+      }
+
+      .businessCo .section-footer {
+        height: 100px;
+        line-height: 20px;
+        font-size: 12px;
+      }
+
+      .businessCo .footer-logo {
+        width: 60px;
+        margin: 16px 0 10px 0;
+      }
+    }
+
+    @media screen and (max-width: 460px){
+      /*---------section-business----------*/
+      .businessCo .co-type .co-tel{
+        margin-bottom: 34px;
+      }
+      
+    @media screen and (max-width: 374px) {
+      /*---------business-co----------*/
+      .businessCo .mobile-wrap{
+        padding: 0 10px;
+      }
+
+      .businessCo .location-map{
+        height: 400px;
+      }
+
+      /*---------section-business----------*/
+      .businessCo .co-type {
+        margin: 0 auto 45px auto;
+      }
+    }
+    }
+  }
+}

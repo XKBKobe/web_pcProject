@@ -1,0 +1,409 @@
+.newsReport .fl {
+  float: left;
+}
+
+.newsReport .fr {
+  float: right;
+}
+
+.newsReport .wrap {
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+.newsReport .fp-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.newsReport .fp-auto-height{
+  height: auto !important;
+}
+
+/**---------section-header----------*/
+.newsReport {
+  background: #0088c3;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsReport .ybp-info{
+  border-bottom: 2px solid #0599d9;
+}
+
+/*--------------section-menu--------*/
+.newsReport .section-menus{
+  width: 132px;
+  height: 377px;
+  background: url("../images/menus-bg.png");
+  position: fixed;
+  top: 160px;
+  left: 111px;
+  z-index: 3;
+}
+
+.newsReport .overlay{
+  width: 100%;
+  height: 324px;
+  background: url("../images/about-overlay.png") repeat-x;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+}
+
+.newsReport .pc-menus{
+  display: block;
+}
+
+.newsReport .mobile-menus,
+.newsReport .mobile-img{
+  display: none;
+}
+
+.newsReport .company-sum{
+  width: 41px;
+  height: 48px;
+  background: #fff;
+  padding: 4px 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.newsReport .company-sum dd{
+  float: left;
+}
+
+.newsReport .govern-support{
+  margin: 0 26px;
+}
+
+.newsReport .company-sum a{
+  width: 33px;
+  display: block;
+  font-size: 16px;
+  color: #0599d9;
+  padding: 0 4px;
+}
+
+.newsReport .company-sum a:hover{
+  background: #d6f3ff;
+  border-radius: 5px;
+}
+
+.newsReport .other-link{
+  width: 47px;
+  font-size: 16px;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  text-align: center;
+}
+
+.newsReport .other-link li{
+  margin-bottom: 21px;
+}
+
+.newsReport .other-link li a{
+  height: 49px;
+  display: block;
+}
+
+.newsReport .company-detail{
+  position: absolute;
+  top: 160px;
+  left: 243px;
+  z-index: 1;
+  background: url("../images/details-bg.png");
+  padding: 58px 47px 26px 51px;
+}
+
+.newsReport .company-detail .show-detail{
+  width: 538px;
+}
+
+.newsReport .info-title{
+  height: 45px;
+  margin-bottom: 33px;
+}
+
+.newsReport .show-detail .show-title1{
+  background: url("../images/news-report-title.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.newsReport .source-bg{
+  height: 100%;
+  width: 100%;
+  background: url(../images/source-bg-big.jpg) no-repeat top center;
+}
+
+/*---------------news-report--------*/
+.newsReport .main-wrap{
+  width: 1088px;
+  padding: 322px 0 100px 243px;
+}
+
+.newsReport .news-list {
+  padding: 6px 0 58px 7px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.newsReport .report-icon img{
+  height: 61px;
+}
+
+.newsReport .news-list ul,
+.newsReport .report-source{
+  overflow: hidden;
+}
+
+.newsReport .report-source{
+  height: 47px;
+  line-height: 63px;
+}
+
+.newsReport .news-list ul li{
+  position: relative;
+  width: 355px;
+  height: 250px;
+  float: left;
+  margin: 0 5px 5px 0;
+}
+
+.newsReport .news-list ul li a{
+  display: block;
+  height: 198px;
+  padding: 25px 41px 22px 48px;
+  color: #000;
+}
+
+.newsReport .news-list li a:hover{
+  border: 2px solid #c3edff;
+  padding: 23px 39px 20px 46px;
+}
+
+.newsReport .news-list li a:active{
+  border: 2px solid #0599d9;
+}
+
+.newsReport .news-list .report-title{
+  font-weight: bold;
+  margin: 21px 0 16px 0;
+}
+
+.newsReport .news-list .report-info{
+  color: #656565;
+  height: 62px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/*-----------------section-footer-----------*/
+.newsReport .section-footer {
+  line-height: 100px;
+  height: 100px;
+  width: 100%;
+  background: #31393c;
+  color: #a5b5bb;
+  font-size: 13px;
+  position: relative;
+}
+
+.newsReport .footer-logo {
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+@media screen and (max-width: 1400px) {
+  /*---------------news-report--------*/
+  .newsReport .section-menus{
+    left: 80px;
+  }
+
+  .newsReport .main-wrap{
+    width: 960px;
+    padding-left: 213px;
+  }
+
+  .newsReport .company-detail{
+    left: 213px;
+  }
+
+  .newsReport .news-list ul li{
+    width: 312px;
+  }
+
+  .newsReport .news-list ul li a{
+    padding: 25px 18px 22px 23px;
+  }
+
+  .newsReport .news-list li a:hover{
+    padding: 23px 16px 20px 21px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    /*---------------news-report--------*/
+    .newsReport .company-detail {
+      left: 190px;
+    }
+
+    .newsReport .main-wrap{
+      width: 728px;
+      padding-left: 190px;
+    }
+
+    .newsReport .news-list ul li {
+      width: 355px;
+    }
+
+    .newsReport .news-list ul li a{
+      padding: 25px 40px 22px 41px;
+    }
+
+    .newsReport .news-list li a:hover{
+      padding: 23px 38px 20px 39px;
+    }
+
+    /*--------section-menus-------*/
+    .newsReport .section-menus{
+      left: 58px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      .newsReport,
+      .newsReport .wrap{
+        max-width: 750px;
+        margin: auto;
+      }
+
+      /*--section-header--*/
+      .newsReport .head-nav,
+      .newsReport .section-footer .pc-footer,
+      .newsReport .pc-menus,
+      .newsReport .overlay{
+        display: none;
+      }
+
+      .newsReport .section-footer .mobile-footer,
+      .newsReport .mobile-menus,
+      .newsReport .mobile-img{
+        display: block;
+      }
+
+      /*---------news-report----------*/
+      .newsReport .mobile-wrap,
+      .newsReport .main-wrap{
+        width: initial !important;
+        padding: 0 20px;
+      }
+
+      .newsReport .info-title{
+        height: 38px;
+        margin-bottom: 20px;
+      }
+
+      .newsReport .main-wrap{
+        margin: 70px 0 30px 0;
+      }
+
+      .newsReport .company-detail{
+        position: relative;
+        top: 70px;
+        left: 0;
+        padding: 30px 15px 20px 15px;
+      }
+
+      .newsReport .news-list ul li{
+        width: auto;
+        height: 215px;
+        margin: 0 6px 6px 0;
+      }
+
+      .newsReport .news-list ul li a {
+        padding: 15px 10px 22px 10px;
+        height: 181px;
+      }
+
+      .newsReport .news-list ul li a:hover {
+        padding: 13px 8px 20px 8px;
+      }
+
+      /*---section-footer---*/
+      .newsReport .wrap{
+        width: 320px;
+      }
+
+      .newsReport .section-footer {
+        height: 100px;
+        line-height: 20px;
+        font-size: 12px;
+      }
+
+      .newsReport .footer-logo {
+        width: 60px;
+        margin: 16px 0 10px 0;
+      }
+
+      /*---section-menus-----*/
+      .newsReport .section-menus{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        top: auto;
+        left: auto;
+      }
+
+      .newsReport .bottom-menus{
+        width: 375px;
+        height: 50px;
+        margin: auto;
+        position: relative;
+      }
+
+      .newsReport .other-link{
+        width: 375px;
+        font-size: 14px;
+        top: 0;
+        left: 0;
+        position: absolute;
+      }
+
+      .newsReport .mobile-menus ul li {
+        width: 41px;
+        float: left;
+        margin-left: 43px;
+        line-height: 16px;
+      }
+
+      .newsReport .mobile-menus .media-report{
+        color: #0599d9;
+        background: #fff;
+      }
+
+      .newsReport .other-link li a{
+        margin-top: 7px;
+        padding: 3px 0;
+        height: auto;
+      }
+    }
+
+    @media screen and (max-width: 374px) {
+      .newsReport .mobile-wrap,
+      .newsReport .main-wrap{
+        padding: 0 10px;
+      }
+
+      /*--section-menus---*/
+      .newsReport .mobile-menus ul li{
+        margin-left: 30px;
+      }
+    }
+  }
+}
