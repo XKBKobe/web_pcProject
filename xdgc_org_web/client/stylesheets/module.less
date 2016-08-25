@@ -1,0 +1,371 @@
+@import 'variables.less';
+
+//首页
+.home-page .bold-border{
+  border-left: 4px solid #65CEA7;
+}
+
+//客户管理模块
+.customer-list .form-group {
+  margin-bottom: 15px;
+}
+
+.customer-list .dropdown-menu,
+.customer-list .form-group label{
+  font-size:@font-size;
+}
+
+.second-menu .inbox-menu > li .submenu > li > a{
+  padding: 10px 0 10px 30px;
+}
+
+.trace-info .word-style{
+  word-wrap: break-word;
+}
+
+.trace-info .list-group{
+  border:1px solid #ccc;
+  background:#fff;
+  border-radius:5px;
+  padding: 15px 15px 40px 15px;
+  margin-bottom:40px;
+}
+
+.modal-add-trace .form-inline .form-group{
+  margin-bottom:20px;
+}
+
+.modal-add-trace .label-checkbox, .label-radio{
+  display:inline;
+}
+
+.modal-add-trace textarea{
+  border:1px solid #ccc;
+  height:91px;
+  resize:none;
+  outline:none;
+}
+
+.modal-add-trace h4{
+  color:@gray-color;
+}
+
+.modal-add-trace label{
+  font-size:@font-size;
+}
+
+//贷前审批模块
+.repayWayModal .modal-dialog {
+   width: 350px;
+}
+
+@media(min-width: 768px) {
+  .approvalInfo .modal-dialog {
+    width:800px;
+  }
+}
+
+@media(min-width: 768px) {
+  .approvalQuery .modal-dialog {
+    width:930px;
+  }
+}
+
+.first-trial .spinner.input-group .input-group-addon a.spin-up,
+.first-trial .spinner.input-group .input-group-addon a.spin-down{
+  height: 10px;
+  width: 10px;
+  font-size: 12px;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  color: #999;
+}
+
+.editAuditAmount .editable-label,
+.editAuditAmount.edit .editable-edit{
+  display: block;
+}
+.editAuditAmount .editable-edit,
+.editAuditAmount.edit .editable-label{
+  display: none;
+}
+
+//店铺管理模块
+.editType div.tagsinput span.tag {
+  border: 1px solid #ccc;
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  display: block;
+  float: left;
+  padding: 5px;
+  text-decoration:none;
+  background: #fff;
+  color: #595a5b;
+  margin-right: 20px;
+  margin-bottom:5px;
+}
+
+.editType div.tagsinput span.tag a{
+  font-weight: bold;
+  color: #595a5b;
+  text-decoration:none;
+  outline:none;
+}
+
+.editType div.tagsinput span.tag a:link{
+  outline: none;
+}
+
+.second-menu .inbox-menu > li .third-part > li > a{
+  padding:10px 0 10px 37px;
+}
+
+.second-menu .inbox-menu > li .fourth-part > li > a{
+  padding:10px 0 10px 51px;
+}
+
+.gray-md{
+  color:#666;
+}
+
+//产品管理模块
+#form-product-conf div.tagsinput span.tag {
+  border: 1px solid #ccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  display: block;
+  float: left;
+  padding: 5px;
+  text-decoration: none;
+  background: #fff;
+  color: #595a5b;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+//color red when shop has warn 
+tr td a.warnShop {
+    color: #f00;
+}
+
+tr td a.weakTies {
+  color: #f58787;
+}
+
+tr td a.addrWarnShop {
+  color: #f47920;
+}
+
+// 欺诈判定
+span a.fraud {
+  color: #00f;
+}
+
+// 一步受理店铺添加
+
+#form-distribute-product .custom-has-error {
+  color: #a94442;
+}
+
+//dop 模块
+.dop .headTd-style td{
+  vertical-align: middle;
+}
+
+.dop .selected-bg{
+  background: #f1f5fc;
+  border: none;
+}
+
+.row-grey-bar {
+  background-color: #dedede;
+}
+
+.dop .fa-long-arrow-down{
+  color: green;
+}
+
+.dop .fa-long-arrow-up{
+  color: red;
+}
+
+.dop .invertedTriangle{
+  position: absolute;
+  top: 0;
+  left: 470px;
+  width: 742px;
+  height: 367px;
+  z-index: 1;
+  background: url(/images/dop/invertedTriangle.png) no-repeat;
+}
+
+.dop .invertedTriangle .desc{
+  position: relative;
+  left: 250px;
+  width: 124px;
+  text-align: center;
+}
+.dop .invertedTriangle .desc li{
+  height: 62px;
+  line-height: 62px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.dop .invertedTriangle .tab{
+  position: absolute;
+}
+
+.dop .invertedTriangle .label1{
+  top: 43px;
+  right: 0;
+}
+
+.dop .invertedTriangle .label2{
+  top: 112px;
+  right: 70px;
+}
+
+.dop .invertedTriangle .label3 {
+  top: 183px;
+  right: 90px;
+}
+
+.dop .invertedTriangle .label4 {
+  top: 239px;
+  right: 122px;
+}
+
+.dop .invertedTriangle .label5 {
+  bottom: 34px;
+  right: 171px;
+}
+
+.dop .invertedTriangle .label6 {
+  top: 174px;
+  right: -40px;
+}
+
+.dop .conversionData .list-group-item,
+.dop .invertedTriangle .list-group-item
+{
+  padding: 0 63px;
+  height: 62px;
+  line-height: 21px;
+}
+
+.dop .blue-bl{
+  background: #e6f1f8;
+}
+
+.dop .gray-bl{
+  background: #e0e9ef;
+}
+
+.dop .purple-bl{
+  background: #f1eef8;
+}
+
+.dop .pink-bl{
+  background: #faf1f4;
+}
+
+.dop .green-bl{
+  background: #f2f6eb;
+}
+
+.dop .green-bd{
+  background: #e4f4f4;
+}
+
+.dop .blue-l{
+ color: #40a7f0;
+}
+
+.dop .blue-m{
+  color: #2b82be;
+}
+
+.dop .blue-d{
+ color: #005a96;
+}
+
+.dop .purple-l{
+  color: #7282cd;
+}
+
+.dop .purple-d{
+  color: #ab8bec;
+}
+
+.dop .pink{
+ color: #ffaec9;
+}
+
+.dop .pink-purple{
+  color: #d3ade6;
+}
+
+.dop .skin{
+  color: #e7c3ae;
+}
+
+.dop .green-l{
+  color: #b7da6b;
+}
+
+.dop .green-m{
+  color: #2ec7c9
+}
+
+.dop .green-d{
+  color: #68a18f;
+}
+
+.dop .sourceDistribution li:nth-of-type(odd){
+  background: #f9f9f9;
+}
+.dop .parentRow{
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dop .parent-row-color{
+  background: #dedede;
+}
+.dop .parent-row-color:hover{
+  background: #dedede;
+}
+
+.dop .sum-table-row{
+  font-weight: bold;
+}
+
+.dop .dayConversion .select2{
+  width: 210px !important;
+  font-size: 12px;
+}
+
+//聚信立导航
+.juXinLi .panel-tab .active a{
+  border-bottom: 2px solid #3c8dbc;
+  font-weight: bold;
+}
+
+tbody.side-header tr  td {
+  border:1px solid #ddd;
+}
+
+#earlywarningChart {
+  border: 1px solid #ddd;
+  margin-bottom: 50px;
+}
+
+.abstrac {
+  width: 100%;
+  height: 140px;
+}

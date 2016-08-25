@@ -1,0 +1,36 @@
+/*--系统登录背景和按钮-*/
+body {
+    /*background: #92343e;*/
+    background: #4a4949;
+}
+
+.login-wrapper .btn.btn-info {
+    padding:10px 35px;
+    background: #a12734;
+    border:none;
+    margin-top:20px;
+    color: #fff;
+}
+
+.login-wrapper .btn.btn-info:hover,
+.login-wrapper .btn.btn-info:focus,
+.login-wrapper .btn.btn-info:active,
+.login-wrapper .btn.btn-info.active {
+    background: #94212d;
+}
+
+.login-wrapper .panel.panel-default {
+    border-color: #807d7d;
+    /*border-color: #a58989;*/
+}
+
+.login-wrapper .panel-heading {
+    padding: 15px;
+}
+
+.login-wrapper .panel.panel-default .panel-heading {
+    color: #f5f5f5;
+    background:none;
+    border-color: #807d7d;
+    /*border-color: #a58989;*/
+}

@@ -1,0 +1,7 @@
+<template name="_breadcrumb">
+  <ul class="breadcrumb font-14">
+    {{#each hasBread Breadcrumb}}
+      <li class="{{cssClasses}}"><a href="{{url}}">{{title}}</a></li>
+    {{/each}}
+  </ul>
+</template>

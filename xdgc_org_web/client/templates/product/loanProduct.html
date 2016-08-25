@@ -1,0 +1,241 @@
+<template name="loanProduct">
+    <div class="padding-xs customer-list">
+        <div class="paddingLR-md m-top-md">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="no-margin" id="formData">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">产品名称</label>
+                                            <input maxlength="32" class="form-control input-sm" name="name" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">当前状态</label>
+                                            <select class="form-control input-sm" name="status">
+                                                <option value="">全部</option>
+                                                {{#each getCodeList "loanProductStatus"}}
+                                                    <option value="{{code}}">{{name}}</option>
+                                                {{/each}}
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.col-md-4 -->
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">贷款类型</label>
+                                    <select class="form-control input-sm" name="type">
+                                        <option value="">全部</option>
+                                        {{#each getCodeList "loanProductType"}}
+                                            <option value="{{code}}">{{name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                               <div class="form-group">
+                                   <label class="control-label">利率</label>
+                                   <div class="clearfix">
+                                     <div class="w100 pull-left">
+                                       <select class="form-control input-sm" name="rateType">
+                                           <option value="">全部</option>
+                                           {{#each getCodeList "rateType"}}
+                                               <option value="{{code}}">{{name}}</option>
+                                           {{/each}}
+                                       </select>
+                                     </div>
+                                     <div class="w80 pull-left m-left-sm">
+                                       <input maxlength="32" class="form-control input-sm" name="rate" type="text" />
+                                     </div>
+                                     <span class="control-label m-left-xs" style="line-height: 28px;">%</span>
+                                   </div>
+                               </div>
+                            </div>
+                            <div class="col-md-4">
+                               <div class="row">
+                                   <div class="col-md-6">
+                                       <div class="form-group">
+                                           <label class="control-label">创建时间(起)</label>
+                                           <div class="input-group">
+                                               <input data-date-format="yyyy-mm-dd" name="startTime" class="form-control input-sm datepicker" value="{{formatDate startCreateTime}}" maxlength="32" type="text" />
+                                               <span class="input-group-addon "><i class="fa fa-calendar"></i></span>
+                                           </div>
+                                       </div>
+                                       <!-- /.form-group -->
+                                   </div>
+                                   <div class="col-md-6">
+                                       <div class="form-group">
+                                            <label class="control-label">创建时间(止)</label>
+                                            <div class="input-group">
+                                                <input data-date-format="yyyy-mm-dd" name="endTime" class="form-control input-sm datepicker" value="{{formatDate endCreateTime}}" maxlength="32" type="text" />
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                       </div>
+                                       <!-- /.form-group -->
+                                   </div>
+                               </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group m-top-md paddingTB-xs">
+                                    <button class="btn btn-success btn-sm" id="searchPro" type="button"><i class="fa fa-search"></i> 检 索</button>
+                                    {{#if notHidden "addEditPro"}}
+                                    <button class="btn btn-success btn-sm" id="addPro" type="button"><i class="fa fa-plus"></i> 新 增</button>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="padding-xs">
+            <div class="panel">
+                <div class="panel-body margin-sm">
+                  <div class="table-responsive">
+                    <table class="table text-center table-bordered table-hover table-style table-striped">
+                        <thead class="font-bold">
+                        <tr>
+                            <td class="col-md-2">创建时间</td>
+                            <td class="col-md-1">名称</td>
+                            <td class="col-md-1">当前状态</td>
+                            <td class="col-md-1">贷款类型</td>
+                            <td class="col-md-2">利率</td>
+                            <td class="col-md-3">操作</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{#each getLoanProList.list}}
+                            <tr>
+                                <td>{{formatDateTime createTime}}</td>
+                                <td>{{name}}</td>
+                                <td>{{getCodeName "loanProductStatus" status}}</td>
+                                <td>{{getCodeName "loanProductType" type}}</td>
+                                <td>{{getCodeName "rateType" rateType}}
+                                    {{#if upperRate}}
+                                        {{#if selectedEqual upperRate downRate}}{{upperRate}}{{else}}{{downRate}}～{{upperRate}}{{/if}}%
+                                    {{/if}}
+                                </td>
+                                <td>
+                                  <div class="m-top-xs">
+                                    {{#if notHidden "addEditPro"}}
+                                    <button class="btn btn-sm btn-success m-bottom-xs editPro"><i class="fa fa-edit"></i> 编辑</button>
+                                    {{/if}}
+                                    {{#if notHidden "upDownPro"}}
+                                      {{#if selectedEqual "2" status}}
+                                      <button class="btn btn-sm btn-success m-bottom-xs dealPro" name="takeOff"><i class="fa fa-arrow-down"></i> 下架</button>
+                                      {{else}}
+                                      <button class="btn btn-sm btn-success m-bottom-xs dealPro" name="release"><i class="fa fa-share"></i> 发布</button>
+                                      {{/if}}
+                                    {{/if}}
+                                    <button class="btn btn-sm btn-success m-bottom-xs historyRecord"><i class="fa fa-file-text-o"></i> 历史记录</button>
+                                    <button class="btn btn-sm btn-success m-bottom-xs dealPro" name="delete"><i class="fa fa-trash-o"></i> 删除</button>
+                                  </div>
+                                </td>
+                            </tr>
+                        {{/each}}
+                        </tbody>
+                    </table>
+                  </div>
+                  {{> tablePagination pageInfo=getLoanProList}}
+                </div>
+            </div>
+        </div>
+        <!-- /.padding-xs -->
+    </div>
+    <!-- /.padding-xs -->
+
+    <!--发布下架提示-->
+    <div class="modal fade" id="dealProModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="panel panel-default">
+                        <form class="form-horizontal no-margin" id="dealProForm" >
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tCont1">
+                                        <div class="m-top-md text-center">
+                                            即将{{getDealAction}}产品“{{getProName}}”
+                                            <p>请输入登录密码</p>
+                                        </div>
+                                        <div class="m-top-md form-group" style="width: 100%;">
+                                          <div class="clearfix" style="width: 208px; margin: auto;">
+                                            <label class="pull-left help-block font-14">密码</label>
+                                            <div class="pull-left w160 m-left-sm">
+                                                 <input class="form-control input-sm" name="loginPwd" type="password" data-error="请输入密码" required />
+                                                 <span class="help-block with-errors"></span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tCont2">
+                                        <h3 class="text-center text-info">
+                                        {{getDealAction}}成功！</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="panel-footer text-center">
+                            <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal" aria-hidden="true"><i class="fa fa-reply"></i> 取消</button>
+                            <button type="button" class="btn btn-sm btn-success" id="tConfirmBtn"><i class="fa fa-check"></i> 确定</button>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!--历史记录-->
+    <div class="modal fade" id="historyRecordModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4><strong>产品历史记录</strong></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel-overview clearfix">
+                      <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-style">
+                            <thead class="font-bold head-style">
+                            <tr>
+                                <td class="col-md-4">操作时间</td>
+                                <td class="col-md-4">操作人员</td>
+                                <td class="col-md-4">操作事项</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each getHistoryRecord}}
+                                <tr>
+                                    <td>{{formatDateTime operTime}}</td>
+                                    <td>{{name}}</td>
+                                    <td>
+                                        {{getCodeName "loanProductStatus" operType}}
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-danger" data-dismiss="modal" aria-hidden="true"><i class='fa fa-reply'></i> 取消</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</template>

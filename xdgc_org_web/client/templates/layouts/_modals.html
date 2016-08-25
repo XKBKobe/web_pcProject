@@ -1,0 +1,81 @@
+<template name="_modals">
+  <!--客户管理模块-->
+  <!--{{> _addCustomerTrace}}
+  {{> _undoDetermine}}
+  {{> _addInstitution}}
+  {{> _addInstitution1}}
+  {{> _addInstitution2}}
+  {{> _confirmFraudField}}
+
+  &lt;!&ndash;贷前审批模块&ndash;&gt;
+  {{> _distributeProducts}}
+  {{> _approvalQueryInfo}}
+  {{> _approvalQueryInfo2}}
+  {{> _approvalQueryInfo3}}
+  {{> _assignAmountFirst}}
+  {{> _assignAmountSecond}}
+  {{> _assignAmountThird}}
+  {{> _signContracts}}
+  {{> _electronicContract}}
+  {{> _yixinInfo}}
+  {{> _firstTrialRepayWay}}
+  {{> _retrialRepayWay}}
+  {{> _finalTrialRepayWay}}
+
+    &lt;!&ndash;资产管理模块&ndash;&gt;
+  {{> _tagsSystem}}
+  {{> _editServiceType}}
+  {{> _changeOwner}}
+  {{>_searchOrders}}
+  {{>_addSourceData}}
+
+  &lt;!&ndash;贷后风控&ndash;&gt;
+  {{> _dataImport}}
+  {{> _changeLevel}}
+  {{> _assetAdjusted}}
+
+  &lt;!&ndash;产品管理&ndash;&gt;
+  {{> _updateProduct}}
+  {{> _areaSelection}}
+
+  &lt;!&ndash;实时播报&ndash;&gt;
+  {{> _visitorTrace}}-->
+
+</template>
+
+<template name="_modal">
+  <!--Modal-->
+  <div class="modal fade" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4><strong>{{title}}</strong></h4>
+        </div>
+        <div class="modal-body">
+          {{> Template.dynamic template=body}}
+        </div>
+        <div class="modal-footer">
+          {{> Template.dynamic template=footer }}
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+</template>
+
+<template name="_logoutConfirm">
+  <!-- Logout confirmation -->
+  <div class="custom-popup width-100" id="logoutConfirm">
+    <div class="padding-md">
+      <span class="font-16">确定要退出登录？</span>
+
+      <div class="text-center m-top-md">
+        <a class="btn btn-sm btn-danger logoutConfirm_close"><i class="fa fa-reply"></i> 取消</a>
+        <a class="btn btn-sm btn-success m-right-sm" id="logout" href="{{pathFor 'logout'}}"><i class="fa fa-check"></i> 确定</a>
+      </div>
+    </div>
+  </div>
+</template>

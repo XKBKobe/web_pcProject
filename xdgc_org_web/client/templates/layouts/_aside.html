@@ -1,0 +1,69 @@
+<template name="_aside">
+  <div class="wrapper menu-list">
+    <aside class="fixed skin">
+      <div class="sidebar-inner scrollable-sidebar">
+        <div class="user-block clearfix">
+          <div class="detail">
+            <strong>{{username}}</strong>
+          </div>
+        </div>
+        <!-- /user-block -->
+        <div class="main-menu">
+          <ul>
+            {{#each allMenus}}
+              {{#if isMatched code myMenus}}
+                <li class="{{#if children}}openable{{else}}showCurrent{{/if}}" id="{{code}}">
+                  <a href="{{url}}">
+                          <span class="menu-icon">
+                            <i class="{{icon}}"></i>
+                          </span>
+                          <span class="text">
+                            {{name}}
+                          </span>
+                    <span class="menu-hover"></span>
+                  </a>
+                  {{#if children}}
+                    <ul class="submenu">
+                      {{#each children}}
+                        {{#if isMatched code myMenus}}
+                          {{#if children}}
+                            <li class="openable">
+                              <a href="#">
+                                <span class="submenu-label">{{name}}</span>
+                                <span class="fa fa-angle-down pull-right"></span>
+                              </a>
+                              <ul class="submenu third-level">
+                                {{#each children}}
+                                  {{#if isMatched code myMenus}}
+                                    <li>
+                                      <a href="{{pathFor url}}" id="{{code}}">
+                                        <span class="submenu-label">{{name}}</span>
+                                      </a>
+                                    </li>
+                                  {{/if}}
+                                {{/each}}
+                              </ul>
+                            </li>
+                          {{else}}
+                            <li class="showCurrent">
+                              <a href="{{pathFor url}}" id="{{code}}">
+                                <span class="submenu-label">{{name}}</span>
+                              </a>
+                            </li>
+                          {{/if}}
+                        {{/if}}
+                      {{/each}}
+                    </ul>
+                  {{/if}}
+                </li>
+              {{/if}}
+            {{/each}}
+
+          </ul>
+        </div>
+        <!-- /main-menu -->
+      </div>
+      <!-- /sidebar-inner -->
+    </aside>
+  </div>
+</template>

@@ -1,0 +1,1 @@
+meteor --port 3008 --settings settings.json

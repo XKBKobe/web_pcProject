@@ -1,0 +1,51 @@
+/**main**/
+#nav-tabs {
+  text-align: left;
+}
+
+.main-nav .grey-container{
+  padding:10px 15px;
+}
+
+.main-nav .shortcut-link {
+  position:relative;
+  text-align:center;
+  padding: 1px 15px;
+  color:#777;
+  margin-right:0;
+}
+
+.main-nav .shortcut-link .text{
+  color:#333;
+  margin-left:0;
+  display:block;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top:0;
+}
+
+.main-nav .shortcut-link:hover {
+  filter: alpha(opacity=20);
+  background: rgba(210, 210, 210, 0.3);
+}
+
+.main-nav .shortcut-close {
+  position:absolute;
+  top:-2px;
+  right:2px;
+  color: red;
+}
+
+.main-nav .shortcut-link .shortcut-icon{
+  font-size:20px;
+}
+
+/** close icon only display on hover a Tab
+ */
+.shortcut-wrapper a .shortcut-close  {
+  display: none;
+}
+
+.shortcut-wrapper a:hover .shortcut-close  {
+  display: block;
+}

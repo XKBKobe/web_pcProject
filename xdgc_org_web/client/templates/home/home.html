@@ -1,0 +1,80 @@
+<template name="home">
+    <div class="padding-md">
+        <div class="alert-animated m-bottom-md" style="border: 0;text-align: left;">
+            <div class="alert-inner" style="border: 0;background-color: #f9f9f9;">
+                <div class="alert-message">
+                    <h4>欢迎光临{{orgData.orgName}}数据中心，从左侧的菜单开始你的管理历程。</h4>
+                </div>
+            </div>
+        </div>
+        <!-- /.alert -->
+        <div class="row m-top-md">
+            <div class="col-md-3">
+                <a href="/orgCustomerList" style="color:#fff;">
+                    <div class="panel panel-default panel-stat1 panel-br" style="background-color: {{color 0}};">
+                        <div class="panel-body">
+                            <dl class="font-22">
+                                <dt>注册用户数</dt>
+                                <dd>今天：{{todayCount.register}}</dd>
+                                <dd>昨天：{{yesterdayCount.register}}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </a>
+                <!-- /.panel -->
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default panel-stat1 panel-br" style="background-color: {{color 1}};cursor: default;">
+                    <div class="panel-body" style="color:#fff;">
+                        <dl class="font-22">
+                            <dt>提交申请数（全系统）</dt>
+                            <dd>今天：{{todayCount.orgApplyLoan}}</dd>
+                            <dd>昨天：{{yesterdayCount.orgApplyLoan}}</dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-md-3 -->
+            <div class="col-md-3">
+                <a href="/orgBank" style="color:#fff;">
+                    <div class="panel panel-default panel-stat1 panel-br" style="background-color: {{color 2}};">
+                        <div class="panel-body">
+                            <dl class="font-22 font-bold">
+                                <dt>提交申请数（本行）</dt>
+                                <dd>今天：{{todayCount.localApplyLoan}}</dd>
+                                <dd>昨天：{{yesterdayCount.localApplyLoan}}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </a>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-md-3 -->
+        </div>
+        <!-- /.row -->
+        <div class="row m-top-md">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>
+                            最近{{timeRange.register}}天运营概况
+                            <small>
+                                日均注册数：{{average.register}},
+                                日均申请数（全系统）：{{average.orgApplyLoan}},
+                                日均申请数（本行）：{{average.localApplyLoan}}
+                            </small>
+                        </h4>
+                    </div>
+                    <div class="panel-body">
+                        <div id="indexCharts" style="height:250px;"></div>
+                    </div>
+                </div>
+                <!-- /.pannel -->
+            </div>
+            <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.padding-md -->
+</template>

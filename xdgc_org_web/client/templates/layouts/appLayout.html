@@ -1,0 +1,38 @@
+<template name="appLayout">
+  <!--[if lt IE 9]>
+    <p class="browser-warning"><strong><i class="icon-exclamation-sign"></i> Warning</strong> - You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to properly view this website.</p>
+  <![endif]-->
+  <link rel="stylesheet" href="/css/{{getSkin}}/systemSkin.css">
+
+  <!-- Overlay Div -->
+  <div id="overlay" class="transparent"></div>
+
+  <div id="wrapper" class="preload">
+    {{> _topnav}}
+    {{> _aside}}
+    <div class="fide-version">
+        v 2.2
+    </div>
+    <div id="main-container">
+      <!--{{#if isCanSeeUrl routerName}}-->
+        {{> _main}}
+        {{> yield}}
+      <!--{{else}}
+        {{> noPermission}}
+      {{/if}}-->
+    </div>
+    {{> _modals}}
+  </div>
+  <!-- /wrapper -->
+  {{> _logoutConfirm}}
+  {{> sAlert template='sAlertCustom'}}
+  {{> loading}}
+
+  <a href="#" id="scroll-to-top" class="hidden-print" style="bottom:8px;display: none;"><i class="fa fa-chevron-up"></i></a>
+</template>
+
+<template name="blankLayout">
+  {{> yield}}
+  {{> sAlert template='sAlertCustom'}}
+  {{> loading}}
+</template>

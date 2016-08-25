@@ -1,0 +1,41 @@
+<template name="_main">
+  {{#if selectedEqual accountFlag 2}}
+  <div class="main-nav">
+    <div id="breadcrumb">
+      {{> _breadcrumb}}
+    </div>
+    <!-- /breadcrumb-->
+  </div>
+  {{/if}}
+  {{> subpageMenu}}
+</template>
+
+<template name="subpageMenu">
+  {{#if currentMenu}}
+    <nav class="navbar subpage-menu">
+      <div class="collapse navbar-collapse" id="galleryNavigation">
+        <ul class="nav navbar-nav">
+          {{#each subMenus}}
+            <li class="{{isActive}} {{hasSubmenu}}">
+              {{#if hasSubmenu}}
+                <a href="#">{{name}} <b class="caret"></b></a>
+                <ul class="dropdown-menu flipInV" role="menu">
+                  {{#each submenu}}
+                    <li><a href="{{genPath}}">{{name}}</a></li>
+                  {{/each}}
+                </ul>
+              {{else}}
+                <a href="{{genPath}}">{{name}}</a>
+              {{/if}}
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+  {{/if}}
+</template>
+
+<template name="subpageMenuItem">
+
+</template>

@@ -1,0 +1,47 @@
+@import "variables.less";
+@import "mixins.less";
+
+.workday-group {
+  font-size: @font-size;
+  display: inline-table;
+
+  & .workday {
+    width: @workday-width;
+    height: @workday-height;
+    border: 1px solid @workday-color-negative;
+    float: left;
+
+    & > label {
+      display: block;
+      position: absolute;
+      width: 50%; /* fixed unknown width calculate issue. */
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    & > .content {
+      width: @workday-width;
+      height: @workday-height;
+      .block-center-text(@workday-width, @workday-height);
+      color: @workday-color-default;
+    }
+
+    &.editable > a.content {
+      line-height: @workday-height;
+      color: @workday-color-edit;
+    }
+
+    &.unavailable > .content {
+      background-color: @workday-bgcolor-negative;
+      color: @workday-color-negative;
+    }
+  } // .workday
+} // .workday-group
+
+.workday-group.weekday-5 {
+  width: (@workday-width * 5);
+}
+
+.workday-group.weekday-7 {
+  width: (@workday-width * 7);
+}

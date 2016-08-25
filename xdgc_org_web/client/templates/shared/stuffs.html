@@ -1,0 +1,37 @@
+<!-- Usage:
+{{> progressBar total=100 current=60 average=80}}
+  {{> progressBar total=100 current=30 average=50}}
+  {{> progressBar total=100 current=10 average=0}} -->
+
+
+<template name="progressBar">
+  <div class="progress-complex">
+    <div class="progress">
+      <div class="progress-bar" style="width: {{percentage current total}}%;"></div>
+    </div>
+    <div class="progress-average fa fa-sort-down fa-th" style="left: {{percentage average total}}%;">
+      <div class="vertical-line"></div>
+    </div>
+  </div>
+  <style media="screen">
+    .progress-complex {
+      position: relative;
+    }
+
+    .progress-average {
+      position: absolute;
+      top: -15px; /* fix process-bar height expl */
+      display: inline-table;
+      text-align: center;
+      width: 8px;
+    }
+
+    .vertical-line {
+      margin-left: 4px;
+
+      width: 1px;
+      border-left: 1px dotted grey;
+      height: 15px;
+    }
+  </style>
+</template>

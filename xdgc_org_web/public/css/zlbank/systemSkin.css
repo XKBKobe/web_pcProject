@@ -1,0 +1,171 @@
+/*--系统头部和左侧菜单-*/
+aside.skin {
+    background: #495B6C;
+}
+aside.skin .size-toggle {
+    border-bottom-color: #415160;
+    box-shadow: 0 1px 0 #506274;
+    -moz-box-shadow: 0 1px 0 #506274;
+    -webkit-box-shadow: 0 1px 0 #506274;
+}
+aside.skin .size-toggle .btn {
+    color: #BECFE0;
+}
+aside.skin .size-toggle .btn:hover,
+aside.skin .size-toggle .btn:focus {
+    color: #fff;
+}
+aside.skin .size-toggle .btn .icon-bar {
+    background-color: #BECFE0;
+}
+aside.skin .sidebar-inner {
+    border-right-color: #415160;
+}
+aside.skin .sidebar-inner .user-block {
+    border-bottom-color: #415160;
+    box-shadow: 0 1px 0 #506274;
+    -moz-box-shadow: 0 1px 0 #506274;
+    -webkit-box-shadow: 0 1px 0 #506274;
+}
+aside.skin .sidebar-inner .user-block .detail {
+    color: #BECFE0;
+}
+aside.skin .sidebar-inner .user-block ul li a {
+    color: #BECFE0;
+}
+aside.skin .sidebar-inner .user-block ul li a:hover,
+aside.skin .sidebar-inner .user-block ul li a:focus {
+    color: #fff;
+}
+aside.skin .sidebar-inner .search-block {
+    border-bottom-color: #415160;
+    box-shadow: 0 1px 0 #506274;
+    -moz-box-shadow: 0 1px 0 #506274;
+    -webkit-box-shadow: 0 1px 0 #506274;
+}
+aside.skin .sidebar-inner .search-block input[type="text"],
+aside.skin .sidebar-inner .search-block .btn {
+    background: #fff;
+    color: #BECFE0;
+    border-color: #dfdfdf;
+}
+aside.skin .main-menu > ul > li {
+    border-top-color: #506274;
+    border-bottom-color: #415160;
+}
+aside.skin .main-menu > ul > li.active,
+aside.skin .main-menu > ul > li.display {
+    border-top-color: #415160;
+}
+aside.skin .main-menu > ul > li.active > a,
+aside.skin .main-menu > ul > li.display > a {
+    background: #415160;
+    color: #fff;
+}
+aside.skin .main-menu > ul > li > a {
+    color: #BECFE0;
+}
+aside.skin .main-menu > ul > li > a:hover,
+aside.skin .main-menu > ul > li > a:focus {
+    background: #394754;
+    color: #fff;
+}
+aside.skin .main-menu > ul > li > a .menu-hover {
+    background: #feffd8;
+    box-shadow: 0 0 10px 0px #ffffff;
+    -moz-box-shadow: 0 0 10px 0px #ffffff;
+    -webkit-box-shadow: 0 0 10px 0px #ffffff;
+}
+aside.skin .main-menu > ul > li > .submenu  li  a{
+    background-color: #415160;
+}
+aside.skin .main-menu > ul > li > .submenu  li a .submenu-label{
+    color: #BECFE0;
+}
+aside.skin .main-menu > ul > li > .submenu  li a:hover .submenu-label,
+aside.skin .main-menu > ul > li > .submenu  li a:focus .submenu-label {
+    color: #fff;
+}
+aside.skin .main-menu > ul > li > .submenu  li.active a{
+    background: #2E3943;
+}
+aside.skin .main-menu > ul > li > .submenu  li.active a .submenu-label{
+    color: #fff;
+}
+@media (max-width: 767px)   {
+    aside.skin .main-menu > ul > li > .dropdown-menu li a {
+        color: #BECFE0;
+    }
+
+    aside.skin .main-menu > ul > li > .dropdown-menu li a:hover
+    ,aside.skin .main-menu > ul > li > .dropdown-menu li a:focus {
+        color: #fff;
+        background: #415160;
+    }
+}
+#top-nav.skin {
+    background: #2B333C;
+    border-bottom-color: #415160;
+}
+#top-nav.skin .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+#top-nav.skin .brand {
+    color: #BECFE0;
+    background: #2B333C;
+}
+#top-nav.skin .brand:hover
+,#top-nav.skin .brand:focus {
+    color: #fff;
+}
+#top-nav.skin .page-title {
+    color: #BECFE0;
+}
+#top-nav.skin .nav-notification > li.open {
+    background: #415160;
+}
+#top-nav.skin .nav-notification > li:hover {
+    background: #415160;
+}
+#top-nav.skin .nav-notification > li > a {
+    color: #BECFE0;
+}
+#top-nav.skin .nav-notification > li > a:hover,
+#top-nav.skin .nav-notification > li > a:focus {
+    color: #fff;
+}
+
+/*-系统按钮-*/
+.btn.btn-success {
+    background: #65cea7;
+    border: 1px solid #3ec291;
+}
+
+.btn.btn-success:hover,
+.btn.btn-success:focus,
+.btn.btn-success:active,
+.btn.btn-success.active {
+    background: #4ac598;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.btn.btn-danger {
+    background: #fc8675;
+    border: 1px solid #fb5a43;
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:focus,
+.btn.btn-danger:active,
+.btn.btn-danger.active {
+    background: #fb6752;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}

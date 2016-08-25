@@ -1,0 +1,19 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico?v=1">
+  <script>
+    (function (window, writeScript) {
+      writeScript(Meteor.settings.public.assets.cities);
+      writeScript(Meteor.settings.public.assets.cityselector);
+      writeScript(Meteor.settings.public.assets.statelist);
+      writeScript(Meteor.settings.public.assets.amap);
+    })(this, function (url) {
+      document.write('<scr' + 'ipt src=' + url + '></scr' + 'ipt>');
+    });
+  </script>
+  <!--<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>-->
+  <link rel="stylesheet" href="/css/amap/main1119.css">
+</head>
+
+<body>
+</body>

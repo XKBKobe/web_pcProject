@@ -1,0 +1,92 @@
+/*------- 本行客户经理关联查询chosen -------*/
+.chosen-container-multi .chosen-choices li.search-field input[type=text],
+.chosen-container-single .chosen-single {
+	height: 34px;
+}
+.chosen-container-multi .chosen-choices li.search-field input[type=text],
+.chosen-container-single .chosen-single {
+	height: 30px;
+}
+.chosen-container-single .chosen-single {
+	font-size: 12px;
+	border-color: #ccc;
+	background: none;
+	box-shadow: none;
+	line-height: 30px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.chosen-container-single .chosen-single div b {
+	background-position:  0 7px;
+}
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+	background-position: -18px 7px;
+}
+.chosen-container-active.chosen-with-drop .chosen-single {
+	background-image: none;
+}
+
+/**下属银行详情地图panel样式**/
+.mapLocation #panel {
+	position: absolute;
+	background-color: white;
+	max-height: 90%;
+	overflow-y: auto;
+	top: 10px;
+	right: 10px;
+	width: 280px;
+}
+
+.mapLocation #tip {
+	background-color: red;
+	color: yellow;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: absolute;
+	font-size: 14px;
+	right: auto;
+	left: 10px;
+	top: 10px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	line-height: 30px;
+}
+
+/*------- [radio]custom-radio -------*/
+#distributeModal input[type="radio"] + .custom-radio {
+	width: 26px;
+	height: 26px;
+}
+#distributeModal input[type="radio"]:checked + .custom-radio:before {
+	width: 20px;
+	height: 20px;
+}
+.gallery-container .gallery-item {
+	overflow: visible;
+}
+.gallery-container .label-radio {
+	display: block;
+	padding-top: 20px;
+	margin-top: 20px;
+	margin-right: 9px;
+}
+.gallery-container input[name="agentRadio"] {
+	 width: 24px;
+	 height: 24px;
+}
+
+/*------- wizard-steps -------*/
+.wizard-steps li a {
+	padding: 8px 10px 9px;
+}
+
+/*------- common -------*/
+.mySystem .tab-bar .active a{
+	font-weight: bold;
+	background: #777;
+	color: #fff;
+	text-shadow: none;
+}

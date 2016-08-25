@@ -1,0 +1,457 @@
+<template name="productDetail">
+    <div class="paddingTB-sm margin-sm">
+        <form class="form-horizontal" id="loanProForm" data-toggle="validator">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default paddingTB-sm">
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <span class="col-lg-2 control-label font-bold">名称</span>
+
+                                <div class="col-lg-8 clearfix">
+                                    <div class="w220 pull-left">
+                                        <input type="text" class="form-control input-sm" pattern="{{getRegExpNoSlash 'nonBlankCharacter'}}" value="{{proDetails.name}}" name="name" required>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /form-group -->
+                            <div class="checkbox-item">
+                             <div class="form-group">
+                                <span class="col-lg-2 control-label font-bold">目标客群</span>
+
+                                <div class="col-lg-10 m-top-xs">
+                                    {{#each getCodeList "targetCustomer"}}
+                                    <span class="control-label label-checkbox inline">
+                                        <input type="checkbox" value="{{code}}" {{checkedItem proDetails.targetCustomer code}} name="targetCustomer">
+                                        <span class="custom-checkbox"></span>
+                                        {{name}}
+                                    </span>
+                                    {{/each}}
+                                </div>
+                                <!-- /.col -->
+                             </div>
+                            <!-- /form-group -->
+                            </div>
+                            <div class="form-group rateType">
+                                <span class="col-lg-2 control-label font-bold">利率</span>
+
+                                <div class="clearfix col-lg-10">
+                                    <div class="pull-left">
+                                        <select class="form-control input-sm" name="rateType">
+                                            {{#each getCodeList "rateType"}}
+                                                <option {{selectedEqual proDetails.rateType code}} value="{{code}}">{{name}}</option>
+                                            {{/each}}
+                                        </select>
+                                    </div>
+                                    <div class="w90 pull-left m-left-sm">
+                                        <input maxlength="32" class="form-control input-sm" value="{{proDetails.downRate}}" name="downRate" type="number" step="any" min="0"/>
+                                    </div>
+                                    <span class="control-label padding-xs pull-left">～</span>
+
+                                    <div class="w90 pull-left">
+                                        <input maxlength="32" class="form-control input-sm" value="{{proDetails.upperRate}}" pattern="{{getRegExpNoSlash 'nonBlankCharacter'}}" name="upperRate" type="number" step="any" min="0" required/>
+                                    </div>
+                                    <span class="control-label m-left-xs pull-left paddingTB-xs">%</span>
+                                </div>
+                                <div class="col-lg-offset-2 col-lg-8">
+                                    <span class="help-block customErrorHelper"></span>
+                                </div>
+                            </div>
+                            <!-- /form-group -->
+                            <div class="form-group">
+                                <span class="col-lg-2 control-label font-bold">贷款类型</span>
+
+                                <div class="col-lg-10 m-top-xs">
+                                   {{#each getCodeList "loanProductType"}}
+                                   <span class="control-label label-radio inline">
+                                       <input type="radio" value="{{code}}" {{defaultChecked proDetails.type code}} name="type">
+                                       <span class="custom-radio"></span>
+                                       {{name}}
+                                   </span>
+                                   {{/each}}
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /form-group -->
+                            <div class="form-group">
+                                <span class="col-lg-2 control-label font-bold">最快放款时间</span>
+
+                                <div class="clearfix col-lg-10">
+                                    <div class="w80 pull-left">
+                                        <input maxlength="32" class="form-control input-sm" pattern="{{getRegExpNoSlash 'integer'}}" value="{{proDetails.loanDay}}" name="loanDay" step="1" data-error="请输入正确的天数" type="number" min="0" required/>
+                                    </div>
+                                    <span class="control-label m-left-sm pull-left">天</span>
+                                </div>
+                                <div class="col-lg-offset-2 col-lg-8">
+                                    <span class="help-block with-errors"></span>
+                                </div>
+                            </div>
+                            <!-- /form-group -->
+                            <div class="form-group">
+                                <span class="col-lg-2 control-label font-bold">爆款推荐</span>
+
+                                <div class="col-lg-10 m-top-xs">
+                                   <span class="control-label label-radio inline">
+                                       <input type="radio" value="1" {{defaultChecked proDetails.recommendType 1}} name="recommendType">
+                                       <span class="custom-radio"></span>
+                                       是
+                                   </span>
+                                    <span class="control-label label-radio inline">
+                                       <input type="radio" value="2" {{defaultChecked proDetails.recommendType 2}} name="recommendType">
+                                       <span class="custom-radio"></span>
+                                       否
+                                   </span>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /form-group -->
+                            <div class="form-group">
+                                <span class="col-lg-2 control-label font-bold" style="margin-top: 23px;">产品图标</span>
+
+                                <div class="col-lg-10 clearfix">
+                                    <div class="pull-left m-top-md paddingTB-xs">
+                                        <button type="button" class="btn btn-success btn-sm photoUpload"><i class="fa fa-upload"></i> 上传</button>
+                                        <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target="#galleryModal" data-backdrop="static"><i class="fa fa-photo"></i> 图库</a>
+                                    </div>
+                                    <div class="pull-left">
+                                        <a class="gallery-zoom m-left-sm photoArea" target="_blank" href="{{picUrl}}" data-id="{{proDetails.pngUrl}}">
+                                            <img style="width: 80px; height: 80px;" src="{{picUrl}}"/>
+                                        </a>
+                                    </div>
+                                    <span class="pull-left m-top-md paddingTB-sm"><strong>（建议尺寸160px*160px）</strong></span>
+                                </div>
+                                <form id="fileFormId" action="" method="post" enctype="multipart/form-data" style="display: none;">
+                                    <div class="input-group">
+                                        <input type="hidden" name="orgCode" value="{{orgCode}}">
+                                        <input maxlength=32 type="hidden" name="uploadTarget" value="">
+                                        <input maxlength=32 type="hidden" name="path" value="">
+                                        <input maxlength=32 type="hidden" name="filename" value="">
+                                        <input type="file" name="filecontent" id="fileContent" value="">
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /form-group -->
+                            <div class="form-group">
+                                <span class="col-lg-2 control-label font-bold">产品描述</span>
+
+                                <div class="col-lg-8">
+                                    <textarea class="form-control" maxlength="302" name="description" value="{{proDetails.description}}" rows="5" style="resize: none; word-break: break-all;" required></textarea>
+                                    <div class="text-right clearfix">
+                                        <div class="font-bold m-top-xs">（字数限制在300字以内）</div>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /form-group -->
+                            <div class="form-group">
+                                <span class="col-lg-2 control-label font-bold">申请条件</span>
+
+                                <div class="col-lg-8">
+                                    <textarea class="form-control" maxlength="152" name="applyDesc" value="{{proDetails.applyDesc}}" rows="5" style="resize: none; word-break: break-all;" required></textarea>
+                                    <div class="text-right clearfix">
+                                        <div class="font-bold m-top-xs">（字数限制在150字以内）</div>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /form-group -->
+                            <div class="form-group">
+                                <span class="col-lg-2 control-label font-bold">还款说明</span>
+
+                                <div class="col-lg-8">
+                                    <textarea class="form-control" maxlength="152" name="paybackDesc" value="{{proDetails.paybackDesc}}" rows="5" style="resize: none; word-break: break-all;" required></textarea>
+                                    <div class="text-right clearfix">
+                                        <div class="font-bold m-top-xs">（字数限制在150字以内）</div>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /form-group -->
+                            <div class="form-group material">
+                                <span class="col-lg-2 control-label font-bold">所需材料</span>
+                            </div>
+                            <!-- /form-group -->
+                            <div class="col-lg-offset-2 col-lg-8">
+                                <div class="m-bottom-md personalInfo checkbox-item">
+                                    <div class="form-group">
+                                        <div class="font-bold m-bottom-sm">个人资料
+                                            <button class="m-left-md btn btn-info btn-xs checkAll" name="personalInfo">全选</button>
+                                            <button class="m-left-md btn btn-info btn-xs unCheckAll" name="personalInfo">取消全选</button>
+                                        </div>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" value="name" name="privateMat" disabled checked>
+                                                <span class="custom-checkbox"></span>
+                                                用户姓名
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" value="idNumber" name="privateMat" disabled checked>
+                                                <span class="custom-checkbox"></span>
+                                                身份证号码
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="identityPic" name="privateMat">
+                                                <span class="custom-checkbox"></span>
+                                                身份证照片正反面
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" value="applyAmount" name="privateMat" disabled checked>
+                                                <span class="custom-checkbox"></span>
+                                                意向贷款额度
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="m-bottom-md baseInfo checkbox-item">
+                                    <div class="form-group">
+                                        <div class="font-bold m-bottom-sm">基础资料
+                                            <button class="m-left-md btn btn-xs btn-info checkAll" name="baseInfo">全选</button>
+                                            <button class="m-left-md btn btn-xs btn-info unCheckAll" name="baseInfo">取消全选</button>
+                                        </div>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="household" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                户籍
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="liveAddress" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                现住址
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="houseProperty" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                住宅状况
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="liveProof" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                居住证明照片
+                                                <a href="#" title="信用卡纸质照片或水电煤账单"><i class="fa fa-question-circle text-info"></i></a>
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="residenceBook" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                户口本照片
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="houseProprietaryCertificate" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                房产证明
+                                                <a href="#" title="房产证或房产查询单证明"><i class="fa fa-question-circle text-info"></i></a>
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="financialAssetsProof" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                金融资产证明
+                                                <a href="#" title="资产证明照片"><i class="fa fa-question-circle text-info"></i></a>
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="marriage" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                婚姻状况
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="marriageLicense" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                结婚证照片
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="children" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                子女状况
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="carProperty" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                购车状况
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="driverLicense" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                车产证明
+                                                <a href="#" title="行驶证照片"><i class="fa fa-question-circle text-info"></i></a>
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="industry" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                行业
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="businessLicenseName" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                营业执照名称
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="businessLicense" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                营业执照照片
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="manageAddress" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                经营地址
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="taxRegistCertificate" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                税务登记证照片
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="orgCodeCertificate" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                机构代码证照片
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="capitalVerificationReport" name="basicMat">
+                                                <span class="custom-checkbox"></span>
+                                                验资报告照片
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="m-bottom-md dataSource checkbox-item">
+                                    <div class="form-group">
+                                        <div class="font-bold m-bottom-sm">数据源
+                                            <button class="m-left-md btn btn-xs btn-info checkAll" name="dataSource">全选</button>
+                                            <button class="m-left-md btn btn-xs btn-info unCheckAll" name="dataSource">取消全选</button>
+                                        </div>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="BANK_CARD" name="dataSource">
+                                                <span class="custom-checkbox"></span>
+                                                银行流水
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="ALIPAY" name="dataSource">
+                                                <span class="custom-checkbox"></span>
+                                                支付宝数据
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="OTO" name="dataSource">
+                                                <span class="custom-checkbox"></span>
+                                                外卖团购
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="POS" name="dataSource">
+                                                <span class="custom-checkbox"></span>
+                                                POS账户
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="TOBACCO" name="dataSource">
+                                                <span class="custom-checkbox"></span>
+                                                烟草账户
+                                            </span>
+                                        </span>
+                                        <span class="w150">
+                                            <span class="control-label label-checkbox inline">
+                                                <input type="checkbox" class="chk-item" value="ACCUMULATIONFUND" name="dataSource">
+                                                <span class="custom-checkbox"></span>
+                                                公积金
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                                <!-- /.col -->
+                            <div class="form-group">
+                                <div class="col-lg-offset-2 col-lg-12 no-padding m-top-md">
+                                    <a href='{{pathFor "loanProduct"}}' class="btn btn-danger btn-sm m-left-sm" type="button"><i class="fa fa-reply"></i> 取消</a>
+                                    <button class="btn btn-success btn-sm m-left-sm" type="button" id="savePro"><i class="fa fa-check"></i> 保存</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /panel -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </form>
+    </div>
+
+    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header text-right">
+                    <button class="btn btn-sm btn-success" id="confirmPic"><i class='fa fa-check'></i> 确定</button>
+                    <button class="btn btn-sm btn-danger" data-dismiss="modal" aria-hidden="true"><i class='fa fa-reply'></i> 取消</button>
+                </div>
+                <div class="modal-body modal-open">
+                    <div class="clearfix" style="padding-left: 20px;">
+                       {{#each getPicUrlList}}
+                       <div class="gallery-item clearfix pull-left w140">
+                           <label class="pull-left" style="margin: 34px 10px 0 0;">
+                               <input name="picRadio" type="radio" data-id="{{picId}}"/>
+                               <span class="custom-radio"></span>
+                           </label>
+                           <a href="#" class="thumbnail pull-left choseTarget" style="margin-right: 15px;cursor: pointer;">
+                                <img style="width: 80px; height: 80px;" src="{{url}}"/>
+                           </a>
+                       </div>
+                       {{/each}}
+                    </div>
+                    <!-- /.gallery-container -->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+</template>

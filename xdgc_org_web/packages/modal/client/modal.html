@@ -1,0 +1,56 @@
+<!-- Example:
+<body>
+  {{> _modal_sample}}
+</body>
+
+<template name="_modal_sample">
+  {{#modal id="modal2"}}
+    {{#modalHeader}} My Modal {{/modalHeader}}
+
+    {{#modalBody}}
+    <p>Modal Body</p>
+    <form id="form_id" action="index.html" method="post">
+      <input maxlength=32 type="text" name="some_name" value="">
+    </form>
+    {{/modalBody}}
+
+    {{#modalFooter}}
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+    {{/modalFooter}}
+  {{/modal}}
+</template>
+
+// Example -->
+
+<template name="modal">
+  <div class="modal fade" id="{{id}}">
+  {{#if show}}
+    <div class="modal-dialog">
+      <div class="modal-content">
+        {{> Template.contentBlock}}
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  {{/if}}
+  </div><!-- /.modal -->
+</template>
+
+<template name="modalHeader">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4><strong>{{> Template.contentBlock}}</strong></h4>
+  </div>
+</template>
+
+<template name="modalBody">
+  <div class="modal-body">
+    {{> Template.contentBlock}}
+  </div>
+</template>
+
+<template name="modalFooter">
+  <div class="modal-footer">
+    {{> Template.contentBlock}}
+  </div>
+</template>
+

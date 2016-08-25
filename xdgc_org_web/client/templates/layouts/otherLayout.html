@@ -1,0 +1,25 @@
+<template name="otherLayout">
+  <!-- Overlay Div -->
+  <div id="overlay" class="transparent"></div>
+  <div id="wrapper" class="preload">
+    <div id="top-nav" class="fixed skin-6">
+      <span class="brand">
+        <img src="/images/icons/logo.png"/>
+        <strong>信贷工厂</strong>
+      </span><!-- /brand -->
+      <ul class="nav-notification clearfix">
+        <li>
+           <span class="brand">
+               <strong>你好，欢迎光临信贷工厂</strong>
+           </span>
+        </li>
+      </ul>
+    </div>
+    <div id="main-container">
+      {{> yield}}
+    </div>
+  </div>
+  <!-- /wrapper -->
+  {{> sAlert template='sAlertCustom'}}
+  {{> loading}}
+</template>

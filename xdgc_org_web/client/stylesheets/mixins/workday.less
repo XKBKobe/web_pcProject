@@ -1,0 +1,12 @@
+.block-center-text(@w, @h) {
+  display: block;
+  text-align: center;
+  line-height: @h;
+};
+
+.block-center-text-as-content(@w, @h) {
+  top: 50%;
+  left: 50%;
+  margin-top: -(@h / 2);
+  margin-left: -(@w / 2);
+}

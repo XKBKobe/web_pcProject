@@ -1,0 +1,55 @@
+<template name="login">
+    <link rel="stylesheet" href="/css/{{getSkin}}/loginSkin.css">
+    <div class="login-wrapper">
+    <div class="text-center">
+      <h2 class="fadeInUp animation-delay8" style="font-weight:bold">
+        <span style="color:#f5f5f5;">{{orgData.orgName}} 数据中心</span>
+      </h2>
+    </div>
+    <div class="login-widget animation-delay1 col-md-4" style="float: none;">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="text-center">
+            <span style="font-size:16px;font-weight:bold;">登录{{orgData.orgName}}数据中心</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          {{#if errorMessages}}
+            <div class="list-errors">
+              {{#each errorMessages}}
+                <div class="list-item">{{this}}</div>
+              {{/each}}
+            </div>
+          {{/if}}
+          <form class="form-login">
+            <!-- 用于阻止浏览器自动填充 -->
+            <input style="display:none" type="text" name="fakeName">
+            <input style="display:none" type="password" name="fakeRember">
+
+            <div class="form-group">
+              <label style="font-size:14px;color:#f5f5f5;">用户名</label>
+              <input type="text" placeholder="请输入你的用户名" name="username" autocomplete="off"
+                     class="form-control input-sm bounceIn animation-delay2">
+            </div>
+            <div class="form-group">
+              <label style="font-size:14px;color:#f5f5f5;">密码</label>
+              <input type="password" placeholder="请输入密码" name="password" autocomplete="off"
+                     class="form-control input-sm bounceIn animation-delay4">
+            </div>
+            <!--<div class="form-group">-->
+            <!--<label class="label-checkbox inline">-->
+            <!--<input type="checkbox" name="_checkbox" class="regular-checkbox chk-delete" autocomplete="off">-->
+            <!--<span class="custom-checkbox info bounceIn animation-delay4"></span>-->
+            <!--</label>-->
+            <!--<label style="color:#f5f5f5;">记住当前密码</label>-->
+            <!--</div>-->
+
+            <button type="submit" class="btn btn-info bounceIn animation-delay5 login-link pull-right"><i class="fa fa-user"></i> 登 录</button>
+          </form>
+        </div>
+      </div>
+      <!-- /panel -->
+    </div>
+    <!-- /login-widget -->
+  </div>
+</template>

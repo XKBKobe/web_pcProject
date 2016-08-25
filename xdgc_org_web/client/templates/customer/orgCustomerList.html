@@ -1,0 +1,140 @@
+<template name="orgCustomerList">
+    <div class="padding-xs customer-list">
+        <div class="paddingLR-md m-top-md">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="no-margin" id="queryForm">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">客户姓名</label>
+                                    <input maxlength="32" class="form-control input-sm" name="name" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">身份证号</label>
+                                    <input maxlength="32" class="form-control input-sm" name="idNumber" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">联系电话</label>
+                                    <input maxlength="32" class="form-control input-sm" name="mobile" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">行业</label>
+                                    <select name="industry" class="form-control input-sm">
+                                        <option value="">全部</option>
+                                        {{#each getCodeList "orgIndustry"}}
+                                            <option value="{{code}}">{{name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row" data-toggle="cityselector">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">经营地址(省)</label>
+                                            <select class="form-control input-sm" data-role="province" id ="_sel_province" name="prov" data-selected=""></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">经营地址(市、区)</label>
+                                            <select class="form-control input-sm" data-role="city" id ="_sel_city" name="city" data-selected=""></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 no-padding">
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">注册时间(起)</label>
+                                                <div class="input-group">
+                                                    <input data-date-format="yyyy-mm-dd" name="startTime" class="form-control input-sm datepicker" maxlength="32" type="text" />
+                                                    <span class="input-group-addon "><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <!-- /.form-group -->
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">注册时间(止)</label>
+                                                <div class="input-group">
+                                                    <input data-date-format="yyyy-mm-dd" name="endTime" class="form-control input-sm datepicker" maxlength="32" type="text" />
+                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <!-- /.form-group -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label class="control-label">申请状态</label>
+                                        <select name="loanFlag" class="form-control input-sm">
+                                            <option value="0">未提交申请</option>
+                                            <option value="1">已提交申请</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group paddingTB-xs m-top-md">
+                                        <button class="btn btn-success btn-sm" type="submit" id="searchCustomer"><i class="fa fa-search"></i> 检 索</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.paddingLR-md -->
+        <div class="padding-xs">
+            <div class="panel">
+                <div class="panel-body margin-sm">
+                  <div class="table-responsive">
+                    <table class="table text-center table-bordered table-hover table-style table-striped">
+                        <thead class="font-bold">
+                        <tr>
+                            <td class="col-md-2">注册时间</td>
+                            <td class="col-md-1">客户姓名</td>
+                            <td class="col-md-1">联系电话</td>
+                            <td class="col-md-2">身份证号</td>
+                            <td class="col-md-2">行业</td>
+                            <td class="col-md-2">经营地址</td>
+                            <td class="col-md-1">申请状态</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{#each customers.list}}
+                        <tr>
+                            <td>{{formatDateTime createTime}}</td>
+                            <td>{{name}}</td>
+                            <td>{{mobile}}</td>
+                            <td>{{idNumber}}</td>
+                            <td>{{getCodeName "orgIndustry"  industry}}</td>
+                            <td>{{getProvinceNameByCode mProv}}-{{getCityNameByCode mProv mCity}}-{{mLoc}}</td>
+                            <td>{{#if selectedEqual loanFlag 0}}未提交申请{{else}}已提交申请{{/if}}</td>
+                        </tr>
+                        {{/each}}
+                        </tbody>
+                    </table>
+                  </div>
+                    {{> tablePagination pageInfo=customers}}
+                </div>
+            </div>
+        </div>
+        <!-- /.padding-xs -->
+    </div>
+    <!-- /.padding-xs -->
+</template>

@@ -1,0 +1,178 @@
+<template name="approvalDetail">
+  <div class="padding-md mySystem">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading clearfix padding-md" style="line-height: 31px;">
+            <div class="col-md-3">
+              <div class="row">
+                <span class="font-14"><strong>申请人：</strong>{{personInfo.name}}</span>
+              </div>
+            </div>
+            <!-- /.col-md-3 -->
+            <div class="col-md-3">
+              <div class="row">
+                <span class="font-14"><strong>风险等级：</strong></span>
+              </div>
+            </div>
+            <!-- /.col-md-3 -->
+            <div class="col-md-3">
+              <div class="row">
+                <span class="font-14"><strong>当前状态：</strong>{{getCodeName "orgLoanStatus" loan.applyStatus}}</span>
+              </div>
+            </div>
+            <!-- /.col-md-3 -->
+            <div class="col-md-3">
+              <div class="row">
+              {{#if selectedEqual accountFlag 1}}
+                {{#if isCanApprocal loan.applyStatus}}
+                <a class="btn btn-success" id="approvalBtn"><i class="fa fa-pencil-square-o"></i> 审批</a>
+                {{/if}}
+              {{/if}}
+              </div>
+            </div>
+            <!-- /.col-md-3 -->
+          </div>
+          <div class="panel-tab">
+            <div class="row">
+              <ul class="tab-bar">
+                <li class="col-md-3 text-center active"><a href="#home1" data-toggle="tab">个人信息</a></li>
+                <li class="col-md-3 text-center"><a href="#profile1" data-toggle="tab">证件信息</a></li>
+                <li class="col-md-3 text-center"><a href="#message1" data-toggle="tab">数据源信息</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="tab-content m-top-md m-bottom-md clearfix">
+              <div class="tab-pane fade active in" id="home1">
+                <div class="col-lg-8">
+                  <table class="table table-bordered table-hover table-striped" id="person-msg">
+                    <tbody>
+                      <tr>
+                        <td class="col-md-3 font-bold">姓名</td>
+                        <td class="col-md-3">{{personInfo.name}}</td>
+                        <td class="col-md-3 font-bold">身份证号</td>
+                        <td class="col-md-3">{{personInfo.idNumber}}</td>
+                      </tr>
+                      <tr>
+                          <td class="font-bold">年龄</td>
+                          <td>{{personInfo.age}}</td>
+                          <td class="font-bold">性别</td>
+                          <td>{{getCodeName "gender" personInfo.gender}}</td>
+                      </tr>
+                      <tr>
+                        <td class="font-bold">户籍</td>
+                        <td>{{getProvinceNameByCode personInfo.hProv}}{{getCityNameByCode personInfo.hProv personInfo.hCity}}</td>
+                        <td class="font-bold">手机号码</td>
+                        <td>{{personInfo.mobile}}</td>
+                      </tr>
+                      <tr>
+                          <td class="font-bold">现住址</td>
+                          <td colspan="3">{{getProvinceNameByCode personInfo.lProv}}{{getCityNameByCode personInfo.lProv personInfo.lCity}}{{personInfo.lLoc}}</td>
+                      </tr>
+                      <tr>
+                          <td class="font-bold">住宅状况</td>
+                          <td>{{getCodeName "houseProperty" personInfo.houseProperty}}</td>
+                          <td class="font-bold">婚姻状况</td>
+                          <td>{{getCodeName "marriage" personInfo.marriage}}</td>
+                      </tr>
+                      <tr>
+                          <td class="font-bold">子女状况</td>
+                          <td>{{getCodeName "children" personInfo.children}}</td>
+                          <td class="font-bold">学历</td>
+                          <td>{{getCodeName "education" personInfo.education}}</td>
+                      </tr>
+                      <tr>
+                          <td class="font-bold">购车状况</td>
+                          <td>{{getCodeName "carProperty" personInfo.carProperty}}</td>
+                          <td class="font-bold">行业</td>
+                          <td>{{getCodeName "orgIndustry" personInfo.industry}}</td>
+                      </tr>
+                      <tr>
+                        <td class="font-bold">营业执照名称</td>
+                        <td colspan="3">{{personInfo.licName}}</td>
+                      </tr>
+                      <tr>
+                        <td class="font-bold">经营地址</td>
+                        <td colspan="3">{{getProvinceNameByCode personInfo.mProv}}{{getCityNameByCode personInfo.mProv personInfo.mCity}}{{personInfo.mLoc}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <a href="#" class="btn btn-success pull-right" id="downLoadPersonInfoBtn"><i class="fa fa-download"></i> 下载</a>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="profile1">
+                <div class="col-lg-8">
+                  <table class="table text-center table-bordered table-hover table-striped table-style">
+                    <thead class="font-bold">
+                    <tr>
+                      <td>序号</td>
+                      <td>资料名称</td>
+                      <td>上传时间</td>
+                      <td>操作</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#each proofmat}}
+                    <tr>
+                      <td>{{index}}</td>
+                      <td>{{matName}}</td>
+                      <td>{{formatDateTime lastUpdateTime}}</td>
+                      <td>
+                        <a class="gallery-zoom cboxElement btn btn-success btn-sm" href="{{matUrl}}">预览</a>
+                      </td>
+                    </tr>
+                    {{/each}}
+                    </tbody>
+                  </table>
+                  {{#with proofmat}}
+                    <a href="#" class="btn btn-success pull-right" id="downLoadProofmatBtn"><i class="fa fa-download"></i> 下载</a>
+                  {{/with}}
+                </div>
+              </div>
+              <div class="tab-pane fade" id="message1">
+                <table class="table text-center table-bordered table-style table-hover table-striped" id="data_source">
+                  <thead class="font-bold">
+                    <tr>
+                      <td>序号</td>
+                      <td>数据源名称</td>
+                      <td>数据源明细</td>
+                      <td>登录账号</td>
+                      <td>操作</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {{#each property}}
+                    <tr>
+                    {{#if rowspan}}
+                      <td rowspan="{{rowspan}}">{{index}}</td>
+                      <td rowspan="{{rowspan}}">{{getCodeName "orgPropertyAcctType" propertyType}}</td>
+                      <td>{{getCodeName "orgPropertyDataSource" subType}}</td>
+                      <td>{{acct}}</td>
+                    {{else}}
+                      <td>{{getCodeName "orgPropertyDataSource" subType}}</td>
+                      <td>{{acct}}</td>
+                    {{/if}}
+                    {{#if isZip}}
+                      {{#if rowspan}}
+                      <td rowspan="{{rowspan}}">{{{btns}}}</td>
+                      {{/if}}
+                    {{else}}
+                      <td>{{{btns}}}</td>
+                    {{/if}}
+                    </tr>
+                  {{/each}}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- pannel -->
+      </div>
+      <!-- /.col-md-12-->
+    </div>
+    <!-- row -->
+  </div>
+  <!-- /.padding-md -->
+</template>

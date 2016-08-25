@@ -1,0 +1,15 @@
+[submodule "packages/ymp-acts-as-form"]
+	path = packages/ymp-acts-as-form
+	url = git@192.168.6.6:package/ymp-acts-as-form
+[submodule "packages/ymp-collection-validations"]
+	path = packages/ymp-collection-validations
+	url = git@192.168.6.6:package/ymp-collection-validations
+[submodule "packages/ymp-flash-notifications"]
+	path = packages/ymp-flash-notifications
+	url = git@192.168.6.6:package/ymp-flash-notifications
+[submodule "packages/ymp-request"]
+	path = packages/ymp-request
+	url = git@192.168.6.6:package/ymp-request.git
+[submodule "packages/log4js"]
+	path = packages/log4js
+	url = git@gitlab.astoyw.com:root/meteor_log4js.git

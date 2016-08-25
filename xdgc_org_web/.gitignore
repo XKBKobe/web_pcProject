@@ -1,0 +1,11 @@
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+dump
+settings.json
+.idea/
+meteor.pid
+.npm
+stderr
+stdout
+tests/cookie.txt

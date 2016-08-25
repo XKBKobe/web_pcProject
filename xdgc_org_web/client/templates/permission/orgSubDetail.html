@@ -1,0 +1,131 @@
+<template name="orgSubDetail">
+    <div class="padding-xs customer-list">
+        <div class="paddingLR-md m-top-md">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="no-margin" id="orgDetailForm" data-toggle="validator">
+                            <input type="hidden" name="innerCode" value="{{org.innerCode}}">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">账号 <i class="red">*</i></label>
+                                            <input maxlength="32" class="form-control input-sm" name="username" pattern="{{getRegExpNoSlash 'nonBlankCharacter'}}" placeholder="登录账号" data-error="请输入账号" type="text" value="{{org.username}}" required/>
+                                            <span class="help-block with-errors"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">名称 <i class="red">*</i></label>
+                                            <input maxlength="32" class="form-control input-sm" name="name" pattern="{{getRegExpNoSlash 'nonBlankCharacter'}}" type="text" data-error="请输入名称" value="{{org.name}}" required/>
+                                            <span class="help-block with-errors"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">联系电话</label>
+                                            <input maxlength="32" class="form-control input-sm" data-error="请输入正确的联系电话" pattern="{{getRegExpNoSlash 'mobileOrTel'}}" name="tel" type="text" value="{{org.tel}}"/>
+                                            <span class="help-block with-errors"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group m-top-md paddingTB-xs">
+                                            {{#if org.username}}
+                                                <button class="btn btn-success btn-sm" id="resetPwd" type="button" data-uuid="{{org.orgUserPartyUuid}}">恢复默认密码（000000）</button>
+                                            {{/if}}
+                                            <button class="btn btn-success btn-sm" type="button" id="saveOrg"><i class="fa fa-check"></i> 保存</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="display: none;">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">派发机构权限 <i class="red">*</i></label>
+                                            <div id="treeViewData"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">派发人员权限 <i class="red">*</i></label>
+                                            <div id="treeViewData2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="display: none;">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">初始化职位</label>
+                                            <div class="initialPos">
+                                            {{#each getOrgPosList}}
+                                            <span class="label-checkbox inline">
+                                                <input type="checkbox" value="{{id}}">
+                                                <span class="custom-checkbox"></span>
+                                                {{name}}
+                                                <a href="#" title="权限**"><i class="fa fa-question-circle text-info"></i></a>
+                                            </span>
+                                            {{/each}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row addressData" data-toggle="cityselector">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">省</label>
+                                            <select class="form-control input-sm addressSelect" name="prov" id="prov" data-role="province"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">市</label>
+                                            <select class="form-control input-sm addressSelect" data-role="city" id ="city" name="city"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">区</label>
+                                            <select class="form-control input-sm addressSelect" data-role="area" id ="area" name="area"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">街道地址</label>
+                                            <div class="input-group">
+                                                <input maxlength="32" class="form-control input-sm addressDetail" id="loc" name="loc" type="text" value="{{org.loc}}"/>
+                                                <span class="input-group-btn">
+                                                    <button id="locSearch" class="btn btn-sm btn-success" type="button">
+                                                        <i class="fa fa-search"></i> 搜索
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group paddingTB-md m-top-xs">
+                                            <label class="sr-only">经纬度</label>
+                                            <input maxlength="32" class="form-control input-sm" id="coordinates" name="coordinates" type="hidden" value="{{org.coordinates}}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- /.col-md-4 -->
+                    </div>
+                </div>
+                <!-- /.panel -->
+            </div>
+        </div>
+        <div class="padding-xs">
+            <div class="panel">
+                <div class="panel-body mapLocation" style="height: 600px;">
+                    <div id='container'></div>
+                    <div id="tip">点击 <strong>右键</strong> 标注坐标</div>
+                </div>
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.padding-xs -->
+    </div>
+    <!-- /.padding-xs -->
+</template>

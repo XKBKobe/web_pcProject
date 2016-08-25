@@ -1,0 +1,125 @@
+<template name="orgSubBank">
+    <div class="padding-xs customer-list">
+        <div class="paddingLR-md m-top-md">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="no-margin" id="formData">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">账号</label>
+                                            <input maxlength="32" class="form-control input-sm" name="username" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">名称</label>
+                                            <input maxlength="32" class="form-control input-sm" name="name" type="text" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">创建时间(起)</label>
+                                            <div class="input-group">
+                                                <input data-date-format="yyyy-mm-dd" name="startCreateTime" class="form-control input-sm datepicker" value="{{formatDate startCreateTime}}" maxlength="32" type="text" />
+                                                <span class="input-group-addon "><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                        <!-- /.form-group -->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">创建时间(止)</label>
+                                            <div class="input-group">
+                                                <input data-date-format="yyyy-mm-dd" name="endCreateTime" class="form-control input-sm datepicker" value="{{formatDate endCreateTime}}" maxlength="32" type="text" />
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                        <!-- /.form-group -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.col-md-4 -->
+                            <div class="col-md-4">
+                                <div class="row" data-toggle="cityselector">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">联系电话</label>
+                                            <input maxlength="32" class="form-control input-sm" name="tel" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">所属</label>
+                                            <select class="form-control input-sm" name="parentInnerCode">
+                                                <option value="">全部</option>
+                                                {{#each getOrgDropdown}}
+                                                <option value="{{value}}">{{text}}</option>
+                                                {{/each}}
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group m-top-md paddingTB-xs">
+                                    <button class="btn btn-success btn-sm" id="orgSubBankSearch" type="submit">
+                                      <i class="fa fa-search"></i> 检 索
+                                    </button>
+                                    <button class="btn btn-success btn-sm" id="createOrg" type="button">
+                                      <i class="fa fa-plus"></i> 新 增
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- col-md-4 -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="padding-xs">
+            <div class="panel">
+                <div class="panel-body margin-sm">
+                   <div class="table-responsive">
+                    <table class="table text-center table-bordered table-hover table-style table-striped">
+                        <thead class="font-bold">
+                            <tr>
+                                <td class="col-md-2">创建时间</td>
+                                <td class="col-md-1">登录账号</td>
+                                <td class="col-md-2">名称</td>
+                                <td class="col-md-2">联系电话</td>
+                                <td class="col-md-2">地址</td>
+                                <td class="col-md-1">所属</td>
+                                <td class="col-md-2">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each getOrgSubBankList.list}}
+                            <tr>
+                                <td>{{formatDateTime createTime}}</td>
+                                <td>{{username}}</td>
+                                <td>{{name}}</td>
+                                <td>{{tel}}</td>
+                                <td>{{getProvinceNameByCode prov}}-{{getCityNameByCode prov city}}-{{getAreaNameByCode prov city area}}-{{loc}}</td>
+                                <td>{{parentName}}</td>
+                                <td>
+                                    <div class="m-top-xs">
+                                        <a class="btn btn-sm btn-success orgDetail m-bottom-xs"><i class="fa fa-edit"></i> 编辑</a>
+                                        <a class="btn btn-sm btn-success orgDelete m-bottom-xs"><i class="fa fa-trash-o"></i> 删除</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                   </div>
+                    {{> tablePagination pageInfo=getOrgSubBankList}}
+                </div>
+            </div>
+        </div>
+        <!-- /.padding-xs -->
+    </div>
+    <!-- /.padding-xs -->
+</template>

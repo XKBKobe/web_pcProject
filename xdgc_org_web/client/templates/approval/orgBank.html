@@ -1,0 +1,272 @@
+<template name="orgBank">
+    <div class="padding-xs customer-list">
+        <div class="paddingLR-md m-top-md">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="no-margin" id="formData">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">客户姓名</label>
+                                    <input maxlength="32" class="form-control input-sm" name="name" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">客户经理</label>
+                                    <select class="form-control input-sm chosen-select" name="cmangerPartyUuid">
+                                        <option value="">全部</option>
+                                        <option value="empty">未分配</option>
+                                        {{#each getAgentData}}
+                                            <option value="{{partyUuid}}">{{name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">当前状态</label>
+                                    <select class="form-control input-sm" name="applyStatus">
+                                        <option value="">全部</option>
+                                        {{#each getCodeList "orgLoanStatus"}}
+                                            <option value="{{code}}">{{name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">产品</label>
+                                    <select class="form-control input-sm" name="productCustUuid">
+                                        <option value="">全部</option>
+                                        {{#each getProList}}
+                                            <option value="{{productCustUuid}}">{{productCustName}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">核身状态</label>
+                                    <select class="form-control input-sm" name="identityVerified">
+                                        <option value="">全部</option>
+                                        <option value="1">已核身</option>
+                                        <option value="2">未核身</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12 no-padding">
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">申请时间(起)</label>
+                                                <div class="input-group">
+                                                    <input data-date-format="yyyy-mm-dd" name="startTime" class="form-control input-sm datepicker" maxlength="32" type="text" />
+                                                    <span class="input-group-addon "><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <!-- /.form-group -->
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">申请时间(止)</label>
+                                                <div class="input-group">
+                                                    <input data-date-format="yyyy-mm-dd" name="endTime" class="form-control input-sm datepicker" maxlength="32" type="text" />
+                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                </div>
+                                            </div>
+                                            <!-- /.form-group -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group m-top-md paddingTB-xs">
+                                        <button class="btn btn-success btn-sm" id="orgLoanSearch" type="button"><i class="fa fa-search"></i> 检 索</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.paddingLR-md -->
+        <div class="padding-xs">
+            <div class="panel">
+                <div class="panel-body margin-sm">
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-style table-striped text-center">
+                        <thead class="font-bold">
+                            <tr>
+                                <td class="col-md-1">申请时间</td>
+                                <td class="col-md-1">客户姓名</td>
+                                <td class="col-md-1">核身</td>
+                                <td class="col-md-1">风险等级</td>
+                                <td class="col-md-1">产品</td>
+                                <td class="col-md-1">申请额度(万)</td>
+                                <td class="col-md-1">预授信额度(万)</td>
+                                <td class="col-md-1">批核额度(万)</td>
+                                <td class="col-md-1">客户经理</td>
+                                <td class="col-md-1">当前状态</td>
+                                <td class="col-md-2">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each getOrgLoanList.list}}
+                            <tr>
+                                <td>{{formatDate applytime}}</td>
+                                <td>{{name}}</td>
+                                <td>{{identityVerifiedText identityVerified}}</td>
+                                <td></td>
+                                <td>{{productCustName}}</td>
+                                <td>{{toTenThousand applyAmount}}</td>
+                                <td>-</td>
+                                <td>{{toTenThousand evaluateAmount}}</td>
+                                <td>{{#if cmanager}}{{cmanager}}{{else}}未分配{{/if}}</td>
+                                <td>{{getCodeName "orgLoanStatus" applyStatus}}</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-success distributeBtn {{distributeClass applyStatus}}">分配</a>
+                                    <a href="{{pathFor 'applyInformation'}}" class="btn btn-sm btn-success applyBtn">申请资料</a>
+                                    <a href="#" class="btn btn-sm btn-success showAuditLog">审批记录</a>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                  </div>
+                    {{> tablePagination pageInfo=getOrgLoanList}}
+                    <!-- /.fg-toolbar -->
+                </div>
+            </div>
+        </div>
+        <!-- /.paddings-xs -->
+    </div>
+    <!-- /.padding-xs -->
+
+    <div class="modal fade" id="distributeModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="padding: 15px 15px 0 15px;">
+                    <form class="no-margin clearfix" id="distributeForm">
+                        <div class="col-md-4 m-bottom-sm">
+                            <button class="btn btn-success btn-sm sortBtn" id="distributeNumSorted" type="button"><i class="fa fa-long-arrow-down"></i> 分配量排序</button>
+                            <button class="btn btn-success btn-sm sortBtn" id="trackNumSorted" type="button"><i class="fa fa-long-arrow-down"></i> 跟进量排序</button>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <select class="form-control btn-sm chosen-select2" name="agentName">
+                                            <option value="">全部</option>
+                                            {{#each filterAgent}}
+                                                <option value="{{partyUuid}}">{{name}}</option>
+                                            {{/each}}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <button class="btn btn-sm btn-success" id="searchAgent" type="button"><i class="fa fa-search"></i> 搜 索</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.col-md-6 -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <div class="text-right">
+                                    <button class="btn btn-success btn-sm" id="confirmBtn"><i class='fa fa-check'></i> 确 定</button>
+                                    <button class="btn btn-danger btn-sm" data-dismiss="modal" aria-hidden="true"><i class='fa fa-reply'></i> 取 消</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.col-md-3 -->
+                    </form>
+                </div>
+                <div class="modal-body modal-open">
+                    <div class="gallery-container clearfix" style="padding-left: 15px;">
+                        {{#each getAgentInfo}}
+                        <div class="gallery-item">
+                            <label class="label-radio pull-left">
+                                <input name="agentRadio" type="radio" data-uuid="{{partyUuid}}"/>
+                                <span class="custom-radio"></span>
+                            </label>
+                            <span class="thumbnail pull-left" style="margin-right: 15px;">
+                                {{#if pngUrl}}
+                                    <img style="width: 80px; height: 110px;" src="{{pngUrl}}"/>
+                                {{else}}
+                                    <div class="text-center" style="width: 80px; height: 110px;line-height: 110px;">未上传</div>
+                                {{/if}}
+                            </span>
+                            <div class="media-body">
+                                <strong class="font-14">姓名：{{name}}</strong>
+                                <div class="seperator"></div>
+                                <p>电话：{{#if mobile}}{{mobile}}{{else}}暂无{{/if}}</p>
+                                <p>已分配：{{sumLoanNumber}}</p>
+                                <p>跟进中：{{followLoanNumber}}</p>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <!-- /.gallery-container -->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!--审批记录-->
+    <div class="modal fade" id="approvalRecord" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4>
+                        <strong>审批记录</strong>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel-overview clearfix">
+                        <table class="table table-bordered table-striped table-style">
+                            <thead class="font-bold head-style">
+                            <tr>
+                                <td class="w220">操作时间</td>
+                                <td class="w140">操作人员</td>
+                                <td class="w160">申请额度(万)</td>
+                                <td class="w160">批核额度(万)</td>
+                                <td class="w200">操作结果</td>
+                                <td class="w160">当前状态</td>
+                                <td class="w220">审批意见</td>
+                                <td class="w140">审批环节</td>
+                            </tr>
+                            </thead>
+                            <tbody style="word-break:break-all;">
+                                {{#each getApprovalRecord}}
+                                <tr>
+                                    <td>{{formatDateTime auditTime}}</td>
+                                    <td>{{name}}</td>
+                                    <td>{{toTenThousand applyAmount}}</td>
+                                    <td>{{toTenThousand auditAmount}}</td>
+                                    <td>{{getCodeName "auditResult" auditResult}}</td>
+                                    <td>{{getCodeName "orgLoanStatus" sufAuditStatus}}</td>
+                                    <td style="word-wrap: break-word;">{{auditIdea}}</td>
+                                    <td>{{getCodeName "auditStep" auditPhase}}</td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-danger" data-dismiss="modal" aria-hidden="true"><i class='fa fa-reply'></i> 取消</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</template>

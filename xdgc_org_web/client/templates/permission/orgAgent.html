@@ -1,0 +1,295 @@
+<template name="orgAgent">
+    <div class="padding-xs customer-list">
+        <div class="paddingLR-md m-top-md">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form class="no-margin" id="formData">
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">账号</label>
+                                    <input maxlength="32" class="form-control input-sm" name="account" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">姓名</label>
+                                    <input maxlength="32" class="form-control input-sm" name="name" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">推荐码</label>
+                                    <input maxlength="32" class="form-control input-sm" name="cmCode" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">联系电话</label>
+                                    <input maxlength="32" class="form-control input-sm" name="mobile" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label class="control-label">头像</label>
+                                    <select class="form-control input-sm" name="pngFlag">
+                                        <option value="0">全部</option>
+                                        <option value="1">未上传</option>
+                                        <option value="2">已上传</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--v2.1-{{#if notHidden "orgPosition"}}
+                                <div class="col-md-2" style="display: none;">
+                                    <div class="form-group">
+                                        <label class="control-label">职位</label>
+                                        <select class="form-control input-sm" name="roleId">
+                                            <option value="">全部</option>
+                                            {{#each getPosList}}
+                                                <option value="{{id}}">{{name}}</option>
+                                            {{/each}}
+                                        </select>
+                                    </div>
+                                </div>
+                            {{/if}}-->
+                            <div class="col-md-12 no-padding">
+                              <div class="col-md-4">
+                               <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">创建时间(起)</label>
+                                        <div class="input-group">
+                                            <input maxlength=32 type="text" class="form-control input-sm datepicker"
+                                                   name="startTime"
+                                                   data-date-format="yyyy-mm-dd">
+                                            <span class="input-group-addon "><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">创建时间(止)</label>
+                                        <div class="input-group">
+                                            <input maxlength=32 type="text" class="form-control input-sm datepicker"
+                                                   name="endTime"
+                                                   data-date-format="yyyy-mm-dd">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <!-- /.col -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group m-top-md paddingTB-xs">
+                                    <button class="btn btn-success btn-sm" id="orgAgentSearch" type="button"><i class="fa fa-search"></i> 检 索</button>
+                                    <button class="btn btn-success btn-sm" type="button" id="addAgent"><i class="fa fa-plus"></i> 新 增</button>
+                                </div>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="padding-xs">
+            <div class="panel">
+                <div class="panel-body margin-sm">
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-hover table-striped table-style text-center">
+                        <thead class="font-bold">
+                        <tr>
+                            <td class="col-md-1">头像</td>
+                            <td class="col-md-1">账号</td>
+                            <td class="col-md-1">姓名</td>
+                            <td class="col-md-1">推荐码</td>
+                            <!--v2.1-<td class="col-md-1">职位</td>-->
+                            <td class="col-md-1">联系电话</td>
+                            <td class="col-md-2">创建时间</td>
+                            <td class="col-md-2">操作</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{#each getOrgAgentList.list}}
+                        <tr>
+                            <td>
+                                {{#if pngUrl}}
+                                <a class="gallery-zoom" href="{{pngUrl}}">
+                                    <img style="width: 44px; height: 60px;" src="{{pngUrl}}" />
+                                </a>
+                                {{else}}
+                                    未上传
+                                {{/if}}
+                            </td>
+                            <td>{{account}}</td>
+                            <td>{{name}}</td>
+                            <td>{{cmCode}}</td>
+                            <!--v2.1-<td>{{roleName}}</td>-->
+                            <td>{{mobile}}</td>
+                            <td>{{formatDateTime createTime}}</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-success editBtn"><i class="fa fa-edit"></i> 编辑</button>
+                                <button type="button" class="btn btn-sm btn-success deleteBtn"><i class="fa fa-trash-o"></i> 删除</button>
+                            </td>
+                        </tr>
+                        {{/each}}
+                        </tbody>
+                    </table>
+                  </div>
+                  {{> tablePagination pageInfo=getOrgAgentList}}
+                  <!-- /.fg-toolbar -->
+                </div>
+            </div>
+        </div>
+        <!-- /.padding-xs -->
+    </div>
+    <!-- /.padding-xs -->
+
+    <!--新增客户经理-->
+    <div class="modal fade" id="agentModalID" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4>
+                       <strong>创建日期：{{formatDate endTime}}</strong>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel-overview clearfix">
+                        <form class="no-margin" data-toggle="validator" id="addUserForm" role="form">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <span class="control-label">
+                                                账号(请勿使用手机号码)<i class="red">*</i>
+                                            </span>
+                                            <input type="text" name="account" pattern="{{getRegExpNoSlash 'nonBlankCharacter'}}" data-error="请输入账号" class="form-control input-sm" maxlength="32" required/>
+                                            <span class="help-block with-errors"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                          <span class="control-label">
+                                              姓名<i class="red">*</i>
+                                          </span>
+                                          <input type="text" name="name" class="form-control input-sm" pattern="{{getRegExpNoSlash 'nonBlankCharacter'}}" data-error="请输入姓名" maxlength="32" required/>
+                                          <span class="help-block with-errors"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <span class="control-label">联系电话<i class="red">*</i></span>
+                                            <input type="text" name="mobile" class="form-control input-sm" pattern="{{getRegExpNoSlash 'mobileOrTel'}}" data-error="请输入正确的联系电话" value="{{getCurrentData.mobile}}" maxlength="32" required/>
+                                            <span class="help-block with-errors"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" style="display: none;">
+                                        <div class="form-group">
+                                            <span class="control-label">职位<i class="red">*</i></span>
+                                            <select class="form-control input-sm" name="roleId" {{isDisabled}} data-error="请选择职位">
+                                               <option value="">请选择</option>
+                                               {{#each getPosList}}
+                                                  <option value="{{id}}" {{selectedEqual name "客户经理"}}>{{name}}</option>
+                                               {{/each}}
+                                               <!--v2.1-{{#each getPosList}}
+                                                  <option value="{{id}}" {{selectedEqual isDisabled "disabled"}}>{{name}}</option>
+                                               {{/each}}-->
+                                            </select>
+                                            <span class="help-block with-errors"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-danger" data-dismiss="modal" aria-hidden="true"><i class='fa fa-reply'></i> 取消</button>
+                    <button class="btn btn-sm btn-success" id="addBtn"><i class='fa fa-check'></i> 保存</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!--编辑信息-->
+    <div class="modal fade" id="editAgentInfo" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4><strong>创建日期：{{formatDate getCurrentData.createTime}}</strong></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel-overview clearfix">
+                        <form class="no-margin form-inline" data-toggle="validator" id="addUserForm" role="form">
+                            <div class="panel-body">
+                                <div class="gallery-container clearfix" style="padding-left: 40px;">
+                                     <span class="thumbnail pull-left" style="margin-right: 50px;">
+                                       {{#if getCurrentData.pngUrl}}
+                                       <img style="width: 100px; height: 140px;" src="{{getCurrentData.pngUrl}}"/>
+                                       {{else}}
+                                       <div class="text-center" style="width: 100px; height: 140px;line-height: 140px;">未上传</div>
+                                       {{/if}}
+                                     </span>
+                                     <div class="media-body font-14">
+                                         <p>账号： {{#if getCurrentData.account}}{{getCurrentData.account}}{{else}}暂无{{/if}}</p>
+                                         <div class="seperator"></div>
+                                         <p>姓名： {{#if getCurrentData.name}}{{getCurrentData.name}}{{else}}暂无{{/if}}</p>
+                                         <div class="seperator"></div>
+                                         <p>联系电话： {{#if getCurrentData.mobile}}{{getCurrentData.mobile}}{{else}}暂无{{/if}}</p>
+                                         <div class="seperator"></div>
+                                         <!--v2.1-{{#if isDisabled}}
+                                         <p>角色： {{#if getCurrentData.roleName}}{{getCurrentData.roleName}}{{else}}暂无{{/if}}</p>
+                                         {{else}}
+                                         <div class="form-group">
+                                            <span class="control-label">角色：</span>
+                                            <select class="form-control input-sm w100" name="addRoleId">
+                                                <option value="">请选择</option>
+                                                {{#each getPosList}}
+                                                    <option value="{{id}}" {{selectedEqual getCurrentData.roleId id}}>{{name}}</option>
+                                                {{/each}}
+                                            </select>
+                                         </div>
+                                         {{/if}}
+                                         <div class="seperator"></div>
+                                         <div class="clearfix form-group">
+                                             <span class="pull-left">权限：</span>
+                                             <div class="pull-left m-left-xs">
+                                               {{#if getRights}}
+                                                 {{#each getRights}}
+                                                 <p>{{this}}</p>
+                                                 {{/each}}
+                                               {{else}}
+                                                  暂无
+                                               {{/if}}
+                                             </div>
+                                         </div>-->
+                                     </div>
+                                </div>
+                                <!-- /.gallery-container -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-danger" data-dismiss="modal" aria-hidden="true"><i class='fa fa-reply'></i> 取消</button>
+                    <button class="btn btn-sm btn-success" id="resetPwd" data-uuid="{{getCurrentData.partyUuid}}"><i class='fa fa-check'></i> 恢复默认密码(000000)</button>
+                    <!--v2.1-{{#if notHidden "orgPosition"}}
+                    <button class="btn btn-sm btn-success" id="saveRoleInfo" data-uuid="{{getCurrentData.partyUuid}}"><i class='fa fa-check'></i> 保存</button>
+                    {{/if}}-->
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</template>

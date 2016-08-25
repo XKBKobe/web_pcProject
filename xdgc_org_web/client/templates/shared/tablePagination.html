@@ -1,0 +1,29 @@
+<template name="tablePagination">
+  {{#if hasPageInfo}}
+    {{#with pageInfo}}
+      <div class="fg-toolbar ui-toolbar ui-widget-header ui-corner-bl ui-corner-br ui-helper-clearfix">
+        <div class="dataTables_info" data-role="info">显示 {{startRow}} 到 {{endRow}} 行，共 {{total}} 行。</div>
+        <div class="dataTables_paginate fg-buttonset ui-buttonset fg-buttonset-multi ui-buttonset-multi paging_full_numbers"
+             data-role="pagination">
+          <a tabindex="0"
+             class="first ui-corner-tl ui-corner-bl fg-button ui-button ui-state-default {{classIsGoodPage firstPage}}"
+             data-role="first" data-page="{{firstPage}}">首页</a>
+          <a tabindex="0" class="previous fg-button ui-button ui-state-default {{classIsGoodPage prePage}}"
+             data-role="previous" data-page="{{prePage}}">上页</a>
+      <span>
+          <span tabindex="0" class="fg-button ui-button">{{pageNum}}/{{pages}}</span>
+      </span>
+          <a tabindex="0" class="next fg-button ui-button ui-state-default {{classIsGoodPage nextPage}}"
+             data-role="next" data-page="{{nextPage}}">下页</a>
+          <a tabindex="0"
+             class="last ui-corner-tr ui-corner-br fg-button ui-button ui-state-default {{classIsGoodPage lastPage}}"
+             data-role="last" data-page="{{lastPage}}">尾页</a>
+        </div>
+      </div>
+    {{/with}}
+  {{/if}}
+</template>
+
+<template name="dopTablePagination">
+    {{> tablePagination pageInfo=dopPageInfo}}
+</template>

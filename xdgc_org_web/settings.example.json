@@ -1,0 +1,42 @@
+{
+  "environment": "development",
+  "production" : {
+    "be" : {
+      "baseUrl" : "http://192.168.4.136:5050/"
+    }
+  },
+  "test" : {
+    "be" : {
+      "baseUrl" : "http://192.168.4.168:18081/"
+    }
+  },
+  "development" : {
+    "be" : {
+      "baseUrl" : "http://192.168.4.136:5050/",
+      "ssoServerURI" : "https://testssoapi.yuanbaopu.com"
+    },
+    "domain": {
+      "bpbank": "bpbank.yuanbaopu.loc",
+      "fdbank": "fdbanktest.yuanbaopu.com"
+    }
+  },
+  "public" : {
+    "meta" : {
+      "title" : "Project Title"
+    },
+    "qcloud": {
+      "appId": "10002631",
+      "bucket": "docs"
+    },
+    "assets": {
+      "cities":    "http://assets.yuanbaopu.loc/cdn/ui/fide/common/js/cities.js",
+      "cityselector": "http://assets.yuanbaopu.loc/cdn/ui/xdgc/js/jquery.cityselector.js",
+      "amap": "https://webapi.amap.com/maps?v=1.3&key=a9da8a6cceb49f311773a1ca181b26ab",
+      "statelist": "http://assets.yuanbaopu.loc/cdn/ui/xdgc/js/statelist.js",
+      "juXinLi": "http://admin.yuanbaopu.com/jxlreport/voucherIndex.do"
+    },
+    "persistent_session": {
+      "default_method": "authenticated"
+    }
+  }
+}
